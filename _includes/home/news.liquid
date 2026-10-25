@@ -1,0 +1,57 @@
+{% assign news = site.news | reverse %}
+{% assign featured = news | where: 'featured', true | first %}
+{% if page.announcements.limit %}
+  {% assign news_limit = page.announcements.limit %}
+{% else %}
+  {% assign news_limit = news.size %}
+{% endif %}
+<div class="rh-section-head">
+  {% include section_title.liquid num='03' title='News' %}
+  <a class="rh-mono rh-section-link" href="{{ '/news/' | relative_url }}">all news →</a>
+</div>
+
+{% if news.size > 0 %}
+  <div class="rh-news">
+    {% if featured %}
+      <a class="rh-card rh-news-featured" href="{% if featured.inline %}{{ '/news/' | relative_url }}{% else %}{{ featured.url | relative_url }}{% endif %}">
+        <div class="rh-card-media">
+          {% if featured.video %}
+            {% include sim_media.liquid src=featured.video %}
+          {% elsif featured.image %}
+            <img class="rh-media-video" src="{{ featured.image | relative_url }}" alt="" loading="lazy">
+          {% else %}
+            {% include sim_media.liquid variant='card' label='[FEATURED IMAGE / CLIP]' %}
+          {% endif %}
+        </div>
+        <div class="rh-card-body">
+          <div class="rh-news-meta">
+            <span class="rh-tag rh-tag-solid">{% if featured.url == news.first.url %}LATEST{% else %}FEATURED{% endif %}</span>
+            <span>{{ featured.date | date: '%Y-%m-%d' }}</span>
+          </div>
+          <h3 class="rh-news-headline">
+            {%- if featured.inline -%}
+              {{ featured.content | strip_html | strip | emojify }}
+            {%- else -%}
+              {{ featured.title }}
+            {%- endif -%}
+          </h3>
+          {% unless featured.inline %}
+            <p class="rh-card-text">{{ featured.content | strip_html | truncatewords: 40 }}</p>
+          {% endunless %}
+        </div>
+      </a>
+    {% endif %}
+
+    <div class="rh-news-list">
+      {% assign shown = 0 %}
+      {% for item in news %}
+        {% if item.url == featured.url %}{% continue %}{% endif %}
+        {% if shown >= news_limit %}{% break %}{% endif %}
+        {% include news_item.liquid item=item %}
+        {% assign shown = shown | plus: 1 %}
+      {% endfor %}
+    </div>
+  </div>
+{% else %}
+  <p>No news so far...</p>
+{% endif %}

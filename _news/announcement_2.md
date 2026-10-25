@@ -3,6 +3,10 @@ layout: post
 title: A long announcement with details
 date: 2015-11-07 16:11:00-0400
 inline: false
+category: SIMULATION
+featured: true # the newest featured item is the large card on the homepage
+image: # optional: featured image (assets/img/...) or
+video: # optional: short clip (assets/video/...webm)
 related_posts: false
 ---
 

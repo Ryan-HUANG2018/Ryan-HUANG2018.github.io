@@ -1,0 +1,23 @@
+{% comment %} One news row: category tag, date, text. Inline items have no page of their own. {% endcomment %}
+{% assign item = include.item %}
+{% if item.inline %}
+  <div class="rh-news-item">
+{% else %}
+  <a class="rh-news-item" href="{{ item.url | relative_url }}">
+{% endif %}
+<div class="rh-news-meta">
+  {% if item.category %}<span class="rh-tag">{{ item.category }}</span>{% endif %}
+  <span>{{ item.date | date: '%Y-%m-%d' }}</span>
+</div>
+<span class="rh-news-text">
+  {%- if item.inline -%}
+    {{ item.content | remove: '<p>' | remove: '</p>' | strip | emojify }}
+  {%- else -%}
+    {{ item.title }}
+  {%- endif -%}
+</span>
+{% if item.inline %}
+  </div>
+{% else %}
+  </a>
+{% endif %}
