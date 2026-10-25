@@ -4,7 +4,13 @@ title: project 1
 description: with background image
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: Cardiovascular
+tags: ["[LES]", "[OpenFOAM]", "[3D]"]
+summary: "[One-paragraph summary: the question, the setup, and the headline result.]"
+thumbnail: # e.g. assets/video/<project>/preview.webm (5-10 s loop, <= 3 MB)
+fields: # one video per field, e.g. - { name: Vorticity, src: assets/video/<project>/vorticity.webm }
+params: { re: "[3,900]", mesh: "[12.4M cells]", model: "[WALE LES]", compute: "[2,400 core-h]" }
+links: # { paper: ..., code: ..., video: ... }
 related_publications: true
 ---
 

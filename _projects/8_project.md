@@ -4,7 +4,13 @@ title: project 8
 description: an other project with a background image and giscus comments
 img: assets/img/9.jpg
 importance: 2
-category: work
+category: Insect & flapping flight
+tags: ["[Level set]"]
+summary: "[One-paragraph summary: the question, the setup, and the headline result.]"
+thumbnail: # e.g. assets/video/<project>/preview.webm (5-10 s loop, <= 3 MB)
+fields: # one video per field, e.g. - { name: Vorticity, src: assets/video/<project>/vorticity.webm }
+params: { re: "[3,900]", mesh: "[12.4M cells]", model: "[WALE LES]", compute: "[2,400 core-h]" }
+links: # { paper: ..., code: ..., video: ... }
 giscus_comments: true
 ---
 

@@ -13,6 +13,41 @@
     });
   };
 
+  // Simulation cards play their preview only while hovered or focused.
+  const initHoverPlay = () => {
+    document.querySelectorAll("video[data-rh-hover-play]").forEach((video) => {
+      const card = video.closest(".rh-card") || video;
+      const play = () => {
+        if (!reduceMotion.matches) video.play().catch(() => {});
+      };
+      const stop = () => video.pause();
+      card.addEventListener("mouseenter", play);
+      card.addEventListener("focus", play);
+      card.addEventListener("mouseleave", stop);
+      card.addEventListener("blur", stop);
+    });
+  };
+
+  // Category chips above the simulation grid; matches each card's data-rh-category.
+  const initFilters = () => {
+    document.querySelectorAll(".rh-filters").forEach((group) => {
+      const grid = group.closest("section").querySelector(".rh-grid");
+      const chips = group.querySelectorAll("[data-rh-filter]");
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const filter = chip.dataset.rhFilter;
+          chips.forEach((c) => {
+            c.classList.toggle("is-active", c === chip);
+            c.setAttribute("aria-pressed", c === chip);
+          });
+          grid.querySelectorAll("[data-rh-category]").forEach((card) => {
+            card.hidden = filter !== "all" && card.dataset.rhCategory !== filter;
+          });
+        });
+      });
+    });
+  };
+
   // Public visit total from GoatCounter, shown in the footer once it loads.
   const loadVisits = () => {
     const el = document.querySelector("[data-rh-visits]");
@@ -28,5 +63,7 @@
 
   syncAutoplay();
   reduceMotion.addEventListener("change", syncAutoplay);
+  initHoverPlay();
+  initFilters();
   loadVisits();
 })();

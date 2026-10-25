@@ -4,7 +4,13 @@ title: project 9
 description: another project with an image 🎉
 img: assets/img/6.jpg
 importance: 4
-category: fun
+category: FSI methods
+tags: ["[RANS]"]
+summary: "[One-paragraph summary: the question, the setup, and the headline result.]"
+thumbnail: # e.g. assets/video/<project>/preview.webm (5-10 s loop, <= 3 MB)
+fields: # one video per field, e.g. - { name: Vorticity, src: assets/video/<project>/vorticity.webm }
+params: { re: "[3,900]", mesh: "[12.4M cells]", model: "[WALE LES]", compute: "[2,400 core-h]" }
+links: # { paper: ..., code: ..., video: ... }
 ---
 
 Every project has a beautiful feature showcase page.

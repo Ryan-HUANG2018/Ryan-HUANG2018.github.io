@@ -22,6 +22,10 @@ hero:
     - { label: SOLVER, value: "[OpenFOAM]" }
     - { label: CELLS, value: "[12.4M]" }
 
+# Filter chips above the simulation cards; each matches a project's `category`.
+simulations:
+  categories: [Cardiovascular, "Insect & flapping flight", FSI methods]
+
 selected_papers: true # includes a list of papers marked as "selected={true}"
 
 announcements:

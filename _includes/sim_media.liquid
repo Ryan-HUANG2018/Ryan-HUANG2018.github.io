@@ -2,7 +2,7 @@
   Simulation media: a looping video when `src` is set, otherwise the
   streamline placeholder from the design mock-ups.
   Params: src (webm), mp4 (fallback), poster, label (placeholder text),
-  variant (hero), hover (true = play on hover instead of autoplay).
+  variant (hero | card), hover (true = play on hover instead of autoplay).
 {% endcomment %}
 {% if include.src and include.src != blank %}
   <video
@@ -38,6 +38,14 @@
         <path d="M0 280 C120 280 160 300 220 306 S360 290 600 296"></path>
       </g>
       <circle class="rh-flow-body" cx="150" cy="170" r="34"></circle>
+    </svg>
+  {% elsif include.variant == 'card' %}
+    <svg class="rh-flow rh-flow-static" viewBox="0 0 340 200" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1">
+        <path d="M0 50 C80 50 120 80 170 80 S260 60 340 60"></path>
+        <path d="M0 100 C80 100 110 130 170 126 S270 96 340 104"></path>
+        <path d="M0 150 C80 150 120 170 170 166 S260 146 340 150"></path>
+      </g>
     </svg>
   {% endif %}
   {% if include.label %}

@@ -15,6 +15,11 @@
 - 页面 `<title>`、SEO / Open Graph / schema 元数据：用 "Qiuxiang (Ryan) Huang"。
 - 论文作者署名格式：**Q. Huang**（名字首字母 + 姓）。
 
+## 已确认的规格调整（优先于 REDESIGN.md）
+
+- 01 Simulations 的筛选分类是 **Cardiovascular / Insect & flapping flight / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
+- 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
+
 ## 工作方式
 
 - 改版**分阶段执行**：每完成一个阶段就停下，说明该在浏览器里看哪个页面（http://localhost:8080/...），等用户确认后再进入下一阶段。
