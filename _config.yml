@@ -77,6 +77,10 @@ google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+# GoatCounter (https://www.goatcounter.com/): counts visits and shows the total in the footer.
+# Set to your site code (e.g. "ryanhuang" for ryanhuang.goatcounter.com) and enable
+# "Allow adding visitor counts on your website" in the GoatCounter settings. Blank disables it.
+goatcounter_code:
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)

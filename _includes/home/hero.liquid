@@ -1,0 +1,59 @@
+{% assign hero = page.hero %}
+{% assign socials = site.data.socials %}
+{% assign cv_page = site.pages | where: 'permalink', '/cv/' | first %}
+<section class="rh-hero">
+  <div class="rh-hero-text">
+    <div class="rh-status">
+      <span class="rh-status-dot rh-pulse" aria-hidden="true"></span>
+      <span>SOLVER RUNNING · {{ hero.status | default: '[YOUR INSTITUTION]' }}</span>
+    </div>
+    <h1 class="rh-hero-name">{% include rh_name.liquid %}</h1>
+    <p class="rh-hero-focus">{{ hero.focus | default: '[YOUR RESEARCH FOCUS]' }}</p>
+    <p class="rh-hero-bio">{{ hero.bio | default: '[A two-to-three sentence bio.]' }}</p>
+    <div class="rh-btn-row">
+      {% if cv_page.cv_pdf %}
+        <a
+          class="rh-btn rh-btn-solid"
+          {% if cv_page.cv_pdf contains '://' %}
+            href="{{ cv_page.cv_pdf }}"
+          {% else %}
+            href="{{ cv_page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          >Download CV</a
+        >
+      {% endif %}
+      {% if socials.scholar_userid %}
+        <a class="rh-btn" href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}">Google Scholar</a>
+      {% endif %}
+      {% if socials.github_username %}
+        <a class="rh-btn" href="https://github.com/{{ socials.github_username }}">GitHub</a>
+      {% endif %}
+      <a class="rh-btn rh-btn-accent" href="#connect"><span class="rh-accent" aria-hidden="true">◆</span>Teraviq</a>
+    </div>
+  </div>
+
+  <figure class="rh-viewport">
+    <div class="rh-viewport-bar">
+      <span>VIEWPORT · {{ hero.viewport | default: 'VORTICITY |ω|' }}</span>
+      <span class="rh-accent">● LIVE</span>
+    </div>
+    <div class="rh-viewport-media">
+      {%
+        include sim_media.liquid variant='hero' src=hero.video mp4=hero.video_mp4 poster=hero.poster
+        label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
+      %}
+    </div>
+    {% if hero.params %}
+      <div class="rh-params">
+        {% for p in hero.params %}
+          <div class="rh-param">
+            <div class="rh-param-label">{{ p.label }}</div>
+            <div class="rh-param-value">{{ p.value }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </figure>
+</section>

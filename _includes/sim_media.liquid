@@ -1,0 +1,46 @@
+{% comment %}
+  Simulation media: a looping video when `src` is set, otherwise the
+  streamline placeholder from the design mock-ups.
+  Params: src (webm), mp4 (fallback), poster, label (placeholder text),
+  variant (hero), hover (true = play on hover instead of autoplay).
+{% endcomment %}
+{% if include.src and include.src != blank %}
+  <video
+    class="rh-media-video"
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    {% if include.hover %}
+      data-rh-hover-play
+    {% else %}
+      autoplay data-rh-autoplay
+    {% endif %}
+    {% if include.poster and include.poster != blank %}
+      poster="{{ include.poster | relative_url }}"
+    {% endif %}
+  >
+    <source src="{{ include.src | relative_url }}" type="video/webm">
+    {% if include.mp4 and include.mp4 != blank %}
+      <source src="{{ include.mp4 | relative_url }}" type="video/mp4">
+    {% endif %}
+  </video>
+{% else %}
+  {% if include.variant == 'hero' %}
+    <svg class="rh-flow" viewBox="0 0 600 340" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-opacity=".75">
+        <path d="M0 40 C120 40 160 60 220 70 S360 50 600 46"></path>
+        <path d="M0 80 C130 80 170 110 230 116 S380 90 600 92"></path>
+        <path d="M0 120 C120 120 150 150 190 150 C240 150 260 118 320 126 S460 150 600 138"></path>
+        <path d="M0 160 C110 160 140 196 200 200 C260 204 280 160 340 166 S480 196 600 186"></path>
+        <path d="M0 200 C120 200 150 236 210 240 C270 244 290 206 350 212 S480 238 600 232"></path>
+        <path d="M0 240 C130 240 170 270 230 274 S380 250 600 256"></path>
+        <path d="M0 280 C120 280 160 300 220 306 S360 290 600 296"></path>
+      </g>
+      <circle class="rh-flow-body" cx="150" cy="170" r="34"></circle>
+    </svg>
+  {% endif %}
+  {% if include.label %}
+    <div class="rh-media-placeholder">{{ include.label }}</div>
+  {% endif %}
+{% endif %}

@@ -334,3 +334,11 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+<!-- Redesign -->
+<script defer src="{{ '/assets/js/redesign.js' | relative_url | bust_file_cache }}"></script>
+
+{% if site.goatcounter_code and jekyll.environment == 'production' %}
+  <!-- GoatCounter: only the published site counts visits -->
+  <script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}

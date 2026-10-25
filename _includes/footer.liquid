@@ -14,6 +14,11 @@
     </span>
     <span>
       t = {{ site.time | date: '%Y-%m-%d %H:%M' }} · residuals converged ✓ ·
+      {% if site.goatcounter_code %}
+        <span data-rh-visits="https://{{ site.goatcounter_code }}.goatcounter.com/counter/TOTAL.json" hidden>
+          visits = <span data-rh-visits-count></span> ·
+        </span>
+      {% endif %}
       <a href="https://github.com/alshedivat/al-folio">theme based on al-folio</a>
     </span>
   </div>

@@ -27,6 +27,9 @@ layout: default
     </header>
 
     <article>
+      {% if content != blank %}
+        <div class="rh-cv-bio">{{ content }}</div>
+      {% endif %}
       <div class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
@@ -78,6 +81,9 @@ layout: default
     </header>
 
     <article>
+      {% if content != blank %}
+        <div class="rh-cv-bio">{{ content }}</div>
+      {% endif %}
       <div class="cv">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
