@@ -672,3 +672,119 @@ footer.rh-footer {
   grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
   gap: 24px;
 }
+
+.rh-section-link {
+  font-size: 13px;
+}
+
+// 02 Publications (homepage and /publications/; markup in _layouts/bib.liquid)
+
+.publications {
+  ol.bibliography {
+    margin: 0;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+.rh-pub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rh-divider);
+}
+
+.rh-pub-year {
+  flex: 0 0 64px;
+  font-family: var(--rh-font-mono);
+  font-size: 13px;
+  color: var(--rh-accent);
+}
+
+.rh-pub-body {
+  flex: 1 1 480px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .periodical {
+    color: var(--rh-text-muted);
+  }
+
+  .badges {
+    margin-top: 4px;
+  }
+}
+
+.publications ol.bibliography li .rh-pub-meta,
+.rh-pub-meta {
+  margin: 0;
+  font-size: 14px;
+  color: var(--rh-text-muted);
+
+  .author {
+    > em {
+      border-bottom: 0;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--rh-text);
+    }
+
+    a {
+      border-bottom: 1px dashed var(--rh-border-soft);
+    }
+
+    > span.more-authors {
+      color: var(--rh-text-muted);
+      border-bottom: 1px dashed var(--rh-border-soft);
+    }
+  }
+
+  .periodical em {
+    font-style: italic;
+  }
+}
+
+.publications ol.bibliography li .links,
+.rh-pub-body .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 4px;
+  font-family: var(--rh-font-mono);
+  font-size: 12px;
+
+  a.rh-pub-link {
+    padding: 0;
+    border: 0;
+    color: var(--rh-link);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--rh-link-hover);
+    }
+  }
+}
+
+.rh-pub-body .hidden.open {
+  border-color: var(--rh-divider);
+  background: var(--rh-card);
+  color: var(--rh-text-body-2);
+}
+
+@media (max-width: 575.98px) {
+  .rh-pub-year {
+    flex-basis: 100%;
+  }
+}
