@@ -14,7 +14,7 @@ Experienced academic and researcher with over 10 years of expertise in Mechanica
 
 Dedicated to advancing the frontiers of Mechanical and Biomedical Engineering through innovative research and education, including curriculum development, graduate supervision, and collaborative research initiatives. Maintains an increasing emphasis on translating cutting-edge technologies into practical applications, particularly in digital health (e.g., cardiovascular modelling, medical device design) and sustainable engineering (e.g., renewable energy systems, eco-friendly aerodynamics).
 
-Currently, I serve as a Research Fellow at the [Centre for Biomedical Technologies](https://research.qut.edu.au/cbt/), [Queensland University of Technology](https://www.qut.edu.au/) (QUT), where I apply advanced computational modelling techniques to interdisciplinary biomedical research.
+Currently, I am a Visiting Fellow in the Cardiovascular Technology Laboratory at the [Centre for Biomedical Technologies](https://research.qut.edu.au/cbt/), [Queensland University of Technology](https://www.qut.edu.au/) (QUT), where I apply advanced computational modelling techniques to interdisciplinary biomedical research.
 
 Prior to this role, from 2021 to 2023, I worked as a Research Associate in Aerospace Engineering at the [University of New South Wales](https://www.unsw.edu.au/) (UNSW). During this period, I leveraged my expertise in fluid-structure interaction (FSI) solvers to investigate aerodynamic mechanisms in insect flight and the design of flapping-wing micro air vehicles, bridging theoretical modelling with applied aerospace engineering.
 

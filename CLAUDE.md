@@ -15,6 +15,11 @@
 - 页面 `<title>`、SEO / Open Graph / schema 元数据：用 "Qiuxiang (Ryan) Huang"。
 - 论文作者署名格式：**Q. Huang**（名字首字母 + 姓）。
 
+## 个人资料来源
+
+- 用户的个人资料在 `C:\Users\huangq20\OneDrive - Queensland University of Technology\AIDataBase\ai-profile`。需要真实内容（简介、新闻、账号、论文等）时从这里找。
+- **只读**：不要修改、移动或删除那个文件夹里的任何文件。从中整理的内容先列给用户确认，再写进本仓库。
+
 ## 已确认的规格调整（优先于 REDESIGN.md）
 
 - 01 Simulations 的筛选分类是 **Cardiovascular / Insect & flapping flight / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。

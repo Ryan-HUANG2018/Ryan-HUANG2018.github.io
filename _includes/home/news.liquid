@@ -26,7 +26,7 @@
         <div class="rh-card-body">
           <div class="rh-news-meta">
             <span class="rh-tag rh-tag-solid">{% if featured.url == news.first.url %}LATEST{% else %}FEATURED{% endif %}</span>
-            <span>{{ featured.date | date: '%Y-%m-%d' }}</span>
+            <span>{% include news_date.liquid item=featured %}</span>
           </div>
           <h3 class="rh-news-headline">
             {%- if featured.inline -%}
