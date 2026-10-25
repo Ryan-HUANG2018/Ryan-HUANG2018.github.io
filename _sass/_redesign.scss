@@ -1,0 +1,238 @@
+/*******************************************************************************
+ * Redesign: dark "simulation software" skin (docs/redesign/REDESIGN.md)
+ * Imported last so it can override Bootstrap/MDB and al-folio base styles.
+ ******************************************************************************/
+
+:root {
+  --rh-bg: #{$rh-bg};
+  --rh-grid-line: #{$rh-grid-line};
+  --rh-card: #{$rh-card};
+  --rh-media: #{$rh-media};
+  --rh-border: #{$rh-border};
+  --rh-divider: #{$rh-divider};
+  --rh-border-soft: #{$rh-border-soft};
+  --rh-accent: #{$rh-accent};
+  --rh-link: #{$rh-link};
+  --rh-link-hover: #{$rh-link-hover};
+  --rh-text: #{$rh-text};
+  --rh-text-body: #{$rh-text-body};
+  --rh-text-body-2: #{$rh-text-body-2};
+  --rh-text-muted: #{$rh-text-muted};
+  --rh-status: #{$rh-status};
+  --rh-font-sans: #{$rh-font-sans};
+  --rh-font-mono: #{$rh-font-mono};
+  --rh-glow: 0 0 0 1px #{$rh-accent}, 0 0 32px rgba(63, 224, 208, 0.18);
+  --rh-nav-height: 64px;
+}
+
+// Base
+
+body {
+  background-color: var(--rh-bg);
+  background-image: linear-gradient(var(--rh-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rh-grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: var(--rh-text-body);
+  font-family: var(--rh-font-sans);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--rh-text);
+    font-family: var(--rh-font-sans);
+    scroll-margin-top: calc(var(--rh-nav-height) + 16px);
+  }
+}
+
+body.fixed-top-nav {
+  padding-top: var(--rh-nav-height);
+}
+
+a {
+  color: var(--rh-link);
+
+  &:hover {
+    color: var(--rh-link-hover);
+    text-decoration: none;
+  }
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--rh-font-mono);
+}
+
+.rh-mono {
+  font-family: var(--rh-font-mono);
+}
+
+.rh-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+// Name: "(Ryan)" is lighter and grey (CLAUDE.md)
+.rh-name-mid {
+  font-weight: 400;
+  color: var(--rh-text-muted);
+}
+
+// Status light, 2s breathing
+.rh-pulse {
+  animation: rh-pulse 2s ease-in-out infinite;
+}
+
+@keyframes rh-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rh-pulse {
+    animation: none;
+  }
+}
+
+// Sticky navigation
+
+.navbar.rh-nav {
+  min-height: var(--rh-nav-height);
+  padding: 0;
+  opacity: 1;
+  background: rgba(6, 8, 12, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rh-divider);
+  box-shadow: none;
+
+  .rh-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--rh-nav-height);
+  }
+
+  .rh-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    color: var(--rh-text);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      color: var(--rh-text);
+    }
+  }
+
+  .rh-brand-mark {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--rh-accent);
+    box-shadow: 0 0 12px var(--rh-accent);
+  }
+
+  .rh-brand-sub {
+    font-family: var(--rh-font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--rh-text-muted);
+  }
+
+  .navbar-nav {
+    gap: 28px;
+    font-family: var(--rh-font-mono);
+    font-size: 13px;
+  }
+
+  .nav-link,
+  #search-toggle .nav-link {
+    padding: 0;
+    color: var(--rh-text-body-2);
+    font-weight: 400;
+
+    &:hover {
+      color: var(--rh-text);
+    }
+  }
+
+  .nav-item.active > .nav-link {
+    color: var(--rh-accent);
+  }
+
+  .rh-num {
+    color: var(--rh-text-muted);
+  }
+
+  .nav-item.active .rh-num {
+    color: var(--rh-accent);
+  }
+
+  .navbar-toggler {
+    padding: 8px 0;
+    border: 0;
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      flex-basis: 100%;
+    }
+
+    .navbar-nav {
+      gap: 0;
+      padding: 8px 0 16px;
+      text-align: left;
+
+      .nav-link,
+      #search-toggle .nav-link {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+      }
+    }
+  }
+}
+
+// Footer
+
+footer.rh-footer {
+  margin-top: 0;
+  padding: 0;
+  border-top: 1px solid var(--rh-divider);
+  background: transparent;
+  font-size: 12px;
+
+  .rh-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-family: var(--rh-font-mono);
+    color: var(--rh-text-muted);
+    text-align: left;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--rh-text);
+    }
+  }
+}
