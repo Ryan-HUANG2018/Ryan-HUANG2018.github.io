@@ -38,7 +38,7 @@
 4. **检查全部通过**：用 `gh pr checks` 等所有 GitHub Actions 检查通过（包括 Prettier 格式检查）。没通过就在同一分支上修好再推。
 5. **用户确认后合并**：把 PR 链接和检查结果告诉用户，由用户决定是否合并。不要自己合并。
 
-提交前用 Prettier 检查格式。CI 每次运行都会安装最新版 Prettier 和 Liquid 插件，所以本地要用同样的最新版本，并加 `--end-of-line auto`（Windows 下文件是 CRLF 换行）。`docs/redesign/` 在 `.prettierignore` 里，不格式化。
+提交前用 Prettier 检查格式。CI 用的是 `package.json` 里锁定的版本（Prettier 3.1.1、Liquid 插件 1.4.0），不是最新版；本地用 Node 镜像在仓库里 `npm install --no-save` 后运行 `npx prettier . --check --end-of-line auto`（Windows 下文件是 CRLF 换行，需要这个参数）。`docs/redesign/` 在 `.prettierignore` 里，不格式化。
 
 ## 本地运行
 
