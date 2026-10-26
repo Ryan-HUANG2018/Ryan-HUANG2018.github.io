@@ -3,7 +3,6 @@ layout: post
 date: 2026-06-01
 inline: true
 category: PAPER
-featured: true # the newest featured item is the large card on the homepage
 image: # optional: featured image (assets/img/...)
 video: # optional: short clip (assets/video/...webm)
 related_posts: false

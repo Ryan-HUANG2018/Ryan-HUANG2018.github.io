@@ -18,6 +18,18 @@ hero:
   poster: assets/video/mechanical-heart-valve/mhv.jpg
   params: # up to 4 cells under the viewport, e.g. - { label: Re, value: "3,900" }; [placeholders] are hidden
 
+# Impact panel under the hero. Update by hand from Google Scholar and refresh `snapshot`;
+# metrics older than 3 months should be re-checked before relying on them.
+impact:
+  snapshot: 2026-10-26
+  source: Google Scholar
+  url: https://scholar.google.com/citations?user=RVQMTLsAAAAJ
+  metrics:
+    - { label: Citations, value: "355" }
+    - { label: h-index, value: "10" }
+    - { label: i10-index, value: "11" }
+    - { label: Journal papers, value: "18", note: peer-reviewed research articles }
+
 # Filter chips above the simulation cards; each matches a project's `category`.
 simulations:
   categories: [Cardiovascular, Bio-locomotion, FSI methods]

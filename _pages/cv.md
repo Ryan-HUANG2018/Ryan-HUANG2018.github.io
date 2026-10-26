@@ -16,7 +16,7 @@ Dedicated to advancing the frontiers of Mechanical and Biomedical Engineering th
 
 Currently, I am a Visiting Fellow in the Cardiovascular Technology Laboratory at the [Centre for Biomedical Technologies](https://research.qut.edu.au/cbt/), [Queensland University of Technology](https://www.qut.edu.au/) (QUT), where I apply advanced computational modelling techniques to interdisciplinary biomedical research.
 
-Prior to this role, from 2021 to 2023, I worked as a Research Associate in Aerospace Engineering at the [University of New South Wales](https://www.unsw.edu.au/) (UNSW). During this period, I leveraged my expertise in fluid-structure interaction (FSI) solvers to investigate aerodynamic mechanisms in insect flight and the design of flapping-wing micro air vehicles, bridging theoretical modelling with applied aerospace engineering.
+From 2023 to 2025, I was a Research Fellow in the School of Mechanical, Medical and Process Engineering at QUT. Before that, from 2021 to 2023, I worked as a Research Associate in Aerospace Engineering at the [University of New South Wales](https://www.unsw.edu.au/) (UNSW). During this period, I leveraged my expertise in fluid-structure interaction (FSI) solvers to investigate aerodynamic mechanisms in insect flight and the design of flapping-wing micro air vehicles, bridging theoretical modelling with applied aerospace engineering.
 
 I completed my PhD in Mechanical Engineering at UNSW in 2021, focusing on the development of cutting-edge FSI solvers for biological applications. My doctoral research addressed critical challenges in modelling complex biological systems, such as cardiovascular fluid dynamics and biomechanical interactions, through the creation of high-fidelity computational frameworks.
 

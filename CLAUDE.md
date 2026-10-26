@@ -25,6 +25,8 @@
 
 - 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
 - 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
+- 首屏下方有学术指标面板（`_pages/about.md` 的 `impact`）：数字必须带快照日期和来源；快照超过 3 个月时提醒用户更新。Journal papers 只计研究论文（不含社论）。
+- 未确认的内容一律写成 `[占位]`，网页上不显示；整块没有内容就整块隐藏。不要编造论文、数据或经历。
 
 ## 工作方式
 

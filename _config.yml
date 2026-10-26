@@ -6,17 +6,17 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Qiuxiang
 middle_name: (Ryan)
 last_name: Huang
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Qiuxiang (Ryan) Huang — computational fluid dynamics: fluid–structure interaction, lattice Boltzmann and
+  immersed boundary methods, and cardiovascular and biological flows.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Qiuxiang Huang, computational fluid dynamics, fluid-structure interaction, lattice Boltzmann method, immersed boundary method, cardiovascular haemodynamics
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # glowing accent square, as in the nav logo (file in /assets/img/)
 
 url: https://Ryan-HUANG2018.github.io # the base hostname & protocol for your site
 baseurl:
@@ -63,9 +63,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://Ryan-HUANG2018.github.io/assets/video/mechanical-heart-valve/mhv.jpg # link preview image (full URL)
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -202,6 +202,20 @@ exclude:
   - requirements.txt
   - _posts/ # al-folio demo blog, not published (restore by removing this line)
   - _books/ # al-folio demo book list, not published
+  # al-folio demo assets (kept in the repo, not published)
+  - assets/img/[0-9]*.jpg
+  - assets/img/book_covers/
+  - assets/img/prof_pic.jpg
+  - assets/img/prof_pic_color.png
+  - assets/img/publication_preview/
+  - assets/img/template_error.png
+  - assets/video/tutorial_al_folio.mp4
+  - assets/video/pexels-*.mp4
+  - assets/html/
+  - assets/pdf/example_pdf.pdf
+  - assets/audio/
+  - assets/jupyter/
+  - assets/plotly/
 keep_files:
   - CNAME
   - .nojekyll
@@ -361,7 +375,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # off: it ignores `exclude` and published WebP copies of the demo images; figure.liquid falls back to the original image
   widths:
     - 480
     - 800

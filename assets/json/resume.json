@@ -2,7 +2,6 @@
   "basics": {
     "name": "Qiuxiang (Ryan) Huang",
     "label": "Visiting Fellow, Queensland University of Technology",
-    "url": "https://Ryan-HUANG2018.github.io",
     "summary": "Computational fluid dynamics — fluid–structure interaction, lattice Boltzmann and immersed boundary methods, and cardiovascular and biological flows.",
     "location": { "city": "Brisbane", "region": "QLD", "countryCode": "AU" }
   },

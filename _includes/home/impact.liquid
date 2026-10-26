@@ -1,0 +1,25 @@
+{% comment %} Academic impact snapshot (page.impact in _pages/about.md); [placeholders] are not shown. {% endcomment %}
+{% assign impact = page.impact %}
+{% capture metrics_html %}
+  {%- for m in impact.metrics -%}
+    {%- unless m.value contains '[' or m.value == blank -%}
+      <div class="rh-impact-metric">
+        <div class="rh-param-label">{{ m.label | upcase }}</div>
+        <div class="rh-impact-value">{{ m.value }}</div>
+        {%- if m.note %}<div class="rh-impact-note">{{ m.note }}</div>{% endif -%}
+      </div>
+    {%- endunless -%}
+  {%- endfor -%}
+{% endcapture %}
+{% if metrics_html != blank %}
+  <section class="rh-impact rh-mono" aria-label="Research impact">
+    <div class="rh-impact-head">
+      <span>IMPACT</span>
+      <span>
+        {%- if impact.url %}<a href="{{ impact.url }}">{{ impact.source }}</a>{% else %}{{ impact.source }}{% endif %}
+        · snapshot {{ impact.snapshot | date: '%Y-%m-%d' -}}
+      </span>
+    </div>
+    <div class="rh-impact-grid">{{ metrics_html }}</div>
+  </section>
+{% endif %}
