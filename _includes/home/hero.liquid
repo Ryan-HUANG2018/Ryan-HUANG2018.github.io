@@ -45,15 +45,18 @@
         label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
       %}
     </div>
-    {% if hero.params %}
-      <div class="rh-params">
-        {% for p in hero.params %}
+    {% capture params_html %}
+      {%- for p in hero.params -%}
+        {%- unless p.value contains '[' -%}
           <div class="rh-param">
             <div class="rh-param-label">{{ p.label }}</div>
             <div class="rh-param-value">{{ p.value }}</div>
           </div>
-        {% endfor %}
-      </div>
+        {%- endunless -%}
+      {%- endfor -%}
+    {% endcapture %}
+    {% if params_html != blank %}
+      <div class="rh-params">{{ params_html }}</div>
     {% endif %}
   </figure>
 </section>

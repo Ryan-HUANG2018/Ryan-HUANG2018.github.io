@@ -14,15 +14,15 @@
   <div class="rh-news">
     {% if featured %}
       <a class="rh-card rh-news-featured" href="{% if featured.inline %}{{ '/news/' | relative_url }}{% else %}{{ featured.url | relative_url }}{% endif %}">
-        <div class="rh-card-media">
-          {% if featured.video %}
-            {% include sim_media.liquid src=featured.video %}
-          {% elsif featured.image %}
-            <img class="rh-media-video" src="{{ featured.image | relative_url }}" alt="" loading="lazy">
-          {% else %}
-            {% include sim_media.liquid variant='card' label='[FEATURED IMAGE / CLIP]' %}
-          {% endif %}
-        </div>
+        {% if featured.video or featured.image %}
+          <div class="rh-card-media">
+            {% if featured.video %}
+              {% include sim_media.liquid src=featured.video %}
+            {% else %}
+              <img class="rh-media-video" src="{{ featured.image | relative_url }}" alt="" loading="lazy">
+            {% endif %}
+          </div>
+        {% endif %}
         <div class="rh-card-body">
           <div class="rh-news-meta">
             <span class="rh-tag rh-tag-solid">{% if featured.url == news.first.url %}LATEST{% else %}FEATURED{% endif %}</span>

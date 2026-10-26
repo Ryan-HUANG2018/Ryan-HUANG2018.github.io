@@ -2,7 +2,7 @@
   Simulation media: a looping video when `src` is set, otherwise the
   streamline placeholder from the design mock-ups.
   Params: src (webm), mp4 (fallback), poster, label (placeholder text),
-  variant (hero | card), hover (true = play on hover instead of autoplay).
+  variant (hero | card | player), hover (true = play on hover instead of autoplay).
 {% endcomment %}
 {% if include.src and include.src != blank %}
   <video
@@ -20,7 +20,7 @@
       poster="{{ include.poster | relative_url }}"
     {% endif %}
   >
-    <source src="{{ include.src | relative_url }}" type="video/webm">
+    <source src="{{ include.src | relative_url }}" type="{% if include.src contains '.mp4' %}video/mp4{% else %}video/webm{% endif %}">
     {% if include.mp4 and include.mp4 != blank %}
       <source src="{{ include.mp4 | relative_url }}" type="video/mp4">
     {% endif %}
@@ -38,6 +38,18 @@
         <path d="M0 280 C120 280 160 300 220 306 S360 290 600 296"></path>
       </g>
       <circle class="rh-flow-body" cx="150" cy="170" r="34"></circle>
+    </svg>
+  {% elsif include.variant == 'player' %}
+    <svg class="rh-flow" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-opacity=".7">
+        <path d="M0 70 C240 70 320 100 440 110 S760 80 1200 76"></path>
+        <path d="M0 140 C260 140 330 180 450 186 S780 150 1200 154"></path>
+        <path d="M0 210 C240 210 300 250 380 252 C480 254 520 200 640 212 S920 250 1200 236"></path>
+        <path d="M0 280 C220 280 280 330 400 334 C520 338 560 280 680 288 S960 330 1200 316"></path>
+        <path d="M0 350 C240 350 300 390 420 396 C540 400 580 350 700 358 S960 396 1200 386"></path>
+        <path d="M0 420 C260 420 340 450 460 456 S760 430 1200 436"></path>
+      </g>
+      <circle class="rh-flow-body" cx="300" cy="260" r="56"></circle>
     </svg>
   {% elsif include.variant == 'card' %}
     <svg class="rh-flow rh-flow-static" viewBox="0 0 340 200" preserveAspectRatio="none" aria-hidden="true">

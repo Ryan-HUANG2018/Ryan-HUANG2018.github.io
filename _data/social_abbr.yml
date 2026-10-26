@@ -31,6 +31,11 @@
   name: X
   url: https://x.com/%s
   handle: "@%s"
+- key: youtube_id
+  abbr: YT
+  name: YouTube
+  url: https://www.youtube.com/@%s
+  handle: "@%s"
 - key: email
   abbr: "@"
   name: Email

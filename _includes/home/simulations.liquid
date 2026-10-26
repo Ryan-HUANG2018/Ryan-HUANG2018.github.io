@@ -19,16 +19,18 @@
     >
       <div class="rh-card-media">
         {% if sim.thumbnail %}
-          {% include sim_media.liquid src=sim.thumbnail hover=true %}
+          {% include sim_media.liquid src=sim.thumbnail poster=sim.thumbnail_poster hover=true %}
           {% assign media_kind = 'ANIMATION' %}
         {% elsif sim.img %}
           <img class="rh-media-video" src="{{ sim.img | relative_url }}" alt="" loading="lazy">
           {% assign media_kind = 'STILL' %}
         {% else %}
           {% include sim_media.liquid variant='card' %}
-          {% assign media_kind = '[ANIMATION]' %}
+          {% assign media_kind = nil %}
         {% endif %}
-        <div class="rh-card-badge">▶ {{ media_kind }}</div>
+        {% if media_kind %}
+          <div class="rh-card-badge">▶ {{ media_kind }}</div>
+        {% endif %}
         <div class="rh-card-id">SIM-{{ sim_num }}</div>
       </div>
       <div class="rh-card-body">

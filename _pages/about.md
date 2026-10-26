@@ -12,19 +12,15 @@ hero:
     Visiting Fellow in the Cardiovascular Technology Laboratory, Centre for Biomedical Technologies, Queensland University of Technology (QUT).
     I develop high-fidelity fluid–structure interaction solvers and use them to study cardiovascular flows,
     insect flight and flapping-wing micro air vehicles.
-  viewport: VORTICITY |ω|
-  video: # e.g. assets/video/hero/vorticity.webm (autoplay loop)
-  video_mp4: # optional H.264 fallback
-  poster: # optional first-frame image
-  params:
-    - { label: Re, value: "[3.9e3]" }
-    - { label: MODEL, value: "[LES]" }
-    - { label: SOLVER, value: "[OpenFOAM]" }
-    - { label: CELLS, value: "[12.4M]" }
+  viewport: VORTICITY · MECHANICAL HEART VALVE
+  video: assets/video/mechanical-heart-valve/mhv.webm # autoplay loop
+  video_mp4: assets/video/mechanical-heart-valve/MHV.mp4
+  poster: assets/video/mechanical-heart-valve/mhv.jpg
+  params: # up to 4 cells under the viewport, e.g. - { label: Re, value: "3,900" }; [placeholders] are hidden
 
 # Filter chips above the simulation cards; each matches a project's `category`.
 simulations:
-  categories: [Cardiovascular, "Insect & flapping flight", FSI methods]
+  categories: [Cardiovascular, Bio-locomotion, FSI methods]
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 

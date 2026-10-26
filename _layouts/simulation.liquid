@@ -1,0 +1,178 @@
+---
+layout: default
+---
+{% comment %}
+  Simulation project page (docs/redesign/REDESIGN.md §3, docs/redesign/Project.dc.html).
+  Front matter:
+    params:        2–4 cards, - { label: Reynolds number, value: "250–800" }
+    Values written as [placeholders] (tags, params) and empty sections are not shown.
+    variant_label: optional caption prefix, e.g. "case", "view"; the bar is hidden for a single variant
+    variants:      one video per variant, - { name: Re 250, src: ...webm, mp4: ..., poster: ..., min: ..., max: ... }
+    colorbar:      optional { label: ..., min: ..., max: ..., map: jet }; a variant's min/max override it
+    media_aspect:  optional player aspect ratio, e.g. "4 / 1" (default: fixed height)
+    t_end:         non-dimensional end time t* of the videos
+    links:         { paper: ..., code: ..., video: ... }
+{% endcomment %}
+{% assign sims = site.projects | sort: 'importance' %}
+{% for sim in sims %}
+  {% if sim.url == page.url %}{% assign sim_index = forloop.index %}{% endif %}
+{% endfor %}
+{% assign variants = page.variants %}
+{% assign first_variant = variants | first %}
+{% assign colorbar = page.colorbar %}
+{% assign links = page.links %}
+
+<nav class="rh-sim-topbar rh-mono">
+  <a href="{{ '/#sims' | relative_url }}">← back to simulations</a>
+  <span>SIM-{{ sim_index | prepend: '0' | slice: -2, 2 }} / {{ sims.size | prepend: '0' | slice: -2, 2 }}</span>
+</nav>
+
+<div class="rh-sim">
+  <header class="rh-sim-head">
+    {% comment %} Unconfirmed values are written as [placeholders] and never shown. {% endcomment %}
+    {% capture tags_html %}
+      {%- assign shown = 0 -%}
+      {%- for tag in page.tags -%}
+        {%- unless tag contains '[' -%}
+          <span class="rh-tag{% if shown == 0 %} rh-tag-accent{% endif %}">{{ tag }}</span>
+          {%- assign shown = shown | plus: 1 -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {% endcapture %}
+    {% if tags_html != blank %}
+      <div class="rh-tags">{{ tags_html }}</div>
+    {% endif %}
+    <h1 class="rh-sim-title">{{ page.title }}</h1>
+    <p class="rh-sim-summary">{{ page.summary | default: page.description }}</p>
+  </header>
+
+  {% if variants %}
+    {% assign show_name = true %}
+    {% if first_variant.name == blank or first_variant.name contains '[' %}{% assign show_name = false %}{% endif %}
+    <figure class="rh-player" data-rh-player data-t-end="{{ page.t_end }}">
+      {% if variants.size > 1 or show_name %}
+        <div class="rh-player-bar rh-mono">
+          {% if variants.size > 1 %}
+            <div class="rh-player-variants" role="group" aria-label="{{ page.variant_label | default: 'variant' }}">
+              {% for v in variants %}
+                {% assign v_min = v.min | default: colorbar.min %}
+                {% assign v_max = v.max | default: colorbar.max %}
+                <button
+                  type="button"
+                  class="rh-variant{% if forloop.first %} is-active{% endif %}"
+                  aria-pressed="{{ forloop.first }}"
+                  data-name="{{ v.name }}"
+                  data-src="{{ v.src | relative_url }}"
+                  {% if v.mp4 %}
+                    data-mp4="{{ v.mp4 | relative_url }}"
+                  {% endif %}
+                  {% if v.poster %}
+                    data-poster="{{ v.poster | relative_url }}"
+                  {% endif %}
+                  {% if v_min %}
+                    data-min="{{ v_min }}"
+                  {% endif %}
+                  {% if v_max %}
+                    data-max="{{ v_max }}"
+                  {% endif %}
+                >
+                  {{ v.name }}
+                </button>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if show_name %}
+            <span class="rh-player-caption">
+              {%- if page.variant_label %}{{ page.variant_label }}: {% endif -%}
+              <span data-rh-variant-name>{{ first_variant.name }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div
+        class="rh-player-media{% if page.media_aspect %} has-aspect{% endif %}"
+        {% if page.media_aspect %}
+          style="aspect-ratio: {{ page.media_aspect }}"
+        {% endif %}
+      >
+        {% include sim_media.liquid src=first_variant.src mp4=first_variant.mp4 poster=first_variant.poster %}
+        {% if colorbar %}
+          <div class="rh-colorbar rh-mono" aria-hidden="true">
+            {% if colorbar.label %}<span class="rh-colorbar-label">{{ colorbar.label }}</span>{% endif %}
+            <span data-rh-min>{{ first_variant.min | default: colorbar.min }}</span>
+            <span class="rh-colorbar-ramp{% if colorbar.map %} rh-map-{{ colorbar.map }}{% endif %}"></span>
+            <span data-rh-max>{{ first_variant.max | default: colorbar.max }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="rh-player-controls rh-mono">
+        <button type="button" class="rh-play" aria-label="Play or pause" data-rh-play>
+          <svg class="rh-icon-play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path d="M3 2 L12 7 L3 12 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+          </svg>
+          <svg class="rh-icon-pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path d="M4 2 V12 M10 2 V12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="rh-progress" data-rh-seek><div class="rh-progress-fill" data-rh-progress></div></div>
+        {% if page.t_end %}
+          <span>t* = <span data-rh-time>0.00</span> / {{ page.t_end }}</span>
+        {% endif %}
+      </div>
+    </figure>
+  {% endif %}
+
+  {% capture params_html %}
+    {%- for p in page.params -%}
+      {%- unless p.value contains '[' or p.label contains '[' -%}
+        <div class="rh-sim-param">
+          <div class="rh-param-label">{{ p.label | upcase }}</div>
+          <div class="rh-sim-param-value">{{ p.value }}</div>
+        </div>
+      {%- endunless -%}
+    {%- endfor -%}
+  {% endcapture %}
+  {% if params_html != blank %}
+    <section class="rh-sim-params rh-mono">{{ params_html }}</section>
+  {% endif %}
+
+  {% capture resources_html %}
+    {%- assign resources = 'paper:Related paper,code:Case files on GitHub,video:Full-res video' | split: ',' -%}
+    {%- for resource in resources -%}
+      {%- assign key = resource | split: ':' | first -%}
+      {%- assign label = resource | split: ':' | last -%}
+      {%- assign href = links[key] -%}
+      {%- if href -%}
+        <a class="rh-resource" href="{{ href }}">{{ label }} <span class="rh-accent">↗</span></a>
+      {%- endif -%}
+    {%- endfor -%}
+  {% endcapture %}
+
+  <section class="rh-sim-main">
+    {% if content != blank or page.related_publications %}
+      <div class="rh-sim-content">
+        {{ content }}
+
+        {% if page.related_publications %}
+          <h2 class="rh-sim-refs">References</h2>
+          <div class="publications">
+            {% bibliography --cited_in_order %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if resources_html != blank %}
+      <aside class="rh-sim-aside rh-mono">
+        <div class="rh-param-label">RESOURCES</div>
+        {{ resources_html }}
+      </aside>
+    {% endif %}
+  </section>
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>

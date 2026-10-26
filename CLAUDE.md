@@ -19,10 +19,11 @@
 
 - 用户的个人资料在 `C:\Users\huangq20\OneDrive - Queensland University of Technology\AIDataBase\ai-profile`。需要真实内容（简介、新闻、账号、论文等）时从这里找。
 - **只读**：不要修改、移动或删除那个文件夹里的任何文件。从中整理的内容先列给用户确认，再写进本仓库。
+- 仿真视频原片在 `C:\Users\huangq20\OneDrive - Queensland University of Technology\QUTLaptop\Personal_website\video`，同样**只读**。用法：复制到 `assets/video/<项目名>/`，再用 `jrottenberg/ffmpeg:6.1-ubuntu` 镜像（不要往网站容器里装 ffmpeg）生成 VP9 `.webm`、视频 40% 处的 poster，以及按卡片比例（约 1.9:1）裁好的 8 秒 `preview.webm`/`preview.jpg`。原 `.mp4` 保留作 H.264 后备。
 
 ## 已确认的规格调整（优先于 REDESIGN.md）
 
-- 01 Simulations 的筛选分类是 **Cardiovascular / Insect & flapping flight / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
+- 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
 - 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
 
 ## 工作方式
