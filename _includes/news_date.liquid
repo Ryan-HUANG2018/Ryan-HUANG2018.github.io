@@ -1,0 +1,6 @@
+{% comment %} News dates show the month; items with `date_precision: year` show only the year. {% endcomment %}
+{%- if include.item.date_precision == 'year' -%}
+  {{- include.item.date | date: '%Y' -}}
+{%- else -%}
+  {{- include.item.date | date: '%Y-%m' -}}
+{%- endif -%}

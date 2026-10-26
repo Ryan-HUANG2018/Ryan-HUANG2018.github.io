@@ -1,0 +1,28 @@
+{% comment %}
+  One news row: category tag, date, text. Inline items have no page of their own;
+  `link` sends the row to an external page instead of the news page.
+{% endcomment %}
+{% assign item = include.item %}
+{% if item.link %}
+  <a class="rh-news-item" href="{{ item.link }}">
+{% elsif item.inline %}
+  <div class="rh-news-item">
+{% else %}
+  <a class="rh-news-item" href="{{ item.url | relative_url }}">
+{% endif %}
+<div class="rh-news-meta">
+  {% if item.category %}<span class="rh-tag">{{ item.category }}</span>{% endif %}
+  <span>{% include news_date.liquid item=item %}</span>
+</div>
+<span class="rh-news-text">
+  {%- if item.inline -%}
+    {{ item.content | remove: '<p>' | remove: '</p>' | strip | emojify }}
+  {%- else -%}
+    {{ item.title }}
+  {%- endif -%}
+</span>
+{% if item.inline and item.link == nil %}
+  </div>
+{% else %}
+  </a>
+{% endif %}

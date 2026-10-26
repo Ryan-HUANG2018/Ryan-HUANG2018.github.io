@@ -1,0 +1,49 @@
+{% assign sims = site.projects | sort: 'importance' %}
+<div class="rh-section-head">
+  {% include section_title.liquid num='01' title='Simulations' %}
+  <div class="rh-filters" role="group" aria-label="Filter simulations by category">
+    <button type="button" class="rh-chip is-active" data-rh-filter="all" aria-pressed="true">All</button>
+    {% for category in page.simulations.categories %}
+      <button type="button" class="rh-chip" data-rh-filter="{{ category | slugify }}" aria-pressed="false">{{ category }}</button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="rh-grid">
+  {% for sim in sims %}
+    {% assign sim_num = forloop.index | prepend: '0' | slice: -2, 2 %}
+    <a
+      class="rh-card rh-sim-card"
+      href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
+      data-rh-category="{{ sim.category | slugify }}"
+    >
+      <div class="rh-card-media">
+        {% if sim.thumbnail %}
+          {% include sim_media.liquid src=sim.thumbnail poster=sim.thumbnail_poster hover=true %}
+          {% assign media_kind = 'ANIMATION' %}
+        {% elsif sim.img %}
+          <img class="rh-media-video" src="{{ sim.img | relative_url }}" alt="" loading="lazy">
+          {% assign media_kind = 'STILL' %}
+        {% else %}
+          {% include sim_media.liquid variant='card' %}
+          {% assign media_kind = nil %}
+        {% endif %}
+        {% if media_kind %}
+          <div class="rh-card-badge">▶ {{ media_kind }}</div>
+        {% endif %}
+        <div class="rh-card-id">SIM-{{ sim_num }}</div>
+      </div>
+      <div class="rh-card-body">
+        <h3 class="rh-card-title">{{ sim.title }}</h3>
+        <p class="rh-card-text">{{ sim.description }}</p>
+        {% if sim.tags %}
+          <div class="rh-tags">
+            {% for tag in sim.tags %}
+              <span class="rh-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </a>
+  {% endfor %}
+</div>

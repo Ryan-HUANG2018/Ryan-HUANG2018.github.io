@@ -1,0 +1,43 @@
+# 04 Connect grid (docs/redesign/REDESIGN.md §2.6): which _data/socials.yml keys are shown, in order.
+# Platforms use monospace letter tiles instead of official logos.
+# In url and handle, %s is replaced by the value from socials.yml; keys left empty there are skipped.
+- key: github_username
+  abbr: GH
+  name: GitHub
+  url: https://github.com/%s
+  handle: "@%s"
+- key: scholar_userid
+  abbr: GS
+  name: Google Scholar
+  url: https://scholar.google.com/citations?user=%s
+  handle: scholar.google.com
+- key: research_gate_profile
+  abbr: RG
+  name: ResearchGate
+  url: https://www.researchgate.net/profile/%s/
+  handle: "%s"
+- key: linkedin_username
+  abbr: in
+  name: LinkedIn
+  url: https://www.linkedin.com/in/%s
+  handle: /in/%s
+- key: bluesky_url
+  abbr: bs
+  name: Bluesky
+  url: "%s"
+  handle: "%s"
+- key: x_username
+  abbr: X
+  name: X
+  url: https://x.com/%s
+  handle: "@%s"
+- key: youtube_id
+  abbr: YT
+  name: YouTube
+  url: https://www.youtube.com/@%s
+  handle: "@%s"
+- key: email
+  abbr: "@"
+  name: Email
+  url: mailto:%s
+  handle: # the address is not shown in plain text on the page

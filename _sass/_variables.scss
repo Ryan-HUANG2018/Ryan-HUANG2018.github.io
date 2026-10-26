@@ -50,3 +50,22 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// Redesign palette (docs/redesign/REDESIGN.md §1)
+$rh-bg: #06080c;
+$rh-grid-line: rgba(127, 240, 228, 0.045);
+$rh-card: #0a0f15;
+$rh-media: #0d141c;
+$rh-border: #1e2c38;
+$rh-divider: #16202a;
+$rh-border-soft: #2a3946;
+$rh-accent: #3fe0d0;
+$rh-link: #7ff0e4;
+$rh-link-hover: #c9fff8;
+$rh-text: #e8f1f5;
+$rh-text-body: #c3cfd8;
+$rh-text-body-2: #a9b7c2;
+$rh-text-muted: #8a9ba8;
+$rh-status: #5be38a;
+$rh-font-sans: "Space Grotesk", system-ui, sans-serif;
+$rh-font-mono: "JetBrains Mono", ui-monospace, monospace;

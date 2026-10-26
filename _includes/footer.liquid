@@ -1,30 +1,25 @@
-{% capture footer_contents %}
-  &copy; Copyright {{ site.time | date: '%Y' }}
-  {{ site.first_name }}
-  {{ site.middle_name }}
-  {{ site.last_name }}. {{ site.footer_text }}
-  {% if site.impressum_path %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+<footer class="rh-footer" role="contentinfo">
+  {% if site.newsletter.enabled %}
+    {% include newsletter.liquid %}
   {% endif %}
-  {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
-  {% endif %}
-{% endcapture %}
 
-{% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo">
-    <div class="container mt-0">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
-    {% if site.newsletter.enabled %}
-      {% include newsletter.liquid %}
-    {% endif %}
-
-    <div class="container">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% endif %}
+  <div class="rh-container">
+    <span>
+      &copy; {{ site.time | date: '%Y' }}
+      {% include rh_name.liquid %}
+      · built with Jekyll
+      {% if site.impressum_path %}
+        · <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>
+      {% endif %}
+    </span>
+    <span>
+      t = {{ site.time | date: '%Y-%m-%d %H:%M' }} · residuals converged ✓ ·
+      {% if site.goatcounter_code %}
+        <span data-rh-visits="https://{{ site.goatcounter_code }}.goatcounter.com/counter/TOTAL.json" hidden>
+          visits = <span data-rh-visits-count></span> ·
+        </span>
+      {% endif %}
+      <a href="https://github.com/alshedivat/al-folio">theme based on al-folio</a>
+    </span>
+  </div>
+</footer>

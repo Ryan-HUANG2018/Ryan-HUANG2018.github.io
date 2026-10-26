@@ -1,0 +1,48 @@
+{% assign teraviq = page.connect.teraviq %}
+{% include section_title.liquid num='04' title='Connect' %}
+
+{% if teraviq %}
+  <a class="rh-card rh-teraviq" href="{{ teraviq.url }}">
+    <div class="rh-teraviq-main">
+      <div class="rh-teraviq-icon" aria-hidden="true">Tq</div>
+      <div class="rh-teraviq-text">
+        <div class="rh-teraviq-kicker">
+          <span>{{ teraviq.role }}</span>
+          <span class="rh-pill"><span class="rh-pill-dot rh-pulse" aria-hidden="true"></span>{{ teraviq.status }}</span>
+        </div>
+        <div class="rh-teraviq-title">
+          <span class="rh-teraviq-name">Teraviq</span>
+          <span class="rh-teraviq-tagline">{{ teraviq.tagline }}</span>
+        </div>
+        <div class="rh-teraviq-blurb">{{ teraviq.blurb }}</div>
+      </div>
+    </div>
+    <span class="rh-btn rh-btn-solid">{{ teraviq.url | remove: 'https://' | remove: 'www.' | remove: '/' }} ↗</span>
+  </a>
+{% endif %}
+
+<div class="rh-socials">
+  {% for platform in site.data.social_abbr %}
+    {% assign value = site.data.socials[platform.key] %}
+    {% if value == blank %}{% continue %}{% endif %}
+    {% if platform.key == 'email' %}
+      {% assign href = value | encode_email | prepend: 'mailto:' %}
+    {% else %}
+      {% assign href = platform.url | replace: '%s', value %}
+    {% endif %}
+    {% if platform.key == 'bluesky_url' %}
+      {% assign handle = value | remove: 'https://bsky.app/profile/' | prepend: '@' %}
+    {% else %}
+      {% assign handle = platform.handle | replace: '%s', value %}
+    {% endif %}
+    <a class="rh-card rh-social" href="{{ href }}">
+      <span class="rh-social-abbr" aria-hidden="true">{{ platform.abbr }}</span>
+      <span class="rh-social-text">
+        <span class="rh-social-name">{{ platform.name }}</span>
+        {% unless platform.key == 'email' %}
+          <span class="rh-social-handle">{{ handle }}</span>
+        {% endunless %}
+      </span>
+    </a>
+  {% endfor %}
+</div>
