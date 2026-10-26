@@ -17,9 +17,9 @@
 
 ## 个人资料来源
 
-- 用户的个人资料在 `C:\Users\huangq20\OneDrive - Queensland University of Technology\AIDataBase\ai-profile`。需要真实内容（简介、新闻、账号、论文等）时从这里找。
-- **只读**：不要修改、移动或删除那个文件夹里的任何文件。从中整理的内容先列给用户确认，再写进本仓库。
-- 仿真视频原片在 `C:\Users\huangq20\OneDrive - Queensland University of Technology\QUTLaptop\Personal_website\video`，同样**只读**。用法：复制到 `assets/video/<项目名>/`，再用 `jrottenberg/ffmpeg:6.1-ubuntu` 镜像（不要往网站容器里装 ffmpeg）生成 VP9 `.webm`、视频 40% 处的 poster，以及按卡片比例（约 1.9:1）裁好的 8 秒 `preview.webm`/`preview.jpg`。原 `.mp4` 保留作 H.264 后备。
+- 本机路径写在 `CLAUDE.local.md`（不提交，仓库是公开的）。
+- 用户的个人资料（ai-profile）：需要真实内容（简介、新闻、账号、论文等）时从这里找。**只读**：不要修改、移动或删除那个文件夹里的任何文件。从中整理的内容先列给用户确认，再写进本仓库。
+- 仿真视频原片文件夹同样**只读**。用法：复制到 `assets/video/<项目名>/`，再用 `jrottenberg/ffmpeg:6.1-ubuntu` 镜像（不要往网站容器里装 ffmpeg）生成 VP9 `.webm`、视频 40% 处的 poster，以及按卡片比例（约 1.9:1）裁好的 8 秒 `preview.webm`/`preview.jpg`。原 `.mp4` 保留作 H.264 后备。
 
 ## 已确认的规格调整（优先于 REDESIGN.md）
 

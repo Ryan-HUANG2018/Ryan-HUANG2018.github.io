@@ -125,13 +125,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+external_sources: [] # al-folio demo feeds removed: they published Medium/Google posts under /blog/
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -203,6 +197,11 @@ exclude:
   - _pages/dropdown.md
   - _pages/profiles.md
   - docs/redesign
+  - CLAUDE.md
+  - CLAUDE.local.md
+  - requirements.txt
+  - _posts/ # al-folio demo blog, not published (restore by removing this line)
+  - _books/ # al-folio demo book list, not published
 keep_files:
   - CNAME
   - .nojekyll
@@ -326,6 +325,7 @@ filtered_bibtex_keywords:
     google_scholar_id,
     html,
     inspirehep_id,
+    label,
     pdf,
     poster,
     preview,
@@ -650,8 +650,10 @@ jsonresume:
   - projects
   - volunteer
   - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
+
+# CV section headings for the JSON Resume keys above (default: the key, capitalised)
+jsonresume_titles:
+  basics: Profile
+  projects: Research funding
+  publications: Invited talks
+  volunteer: Teaching and service

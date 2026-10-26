@@ -1396,3 +1396,12 @@ a.rh-news-item:hover .rh-news-text {
 .rh-player-caption {
   margin-left: auto;
 }
+
+// Publication type tag (bib `label` field, e.g. Editorial)
+.rh-pub-label {
+  margin-right: 6px;
+  font-family: var(--rh-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  vertical-align: 2px;
+}

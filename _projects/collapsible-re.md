@@ -21,8 +21,7 @@ media_aspect: 4 / 1
 params:
   - { label: Reynolds number, value: "250–800" }
 links:
-  # DOI not yet known: search link for the exact title until it is added.
-  paper: https://scholar.google.com/scholar?q=%22Non-Newtonian+fluid%E2%80%93structure+interaction+in+three-dimensional+collapsible+tubes%22
+  paper: https://doi.org/10.1063/5.0315385
 ---
 
 ## Publication

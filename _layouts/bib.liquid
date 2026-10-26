@@ -6,7 +6,10 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="rh-pub-body">
     <!-- Title -->
-    <h3 class="title">{{ entry.title }}</h3>
+    <h3 class="title">
+      {%- if entry.label %}<span class="rh-tag rh-pub-label">{{ entry.label }}</span> {% endif -%}
+      {{ entry.title }}
+    </h3>
     <!-- Authors · venue -->
     <div class="rh-pub-meta">
     <span class="author">
