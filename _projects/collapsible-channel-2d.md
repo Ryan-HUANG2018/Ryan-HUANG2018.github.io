@@ -10,7 +10,12 @@ summary: >
 thumbnail: assets/video/collapsible-channel-2d/preview.webm
 thumbnail_poster: assets/video/collapsible-channel-2d/preview.jpg
 variants:
-  - { name: "[field?]", src: assets/video/collapsible-channel-2d/2d_collapsible.webm, mp4: assets/video/collapsible-channel-2d/2D_collapsible.mp4, poster: assets/video/collapsible-channel-2d/2d_collapsible.jpg }
+  - {
+      name: "[field?]",
+      src: assets/video/collapsible-channel-2d/2d_collapsible.webm,
+      mp4: assets/video/collapsible-channel-2d/2D_collapsible.mp4,
+      poster: assets/video/collapsible-channel-2d/2d_collapsible.jpg,
+    }
 media_aspect: 2 / 1
 params:
   - { label: Dimension, value: 2D }

@@ -13,7 +13,10 @@
 {% if news.size > 0 %}
   <div class="rh-news">
     {% if featured %}
-      <a class="rh-card rh-news-featured" href="{% if featured.link %}{{ featured.link }}{% elsif featured.inline %}{{ '/news/' | relative_url }}{% else %}{{ featured.url | relative_url }}{% endif %}">
+      <a
+        class="rh-card rh-news-featured"
+        href="{% if featured.link %}{{ featured.link }}{% elsif featured.inline %}{{ '/news/' | relative_url }}{% else %}{{ featured.url | relative_url }}{% endif %}"
+      >
         {% if featured.video or featured.image %}
           <div class="rh-card-media">
             {% if featured.video %}
@@ -30,7 +33,9 @@
         {% endif %}
         <div class="rh-card-body">
           <div class="rh-news-meta">
-            <span class="rh-tag rh-tag-solid">{% if featured.url == news.first.url %}LATEST{% else %}FEATURED{% endif %}</span>
+            <span class="rh-tag rh-tag-solid">
+              {%- if featured.url == news.first.url %}LATEST{% else %}FEATURED{% endif -%}
+            </span>
             <span>{% include news_date.liquid item=featured %}</span>
           </div>
           <h3 class="rh-news-headline">

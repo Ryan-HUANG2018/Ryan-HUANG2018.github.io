@@ -16,7 +16,11 @@
     <div class="rh-impact-head">
       <span>IMPACT</span>
       <span>
-        {%- if impact.url %}<a href="{{ impact.url }}">{{ impact.source }}</a>{% else %}{{ impact.source }}{% endif %}
+        {%- if impact.url -%}
+          <a href="{{ impact.url }}">{{ impact.source }}</a>
+        {%- else -%}
+          {{- impact.source -}}
+        {%- endif %}
         · snapshot {{ impact.snapshot | date: '%Y-%m-%d' -}}
       </span>
     </div>

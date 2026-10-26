@@ -26,7 +26,7 @@
           {% assign media_kind = 'STILL' %}
         {% else %}
           {% include sim_media.liquid variant='card' %}
-          {% assign media_kind = nil %}
+          {% assign media_kind = null %}
         {% endif %}
         {% if media_kind %}
           <div class="rh-card-badge">▶ {{ media_kind }}</div>

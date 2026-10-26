@@ -10,7 +10,12 @@ summary: >
 thumbnail: assets/video/mechanical-heart-valve/preview.webm
 thumbnail_poster: assets/video/mechanical-heart-valve/preview.jpg
 variants:
-  - { name: Vorticity, src: assets/video/mechanical-heart-valve/mhv.webm, mp4: assets/video/mechanical-heart-valve/MHV.mp4, poster: assets/video/mechanical-heart-valve/mhv.jpg }
+  - {
+      name: Vorticity,
+      src: assets/video/mechanical-heart-valve/mhv.webm,
+      mp4: assets/video/mechanical-heart-valve/MHV.mp4,
+      poster: assets/video/mechanical-heart-valve/mhv.jpg,
+    }
 media_aspect: 1000 / 332
 params:
   - { label: Dimension, value: 2D }

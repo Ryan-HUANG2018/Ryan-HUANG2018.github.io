@@ -29,8 +29,7 @@
 
 body {
   background-color: var(--rh-bg);
-  background-image: linear-gradient(var(--rh-grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--rh-grid-line) 1px, transparent 1px);
+  background-image: linear-gradient(var(--rh-grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--rh-grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   color: var(--rh-text-body);
   font-family: var(--rh-font-sans);

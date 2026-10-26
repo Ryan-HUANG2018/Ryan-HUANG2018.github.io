@@ -99,7 +99,9 @@ layout: default
         {% include sim_media.liquid src=first_variant.src mp4=first_variant.mp4 poster=first_variant.poster %}
         {% if colorbar %}
           <div class="rh-colorbar rh-mono" aria-hidden="true">
-            {% if colorbar.label %}<span class="rh-colorbar-label">{{ colorbar.label }}</span>{% endif %}
+            {% if colorbar.label -%}
+              <span class="rh-colorbar-label">{{ colorbar.label }}</span>
+            {%- endif %}
             <span data-rh-min>{{ first_variant.min | default: colorbar.min }}</span>
             <span class="rh-colorbar-ramp{% if colorbar.map %} rh-map-{{ colorbar.map }}{% endif %}"></span>
             <span data-rh-max>{{ first_variant.max | default: colorbar.max }}</span>

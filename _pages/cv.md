@@ -10,7 +10,7 @@ toc:
   sidebar: left
 ---
 
-Experienced academic and researcher with over 10 years of expertise in Mechanical and Biomedical Engineering, specialising in computational fluid dynamics, fluid-structure interaction, and AI-driven modelling for biomedical, aerospace, and energy applications. 
+Experienced academic and researcher with over 10 years of expertise in Mechanical and Biomedical Engineering, specialising in computational fluid dynamics, fluid-structure interaction, and AI-driven modelling for biomedical, aerospace, and energy applications.
 
 Dedicated to advancing the frontiers of Mechanical and Biomedical Engineering through innovative research and education, including curriculum development, graduate supervision, and collaborative research initiatives. Maintains an increasing emphasis on translating cutting-edge technologies into practical applications, particularly in digital health (e.g., cardiovascular modelling, medical device design) and sustainable engineering (e.g., renewable energy systems, eco-friendly aerodynamics).
 
@@ -21,4 +21,3 @@ From 2023 to 2025, I was a Research Fellow in the School of Mechanical, Medical 
 I completed my PhD in Mechanical Engineering at UNSW in 2021, focusing on the development of cutting-edge FSI solvers for biological applications. My doctoral research addressed critical challenges in modelling complex biological systems, such as cardiovascular fluid dynamics and biomechanical interactions, through the creation of high-fidelity computational frameworks.
 
 Earlier, in 2013, I earned a Bachelor of Engineering in Mechanical Engineering from the Nanjing University of Aeronautics & Astronautics - one of China’s preeminent institutions in aerospace and mechanical engineering - where I established a foundational expertise in mechanical systems and engineering principles.
-

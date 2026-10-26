@@ -13,10 +13,30 @@ thumbnail: assets/video/collapsible-re/preview.webm
 thumbnail_poster: assets/video/collapsible-re/preview.jpg
 variant_label: case
 variants:
-  - { name: "Re = 250", src: assets/video/collapsible-re/re250.webm, mp4: assets/video/collapsible-re/Collapsible_Re250.mp4, poster: assets/video/collapsible-re/re250.jpg }
-  - { name: "Re = 550", src: assets/video/collapsible-re/re550.webm, mp4: assets/video/collapsible-re/Collapsible_Re550.mp4, poster: assets/video/collapsible-re/re550.jpg }
-  - { name: "Re = 650", src: assets/video/collapsible-re/re650.webm, mp4: assets/video/collapsible-re/Collapsible_Re650.mp4, poster: assets/video/collapsible-re/re650.jpg }
-  - { name: "Re = 800", src: assets/video/collapsible-re/re800.webm, mp4: assets/video/collapsible-re/Collapsible_Re800.mp4, poster: assets/video/collapsible-re/re800.jpg }
+  - {
+      name: "Re = 250",
+      src: assets/video/collapsible-re/re250.webm,
+      mp4: assets/video/collapsible-re/Collapsible_Re250.mp4,
+      poster: assets/video/collapsible-re/re250.jpg,
+    }
+  - {
+      name: "Re = 550",
+      src: assets/video/collapsible-re/re550.webm,
+      mp4: assets/video/collapsible-re/Collapsible_Re550.mp4,
+      poster: assets/video/collapsible-re/re550.jpg,
+    }
+  - {
+      name: "Re = 650",
+      src: assets/video/collapsible-re/re650.webm,
+      mp4: assets/video/collapsible-re/Collapsible_Re650.mp4,
+      poster: assets/video/collapsible-re/re650.jpg,
+    }
+  - {
+      name: "Re = 800",
+      src: assets/video/collapsible-re/re800.webm,
+      mp4: assets/video/collapsible-re/Collapsible_Re800.mp4,
+      poster: assets/video/collapsible-re/re800.jpg,
+    }
 media_aspect: 4 / 1
 params:
   - { label: Reynolds number, value: "250–800" }

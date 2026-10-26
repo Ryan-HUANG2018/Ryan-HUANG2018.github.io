@@ -11,7 +11,9 @@
   <a class="rh-news-item" href="{{ item.url | relative_url }}">
 {% endif %}
 <div class="rh-news-meta">
-  {% if item.category %}<span class="rh-tag">{{ item.category }}</span>{% endif %}
+  {% if item.category -%}
+    <span class="rh-tag">{{ item.category }}</span>
+  {%- endif %}
   <span>{% include news_date.liquid item=item %}</span>
 </div>
 <span class="rh-news-text">
@@ -21,7 +23,7 @@
     {{ item.title }}
   {%- endif -%}
 </span>
-{% if item.inline and item.link == nil %}
+{% if item.inline and item.link == null %}
   </div>
 {% else %}
   </a>

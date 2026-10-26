@@ -11,7 +11,12 @@ summary: >
 thumbnail: assets/video/coronary-pulse/preview.webm
 thumbnail_poster: assets/video/coronary-pulse/preview.jpg
 variants:
-  - { name: Outlet flow rates, src: assets/video/coronary-pulse/coronary_pulse.webm, mp4: assets/video/coronary-pulse/coronary_pulse.mp4, poster: assets/video/coronary-pulse/coronary_pulse.jpg }
+  - {
+      name: Outlet flow rates,
+      src: assets/video/coronary-pulse/coronary_pulse.webm,
+      mp4: assets/video/coronary-pulse/coronary_pulse.mp4,
+      poster: assets/video/coronary-pulse/coronary_pulse.jpg,
+    }
 media_aspect: 16 / 9
 params:
   - { label: Flow, value: Pulsatile }
