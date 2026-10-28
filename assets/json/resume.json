@@ -115,7 +115,11 @@
     { "title": "Third Prize, Presentation", "date": "2019-11", "awarder": "UNSW Canberra Research Day" },
     { "title": "APS Student Travel Grant", "date": "2019-09", "awarder": "American Physical Society" },
     { "title": "PhD Tuition Fee Scholarship with living allowance", "date": "2017-02", "awarder": "UNSW" },
-    { "title": "Master's tuition scholarship with living allowance", "date": "2013-09", "awarder": "Nanjing University of Aeronautics and Astronautics" }
+    {
+      "title": "Master's tuition scholarship with living allowance",
+      "date": "2013-09",
+      "awarder": "Nanjing University of Aeronautics and Astronautics"
+    }
   ],
   "publications": [
     { "name": "Sydney–Glasgow Ignition Symposium", "publisher": "University of Sydney", "releaseDate": "2024-01" },

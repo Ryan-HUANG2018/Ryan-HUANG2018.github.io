@@ -1,1 +1,5 @@
-{{ site.first_name }}{% if site.middle_name %} <span class="rh-name-mid">{{ site.middle_name }}</span>{% endif %} {{ site.last_name }}
+{{ site.first_name -}}
+{%- if site.middle_name %}
+  <span class="rh-name-mid">{{ site.middle_name }}</span>
+{%- endif %}
+{{ site.last_name }}

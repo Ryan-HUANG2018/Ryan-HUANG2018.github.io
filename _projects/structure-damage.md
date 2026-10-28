@@ -12,8 +12,18 @@ thumbnail: assets/video/structure-damage/preview.webm
 thumbnail_poster: assets/video/structure-damage/preview.jpg
 variant_label: case
 variants:
-  - { name: Plate perforation, src: assets/video/structure-damage/perforation.webm, mp4: assets/video/structure-damage/perforation.mp4, poster: assets/video/structure-damage/perforation.jpg }
-  - { name: Taylor impact, src: assets/video/structure-damage/taylor-impact.webm, mp4: assets/video/structure-damage/taylor-impact.mp4, poster: assets/video/structure-damage/taylor-impact.jpg }
+  - {
+      name: Plate perforation,
+      src: assets/video/structure-damage/perforation.webm,
+      mp4: assets/video/structure-damage/perforation.mp4,
+      poster: assets/video/structure-damage/perforation.jpg,
+    }
+  - {
+      name: Taylor impact,
+      src: assets/video/structure-damage/taylor-impact.webm,
+      mp4: assets/video/structure-damage/taylor-impact.mp4,
+      poster: assets/video/structure-damage/taylor-impact.jpg,
+    }
 media_aspect: 1270 / 336
 params:
   - { label: Method, value: MPM }
@@ -27,10 +37,10 @@ params:
 
 **Taylor impact test.** A rod with L₀ = 25.4 mm and D₀ = 7.6 mm strikes a rigid surface at v₀ = 190 m/s, using the Johnson–Cook constitutive model.
 
-| | L (mm) | D (mm) | W (mm) |
-|---|---|---|---|
-| Experiment | 16.2 | 13.5 | 10.1 |
-| MPM | 16.3 | 13.0 | 9.6 |
+|            | L (mm) | D (mm) | W (mm) |
+| ---------- | ------ | ------ | ------ |
+| Experiment | 16.2   | 13.5   | 10.1   |
+| MPM        | 16.3   | 13.0   | 9.6    |
 
 The overall error is 3.1%.
 

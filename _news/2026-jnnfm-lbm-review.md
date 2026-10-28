@@ -7,4 +7,4 @@ category: PAPER
 related_posts: false
 ---
 
-Co-authored review "Lattice Boltzmann methods for simulating non-Newtonian fluids: a comprehensive review", *J. Non-Newtonian Fluid Mech.* (2026).
+Co-authored review "Lattice Boltzmann methods for simulating non-Newtonian fluids: a comprehensive review", _J. Non-Newtonian Fluid Mech._ (2026).
