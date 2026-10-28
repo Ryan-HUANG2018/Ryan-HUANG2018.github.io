@@ -99,6 +99,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/structure-damage/";
             },},{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/ryan-huang.bsky.social", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
