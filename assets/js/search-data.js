@@ -43,24 +43,19 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/2026-10-teraviq-website/";
-            },},{id: "projects-adaptive-mesh-refinement-for-a-cylinder-and-an-aerofoil",
-          title: 'Adaptive mesh refinement for a cylinder and an aerofoil',
-          description: "Block-structured mesh refinement around a cylinder and a NACA0015 aerofoil, coloured by streamwise velocity.",
+            },},{id: "projects-adaptive-mesh-refinement-with-hash-tables",
+          title: 'Adaptive mesh refinement with hash tables',
+          description: "A block-structured Cartesian grid refines and coarsens as a cylinder and a flapping NACA0015 foil move through it, using a hash-table AMR framework coupled to the IB–LBM.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/amr/";
-            },},{id: "projects-two-sided-collapsible-channel",
-          title: 'Two-sided collapsible channel',
-          description: "Flow through a 2D channel with two compliant wall segments, and the vortex train downstream.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/collapsible-channel-2d/";
-            },},{id: "projects-collapsible-tube-flow-from-re-250-to-800",
-          title: 'Collapsible-tube flow from Re = 250 to 800',
-          description: "One collapsible geometry at four Reynolds numbers — how the jet through the collapsed segment and the downstream wake change.",
+            },},{id: "projects-transition-to-chaos-in-a-collapsible-channel",
+          title: 'Transition to chaos in a collapsible channel',
+          description: "A 2D channel with two elastic wall segments — depending on Re and the wall mass, the walls stay still or oscillate periodically, through period-doubling, quasi-periodically or chaotically.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/collapsible-re/";
-            },},{id: "projects-three-dimensional-collapsible-tube",
-          title: 'Three-dimensional collapsible tube',
-          description: "A compliant tube collapses under the flow; vortex structures form downstream of the collapsed section.",
+            },},{id: "projects-self-excited-oscillations-of-a-3d-collapsible-tube",
+          title: 'Self-excited oscillations of a 3D collapsible tube',
+          description: "A thin-walled elastic tube collapses into a two-lobed shape and oscillates, driven by vortex shedding downstream of the throat, in laminar and turbulent flow.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/collapsible-tube-3d/";
             },},{id: "projects-pulsatile-flow-in-a-coronary-artery-tree",
@@ -83,9 +78,9 @@ ninja.data = [{
           description: "Two standard fluid–structure interaction benchmarks, a 2D flexible filament and a 3D flapping flag, compared with published results.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fsi-benchmarks/";
-            },},{id: "projects-mechanical-heart-valve",
-          title: 'Mechanical heart valve',
-          description: "A valve leaflet in a channel with a sinus, and the vortices around it, shown by vorticity.",
+            },},{id: "projects-mechanical-heart-valve-leaflet-in-pulsatile-flow",
+          title: 'Mechanical heart valve leaflet in pulsatile flow',
+          description: "A rigid valve leaflet swings open and shut in pulsatile flow past an aortic sinus — validated against experiment, then applied to supravalvular aortic stenosis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mechanical-heart-valve/";
             },},{id: "projects-flow-past-a-naca0012-aerofoil",
@@ -93,9 +88,9 @@ ninja.data = [{
           description: "Two-dimensional flow past a NACA0012 aerofoil and the vortices shed into its wake.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/naca0012/";
-            },},{id: "projects-passively-flapping-wings",
-          title: 'Passively flapping wings',
-          description: "A flexible flapping wing with its lift coefficient over the flapping cycle and the surrounding vortex structures.",
+            },},{id: "projects-passively-pitching-flapping-wings-in-hover",
+          title: 'Passively pitching flapping wings in hover',
+          description: "An insect-like wing flaps on a prescribed stroke while a torsional spring at the hinge lets it pitch freely — wing shape and hinge stiffness set the lift and the power economy.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/passively-flapping-wings/";
             },},{id: "projects-structural-solver-verification",
