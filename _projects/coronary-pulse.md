@@ -2,7 +2,7 @@
 layout: simulation
 title: Pulsatile flow in a coronary artery tree
 description: Pulsatile flow rates at the outlets of the left and right coronary branches over successive cardiac cycles.
-importance: 3
+importance: 6
 category: Cardiovascular
 tags: ["3D", "Haemodynamics"]
 summary: >

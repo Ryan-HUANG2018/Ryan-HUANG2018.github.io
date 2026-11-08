@@ -2,7 +2,7 @@
 layout: simulation
 title: Self-excited oscillations of a 3D collapsible tube
 description: A thin-walled elastic tube collapses into a two-lobed shape and oscillates, driven by vortex shedding downstream of the throat, in laminar and turbulent flow.
-importance: 1
+importance: 2
 category: Cardiovascular
 tags: ["3D", "FSI", "Collapsible tube", "LES"]
 summary: >

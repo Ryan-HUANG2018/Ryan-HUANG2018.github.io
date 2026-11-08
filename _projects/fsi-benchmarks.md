@@ -2,7 +2,7 @@
 layout: simulation
 title: FSI benchmarks — flexible filament and flapping flag
 description: Two standard fluid–structure interaction benchmarks, a 2D flexible filament and a 3D flapping flag, compared with published results.
-importance: 12
+importance: 4
 category: FSI methods
 tags: ["2D", "3D", "FSI", "Verification"]
 summary: >

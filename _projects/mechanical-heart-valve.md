@@ -2,7 +2,7 @@
 layout: simulation
 title: Mechanical heart valve
 description: A valve leaflet in a channel with a sinus, and the vortices around it, shown by vorticity.
-importance: 4
+importance: 5
 category: Cardiovascular
 tags: ["2D", "FSI"]
 summary: >

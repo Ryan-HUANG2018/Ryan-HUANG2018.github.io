@@ -2,7 +2,7 @@
 layout: simulation
 title: Adaptive mesh refinement for a cylinder and an aerofoil
 description: Block-structured mesh refinement around a cylinder and a NACA0015 aerofoil, coloured by streamwise velocity.
-importance: 8
+importance: 9
 category: FSI methods
 tags: ["2D", "AMR"]
 summary: >

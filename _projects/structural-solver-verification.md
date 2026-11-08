@@ -2,7 +2,7 @@
 layout: simulation
 title: Structural solver verification
 description: Stand-alone tests of my in-house structural solvers, a large-deformation beam and explicit 3D finite elements, against published solutions.
-importance: 11
+importance: 3
 category: FSI methods
 tags: ["2D", "3D", "FEM", "Verification"]
 summary: >
