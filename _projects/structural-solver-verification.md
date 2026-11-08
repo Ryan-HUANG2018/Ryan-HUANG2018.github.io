@@ -53,7 +53,7 @@ Both structural solvers are my own. Each was tested on its own before being coup
 
 **Element choice.** For a thin-walled cantilever with one element through the thickness, 8-node bricks (C3D8) lock in shear, while 20-node bricks (C3D20 and C3D20R) match the analytical solution. This is why C3D20R elements are used for thin, flexible walls.
 
-**Buckling of a tube cross-section.** In plane strain, the post-buckling wall shapes at P = 4.75 and P = 5.247 agree with published data.
+**Buckling of a tube cross-section.** In plane strain, the post-buckling wall shapes at P = 4.75 and P = 5.247 agree with Kozlovsky et al. (2014).
 
 **Large-deformation beam.** Deformed shapes from 1 s to 15 s under a tip load, computed with three grid spacings, agree with Sugiyama et al. (2006).
 
@@ -67,12 +67,12 @@ Both structural solvers are my own. Each was tested on its own before being coup
     <figcaption class="caption">One element through the thickness: C3D8 locks in shear; C3D20 and C3D20R match the analytical solution.</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/structural-validation/buckling-p4p75.png' | relative_url }}" alt="Post-buckling shape of a tube cross-section at P = 4.75 compared with published data" loading="lazy">
-    <figcaption class="caption">Tube cross-section after buckling, P = 4.75 (line: present; circles: published data).</figcaption>
+    <img src="{{ '/assets/img/structural-validation/buckling-p4p75.png' | relative_url }}" alt="Post-buckling shape of a tube cross-section at P = 4.75 compared with Kozlovsky et al. (2014)" loading="lazy">
+    <figcaption class="caption">Tube cross-section after buckling, P = 4.75 (line: present; circles: Kozlovsky et al., 2014).</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/structural-validation/buckling-p5p247.png' | relative_url }}" alt="Post-buckling shape of a tube cross-section at P = 5.247 compared with published data" loading="lazy">
-    <figcaption class="caption">Tube cross-section after buckling, P = 5.247 (line: present; circles: published data).</figcaption>
+    <img src="{{ '/assets/img/structural-validation/buckling-p5p247.png' | relative_url }}" alt="Post-buckling shape of a tube cross-section at P = 5.247 compared with Kozlovsky et al. (2014)" loading="lazy">
+    <figcaption class="caption">Tube cross-section after buckling, P = 5.247 (line: present; circles: Kozlovsky et al., 2014).</figcaption>
   </figure>
   <figure>
     <img src="{{ '/assets/img/structural-validation/beam-shapes.png' | relative_url }}" alt="Deformed beam shapes from 1 s to 15 s for three grid spacings compared with Sugiyama et al. (2006)" loading="lazy">
