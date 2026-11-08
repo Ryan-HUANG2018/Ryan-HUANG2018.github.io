@@ -78,6 +78,11 @@ ninja.data = [{
           description: "An undulating swimmer and the vortices in its wake, shown by vorticity.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fish-swimming/";
+            },},{id: "projects-fsi-benchmarks-flexible-filament-and-flapping-flag",
+          title: 'FSI benchmarks — flexible filament and flapping flag',
+          description: "Two standard fluid–structure interaction benchmarks, a 2D flexible filament and a 3D flapping flag, compared with published results.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fsi-benchmarks/";
             },},{id: "projects-mechanical-heart-valve",
           title: 'Mechanical heart valve',
           description: "A valve leaflet in a channel with a sinus, and the vortices around it, shown by vorticity.",
@@ -93,6 +98,11 @@ ninja.data = [{
           description: "A flexible flapping wing with its lift coefficient over the flapping cycle and the surrounding vortex structures.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/passively-flapping-wings/";
+            },},{id: "projects-structural-solver-verification",
+          title: 'Structural solver verification',
+          description: "Stand-alone tests of my in-house structural solvers, a large-deformation beam and explicit 3D finite elements, against published solutions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/structural-solver-verification/";
             },},{id: "projects-impact-damage-plate-perforation-and-taylor-impact",
           title: 'Impact damage — plate perforation and Taylor impact',
           description: "Material point method (MPM) simulations of plate perforation and a Taylor impact test, each validated against experiment.",
