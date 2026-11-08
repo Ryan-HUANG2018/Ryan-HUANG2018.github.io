@@ -79,3 +79,5 @@ Both structural solvers are my own. Each was tested on its own before being coup
     <figcaption class="caption">2D beam: deformed shapes from 1 s to 15 s for three grid spacings, compared with Sugiyama et al. (2006).</figcaption>
   </figure>
 </div>
+
+Kozlovsky, P., Zaretsky, U., Jaffa, A.J. & Elad, D. (2014). General tube law for collapsible thin and thick-wall tubes. _Journal of Biomechanics_ 47(10), 2378–2384.

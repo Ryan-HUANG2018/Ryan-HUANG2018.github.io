@@ -7,7 +7,8 @@ category: FSI methods
 tags: ["3D", "Impact", "MPM"]
 summary: >
   Two impact problems solved with the material point method (MPM): an ogive-nose projectile perforating an
-  A6061-T651 aluminium plate, and a Taylor impact test with the Johnson–Cook constitutive model.
+  A6061-T651 aluminium plate, and a Taylor impact test with the Johnson–Cook constitutive model. I ran these
+  with an existing open-source MPM code while learning the method, before coupling MPM to my own IB–LBM solver.
 thumbnail: assets/video/structure-damage/preview.webm
 thumbnail_poster: assets/video/structure-damage/preview.jpg
 variant_label: case
