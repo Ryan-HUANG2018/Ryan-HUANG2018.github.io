@@ -9,8 +9,8 @@ summary: >
   Flow through a two-dimensional channel in which a segment of both walls is elastic, a model of the Starling resistor
   and of collapsible vessels such as compressed coronary arteries. Over 100 ≤ Re ≤ 3000 and wall-to-fluid mass ratios
   0.3 ≤ M ≤ 100, the walls can be steady or oscillate periodically, through period-doubling, quasi-periodically or
-  chaotically. Switch between four cases at M = 1, and one with large-amplitude wall oscillation, to compare the jet
-  through the throat and the vortices downstream.
+  chaotically. Switch between four cases at M = 1 and a heavy-wall case (Re = 500, M = 20) with large-amplitude
+  oscillation to compare the jet through the throat and the vortices downstream.
   From our 2021 Journal of Fluid Mechanics paper.
 thumbnail: assets/video/collapsible-re/preview.webm
 thumbnail_poster: assets/video/collapsible-re/preview.jpg
@@ -41,7 +41,7 @@ variants:
       poster: assets/video/collapsible-re/re800.jpg,
     }
   - {
-      name: "Large-amplitude",
+      name: "Re = 500 · M = 20",
       src: assets/video/collapsible-re/large-amplitude.webm,
       mp4: assets/video/collapsible-re/large-amplitude.mp4,
       poster: assets/video/collapsible-re/large-amplitude.jpg,
@@ -134,6 +134,8 @@ The dominant Lyapunov exponents confirm the classification (_M_ = 1, _K<sub>s</s
 | 600  | period-doubling | 0.0076                |
 | 650  | quasi-periodic  | 0.0124                |
 | 800  | chaotic         | 0.0417                |
+
+**Heavier walls at _Re_ = 500.** With _K<sub>s</sub>_ = 2400 and _P<sub>e</sub>_ = 1.95, the oscillation amplitude grows with the mass ratio. The walls end up steady for _M_ ≤ 1, oscillate with an amplitude below 0.01 at _M_ = 2, and switch from a small-amplitude mode at _M_ = 5 to a large-amplitude mode at _M_ = 10. At _M_ = 20 (the last case in the player) the walls bulge out strongly upstream, then bounce back to a strongly collapsed state, yet the two walls and the shed vortex pairs stay symmetric. At the most collapsed instant a strong central jet entrains the earlier vortex pairs. This resembles the jet propulsion of a cephalopod more than the jet from a nozzle.
 
 **Mechanisms.**
 
