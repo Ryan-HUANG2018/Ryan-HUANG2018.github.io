@@ -51,7 +51,9 @@ As the body moves, the grid is refined around its new position and coarsened whe
 
 ## Results
 
-**Flapping NACA0015 foil.** The foil pitches and plunges in a uniform flow at _Re_ = 1100, with pitching amplitude 76.3°, plunging amplitude 1 chord, reduced frequency _fc_/_U_ = 0.14 and a 90° phase between the two motions. These are the high-efficiency kinematics of Kinsey & Dumas (2008) for a flapping-foil power generator, and the predicted lift matches their results. With five refinement levels, the finest grid near the foil is 0.00625*c*.
+**The animations.** The refined blocks follow a pitching and plunging NACA0015 foil and a moving circular cylinder, refining around each body as it moves and coarsening where it has left.
+
+**Validation.** In Liu et al. (2022) and Liu et al. (2023), the solver was checked against a NACA0015 foil pitching and plunging at _Re_ = 1100, with pitching amplitude 76.3°, plunging amplitude 1 chord, reduced frequency _fc_/_U_ = 0.14 and a 90° phase between the two motions. These are the high-efficiency kinematics of Kinsey & Dumas (2008) for a flapping-foil power generator, and the predicted lift matches their results. With five refinement levels, the finest grid near the foil is 0.00625*c*.
 
 **Flapping-foil power generator.** In Liu et al. (2023), we used this solver to study a flapping-foil generator placed between two thin plates of finite length, 1.5 to 4 chords from the foil, with the plates 10 to 50 chords long. Unlike walls of infinite length, which have been reported to raise the efficiency, the finite plates lower it:
 
@@ -59,8 +61,6 @@ As the body moves, the grid is refined around its new position and coarsened whe
 - a large mass-flow deficit forms between closely spaced plates, so less power is available in the oncoming flow;
 - the plate length upstream of the foil matters much more than the length downstream; and
 - the efficiency falls by up to 35% with the plates 1.5 chords away, so these generators should be placed at least four chords from such obstacles.
-
-**Moving cylinder.** The second animation shows the refined blocks following a moving circular cylinder as it sheds vortices.
 
 ## Publications
 
