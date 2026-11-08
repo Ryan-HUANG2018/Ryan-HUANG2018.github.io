@@ -47,6 +47,8 @@ Both structural solvers are my own. Each was tested on its own before being coup
 - **2D beam.** A geometrically nonlinear beam with stretching and bending stiffness, solved with finite differences. It is used for the collapsible channels and the flexible filament.
 - **3D solids.** Explicit time integration with 20-node reduced-integration hexahedral elements (C3D20R). It is used for the three-dimensional collapsible tubes.
 
+The set-up, grids and further results of every test on this page are given in my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (UNSW, 2021).
+
 ## Results
 
 **Element choice for thin walls.** This test, from the appendix of our 2024 Physics of Fluids paper, decided which element to use for the thin walls of the 3D collapsible tubes. A cantilever of length _L_ = 10 m, thickness _h_ = 0.1 m and width _b_ = 1 m (Young's modulus 6 × 10⁴ Pa, Poisson's ratio 0.2) is clamped at one end and loaded by a uniform pressure _P_ = 0.015 N/m² on its free end. Geometric nonlinearity is included, and light damping (2% of critical) lets the tip settle to its static deflection. Euler–Bernoulli beam theory gives a tip deflection of _δ_<sub>max</sub> = _PL_<sup>3</sup>/(3*EI*) = 1 m. Three hexahedral elements are compared:
@@ -97,6 +99,8 @@ With one element through the thickness, C3D8 is far too stiff in bending and sto
 </div>
 
 ## Publications
+
+Huang, Q. (2021). _Low Reynolds Number Turbulent FSI and its Applications in Biological Flows_. PhD thesis, UNSW Canberra, University of New South Wales. [doi:10.26190/unsworks/3993](https://doi.org/10.26190/unsworks/3993)
 
 Huang, Q., Ji, X., Ma, J., Wang, L., Young, J. & Lai, J.C.S. (2024). Self-excited oscillations of three-dimensional collapsible tubes conveying both laminar and turbulent flows. _Physics of Fluids_ 36(12), 121920.
 
