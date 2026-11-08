@@ -44,7 +44,7 @@ A thin-walled elastic tube of radius _R_, length _L_ = 5*D* and wall thickness _
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/collapsible-tube-3d/schematic.jpg' | relative_url }}" alt="Schematic of the three-dimensional collapsible tube: a rigid upstream tube of length Lu, an elastic tube of length L under external pressure pe, and a rigid downstream tube of length Ld; the cross-section shows radius R and wall thickness h" loading="lazy">
-    <figcaption class="caption">(a) Rigid upstream tube, elastic tube under external pressure <em>p<sub>e</sub></em>, and rigid downstream tube. (b) Cross-section of the elastic tube.</figcaption>
+    <figcaption>(a) Rigid upstream tube, elastic tube under external pressure <em>p<sub>e</sub></em>, and rigid downstream tube. (b) Cross-section of the elastic tube.</figcaption>
   </figure>
 </div>
 
@@ -62,7 +62,7 @@ The fluid is solved with a lattice Boltzmann method on a uniform grid of 0.02*D*
 <div class="rh-figs is-single is-narrow">
   <figure>
     <img src="{{ '/assets/img/collapsible-tube-3d/wall-thickening-re200.jpg' | relative_url }}" alt="Deformed tube walls in the X-Z plane at four instants during one oscillation at Re = 200, with wall thickening marked at z/R = 7.25" loading="lazy">
-    <figcaption class="caption">Tube wall in the X–Z plane at four instants of one oscillation, <em>Re</em> = 200. The wall thickens at <em>z</em>/<em>R</em> = 7.25.</figcaption>
+    <figcaption>Tube wall in the X–Z plane at four instants of one oscillation, <em>Re</em> = 200. The wall thickens at <em>z</em>/<em>R</em> = 7.25.</figcaption>
   </figure>
 </div>
 
@@ -71,7 +71,7 @@ The fluid is solved with a lattice Boltzmann method on a uniform grid of 0.02*D*
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/collapsible-tube-3d/flow-fields-re1000.jpg' | relative_url }}" alt="Pressure, streamwise velocity and vorticity in the Y-Z and X-Z planes at Re = 1000 when the tube is most collapsed, showing vortex merging near z/R = 22" loading="lazy">
-    <figcaption class="caption">(a) Pressure, (b) streamwise velocity and (c) vorticity in the Y–Z (upper) and X–Z (lower) planes at <em>Re</em> = 1000, with the tube most collapsed. m<sub>1</sub> and m<sub>2</sub> are monitor points.</figcaption>
+    <figcaption>(a) Pressure, (b) streamwise velocity and (c) vorticity in the Y–Z (upper) and X–Z (lower) planes at <em>Re</em> = 1000, with the tube most collapsed. m<sub>1</sub> and m<sub>2</sub> are monitor points.</figcaption>
   </figure>
 </div>
 

@@ -63,7 +63,7 @@ A two-dimensional channel of width _D_ has rigid walls upstream (_L<sub>u</sub>_
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/collapsible-channel/schematic.png' | relative_url }}" alt="Schematic of the two-sided collapsible channel: rigid upstream and downstream sections, an elastic wall segment of length L on both sides, inlet velocity U0, external pressure pe and downstream pressure pd" loading="lazy">
-    <figcaption class="caption">Two-sided collapsible channel. Both walls are elastic over the length <em>L</em> and are loaded by the external pressure <em>p<sub>e</sub></em>.</figcaption>
+    <figcaption>Two-sided collapsible channel. Both walls are elastic over the length <em>L</em> and are loaded by the external pressure <em>p<sub>e</sub></em>.</figcaption>
   </figure>
 </div>
 
@@ -86,7 +86,7 @@ The fluid is solved with a D2Q9 multi-relaxation-time lattice Boltzmann method, 
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/collapsible-channel/regime-map.png' | relative_url }}" alt="Regime map in the Reynolds number–mass ratio plane, with Re from 100 to 1000 and M from 0.3 to 100, marking steady, periodic, period-doubling, quasi-periodic and chaotic cases" loading="lazy">
-    <figcaption class="caption">Motion states in the (<em>Re</em>, <em>M</em>) plane, <em>K<sub>s</sub></em> = 2400, <em>P<sub>e</sub></em> = 1.95.</figcaption>
+    <figcaption>Motion states in the (<em>Re</em>, <em>M</em>) plane, <em>K<sub>s</sub></em> = 2400, <em>P<sub>e</sub></em> = 1.95.</figcaption>
   </figure>
 </div>
 

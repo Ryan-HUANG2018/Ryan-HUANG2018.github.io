@@ -48,7 +48,7 @@ $$
 <div class="rh-figs is-single is-narrow">
   <figure>
     <img src="{{ '/assets/img/flapping-wings/schematic.png' | relative_url }}" alt="Schematic of the flapping wing: span L, mean chord c, stroke angle phi about the vertical z axis, pitch angle theta about the leading edge, and a torsional spring at the wing hinge" loading="lazy">
-    <figcaption class="caption">Two-angle kinematics: prescribed stroke <em>φ</em> and passive pitch <em>θ</em>, with a torsional spring at the hinge.</figcaption>
+    <figcaption>Two-angle kinematics: prescribed stroke <em>φ</em> and passive pitch <em>θ</em>, with a torsional spring at the hinge.</figcaption>
   </figure>
 </div>
 
@@ -57,7 +57,7 @@ The hinge stiffness is measured by the Cauchy number _Ch_ = _ρφ<sub>A</sub>_<s
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/flapping-wings/planforms.png' | relative_url }}" alt="Eight wing planforms with the radius of the first moment of area r1 from 0.39 to 0.63" loading="lazy">
-    <figcaption class="caption">The eight wing planforms, <em>r̄</em><sub>1</sub> = 0.39 to 0.63.</figcaption>
+    <figcaption>The eight wing planforms, <em>r̄</em><sub>1</sub> = 0.39 to 0.63.</figcaption>
   </figure>
 </div>
 
@@ -70,7 +70,7 @@ The flow is solved with my D3Q19 multi-relaxation-time lattice Boltzmann solver 
 <div class="rh-figs is-single">
   <figure>
     <img src="{{ '/assets/img/flapping-wings/performance-map.png' | relative_url }}" alt="Contour maps of (a) mean lift coefficient and (b) power economy over wing shape r1 from 0.39 to 0.63 and Cauchy number Ch from 0.05 to 0.6" loading="lazy">
-    <figcaption class="caption">(a) Mean lift coefficient and (b) power economy over wing shape <em>r̄</em><sub>1</sub> and hinge stiffness <em>Ch</em>.</figcaption>
+    <figcaption>(a) Mean lift coefficient and (b) power economy over wing shape <em>r̄</em><sub>1</sub> and hinge stiffness <em>Ch</em>.</figcaption>
   </figure>
 </div>
 

@@ -48,14 +48,14 @@ Slender elastic bodies coupled to the flow are a standard test of a fluid–stru
 <div class="rh-figs">
   <figure>
     <img src="{{ '/assets/img/fsi-benchmarks/filament-y.png' | relative_url }}" alt="Transverse position of the filament trailing end compared with Tian et al. and Wang et al. (2017)" loading="lazy">
-    <figcaption class="caption">2D filament: transverse position of the trailing end, compared with Tian et al. and Wang et al. (2017).</figcaption>
+    <figcaption>2D filament: transverse position of the trailing end, compared with Tian et al. and Wang et al. (2017).</figcaption>
   </figure>
   <figure>
     <img src="{{ '/assets/img/fsi-benchmarks/filament-x.png' | relative_url }}" alt="Streamwise position of the filament trailing end compared with Tian et al. and Wang et al. (2017)" loading="lazy">
-    <figcaption class="caption">2D filament: streamwise position of the trailing end, compared with Tian et al. and Wang et al. (2017).</figcaption>
+    <figcaption>2D filament: streamwise position of the trailing end, compared with Tian et al. and Wang et al. (2017).</figcaption>
   </figure>
   <figure>
     <img src="{{ '/assets/img/fsi-benchmarks/flag-z.png' | relative_url }}" alt="Flag motion compared with Tian et al. (2014)" loading="lazy">
-    <figcaption class="caption">3D flag: motion compared with Tian et al. (2014).</figcaption>
+    <figcaption>3D flag: motion compared with Tian et al. (2014).</figcaption>
   </figure>
 </div>
