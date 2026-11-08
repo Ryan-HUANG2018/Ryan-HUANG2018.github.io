@@ -2,7 +2,7 @@
 layout: simulation
 title: Impact damage — plate perforation and Taylor impact
 description: Material point method (MPM) simulations of plate perforation and a Taylor impact test, each validated against experiment.
-importance: 10
+importance: 11
 category: FSI methods
 tags: ["3D", "Impact", "MPM"]
 summary: >

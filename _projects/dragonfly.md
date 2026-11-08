@@ -2,7 +2,7 @@
 layout: simulation
 title: Dragonfly flight
 description: A three-dimensional dragonfly model with flapping fore- and hindwings.
-importance: 5
+importance: 8
 category: Bio-locomotion
 tags: ["3D", "Flapping flight"]
 summary: >
