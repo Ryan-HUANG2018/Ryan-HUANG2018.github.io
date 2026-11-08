@@ -1484,3 +1484,42 @@ a.rh-news-item:hover .rh-news-text {
   object-fit: contain;
   padding: 28px 32px;
 }
+
+.rh-figs.is-single {
+  grid-template-columns: 1fr;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+  }
+}
+
+.rh-vort {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+
+  figure {
+    margin: 0;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  figcaption {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-family: var(--rh-font-mono);
+    font-size: 12px;
+    color: var(--rh-text-muted);
+  }
+}
