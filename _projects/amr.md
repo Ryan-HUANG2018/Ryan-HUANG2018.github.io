@@ -1,12 +1,12 @@
 ---
 layout: simulation
 title: Adaptive mesh refinement with hash tables
-description: A block-structured Cartesian grid refines and coarsens as a cylinder and a flapping NACA0015 foil move through it, using a hash-table AMR framework coupled to the IB–LBM.
+description: A block-structured Cartesian grid refines and coarsens as an oscillating cylinder and a flapping NACA0015 foil move through it, using a hash-table AMR framework coupled to the IB–LBM.
 importance: 9
 category: FSI methods
 tags: ["2D", "AMR", "IB–LBM"]
 summary: >
-  The grid follows the body: fine cells cluster around a moving cylinder and a flapping NACA0015 foil, and coarsen again
+  The grid follows the body: fine cells cluster around an oscillating cylinder and a flapping NACA0015 foil, and coarsen again
   once the body has passed. The adaptive mesh refinement (AMR) framework of Liu et al. (2022) stores each refinement level
   in its own hash table, which makes finding a node and its neighbours fast. Coupled to the immersed boundary–lattice
   Boltzmann method, it is the solver of our 2023 Physics of Fluids paper on a flapping-foil power generator. Colours show
@@ -16,7 +16,7 @@ thumbnail_poster: assets/video/amr/preview.jpg
 variant_label: case
 variants:
   - {
-      name: Moving cylinder,
+      name: Oscillating cylinder,
       src: assets/video/amr/amr_for_2d_cylinder.webm,
       mp4: assets/video/amr/AMR_for_2D_cylinder.mp4,
       poster: assets/video/amr/amr_for_2d_cylinder.jpg,
@@ -32,9 +32,10 @@ params:
   - { label: Data structure, value: Hash table (Morton keys) }
   - { label: Refinement levels, value: "5" }
   - { label: Finest grid (foil), value: "0.00625c" }
-  - { label: "Time saved vs. binary tree", value: "> 65%" }
+  - { label: Grid nodes (cylinder), value: "32× fewer" }
 links:
   paper: https://doi.org/10.1063/5.0134701
+  video: https://youtu.be/lhvr0__Jp9k
 ---
 
 ## Setup
@@ -51,9 +52,16 @@ As the body moves, the grid is refined around its new position and coarsened whe
 
 ## Results
 
-**The animations.** The refined blocks follow a pitching and plunging NACA0015 foil and a moving circular cylinder, refining around each body as it moves and coarsening where it has left.
+**Oscillating cylinder.** Compared with our earlier multi-block Fortran IB–LBM code on the same case, the AMR solver needs 32 times fewer grid nodes (45,863 instead of 1,441,301) and runs 18 times faster ([video](https://youtu.be/Xte7dpTSsao)).
 
-**Validation.** In Liu et al. (2022) and Liu et al. (2023), the solver was checked against a NACA0015 foil pitching and plunging at _Re_ = 1100, with pitching amplitude 76.3°, plunging amplitude 1 chord, reduced frequency _fc_/_U_ = 0.14 and a 90° phase between the two motions. These are the high-efficiency kinematics of Kinsey & Dumas (2008) for a flapping-foil power generator, and the predicted lift matches their results. With five refinement levels, the finest grid near the foil is 0.00625*c*.
+**Flapping NACA0015 foil.** The foil pitches and plunges in a uniform flow at _Re_ = 1100, with pitching amplitude 76.3°, plunging amplitude 1 chord, reduced frequency _fc_/_U_ = 0.14 and a 90° phase between the two motions. These are the high-efficiency kinematics of Kinsey & Dumas (2008) for a flapping-foil power generator, and the predicted lift matches their results.
+
+| Item                 | Value                                                                         |
+| -------------------- | ----------------------------------------------------------------------------- |
+| Computational domain | 40*c* × 30*c*                                                                 |
+| Grid spacing         | 0.00625*c* (finest) to 0.2*c* (coarsest)                                      |
+| Grid nodes           | 42,672                                                                        |
+| Run time             | 15 minutes for 6 flapping cycles, on a laptop, serial (no OpenMP, MPI or GPU) |
 
 **Flapping-foil power generator.** In Liu et al. (2023), we used this solver to study a flapping-foil generator placed between two thin plates of finite length, 1.5 to 4 chords from the foil, with the plates 10 to 50 chords long. Unlike walls of infinite length, which have been reported to raise the efficiency, the finite plates lower it:
 
