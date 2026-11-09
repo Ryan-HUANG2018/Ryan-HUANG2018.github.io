@@ -30,6 +30,8 @@ params:
   - { label: Mass ratio (2D), value: "1" }
   - { label: Stretching / bending (2D), value: "500 / 0.0001" }
   - { label: Method, value: IB–LBM + own structural solvers }
+links:
+  paper: https://doi.org/10.26190/unsworks/3993
 ---
 
 ## Setup
@@ -38,6 +40,8 @@ Slender elastic bodies coupled to the flow are a standard test of a fluid–stru
 
 - **2D flexible filament** in a uniform flow at Re = 100, with mass ratio 1, stretching stiffness 500 and bending stiffness 0.0001.
 - **3D flapping flag**: a flexible plate in a uniform flow, with the same IB–LBM coupling.
+
+Both cases are described in detail in my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (UNSW, 2021).
 
 ## Results
 
@@ -59,3 +63,7 @@ Slender elastic bodies coupled to the flow are a standard test of a fluid–stru
     <figcaption>3D flag: motion compared with Tian et al. (2014).</figcaption>
   </figure>
 </div>
+
+## Publication
+
+Huang, Q. (2021). _Low Reynolds Number Turbulent FSI and its Applications in Biological Flows_. PhD thesis, UNSW Canberra, University of New South Wales. [doi:10.26190/unsworks/3993](https://doi.org/10.26190/unsworks/3993)
