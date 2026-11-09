@@ -45,7 +45,7 @@ ninja.data = [{
               window.location.href = "/news/2026-10-teraviq-website/";
             },},{id: "projects-adaptive-mesh-refinement-with-hash-tables",
           title: 'Adaptive mesh refinement with hash tables',
-          description: "A block-structured Cartesian grid refines and coarsens as a cylinder and a flapping NACA0015 foil move through it, using a hash-table AMR framework coupled to the IB–LBM.",
+          description: "A block-structured Cartesian grid refines and coarsens as an oscillating cylinder and a flapping NACA0015 foil move through it, using a hash-table AMR framework coupled to the IB–LBM.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/amr/";
             },},{id: "projects-transition-to-chaos-in-a-collapsible-channel",
@@ -65,12 +65,12 @@ ninja.data = [{
               window.location.href = "/projects/coronary-pulse/";
             },},{id: "projects-dragonfly-flight",
           title: 'Dragonfly flight',
-          description: "A three-dimensional dragonfly model with flapping fore- and hindwings.",
+          description: "A three-dimensional dragonfly with flapping fore- and hindwings that pitch passively — a demonstration of my IB–LBM fluid–structure interaction solver.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dragonfly/";
             },},{id: "projects-fish-swimming",
           title: 'Fish swimming',
-          description: "An undulating swimmer and the vortices in its wake, shown by vorticity.",
+          description: "A two-dimensional undulating swimmer at Re = 400 and St = 0.573, with the vortices shed into its wake.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fish-swimming/";
             },},{id: "projects-fsi-benchmarks-flexible-filament-and-flapping-flag",
@@ -83,9 +83,9 @@ ninja.data = [{
           description: "A rigid valve leaflet swings open and shut in pulsatile flow past an aortic sinus — validated against experiment, then applied to supravalvular aortic stenosis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mechanical-heart-valve/";
-            },},{id: "projects-flow-past-a-naca0012-aerofoil",
-          title: 'Flow past a NACA0012 aerofoil',
-          description: "Two-dimensional flow past a NACA0012 aerofoil and the vortices shed into its wake.",
+            },},{id: "projects-pitching-and-plunging-naca0012-foil",
+          title: 'Pitching and plunging NACA0012 foil',
+          description: "A NACA0012 foil pitches and plunges at Re = 1000 and sheds leading- and trailing-edge vortices, on a 1.3-million-node multi-block grid.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/naca0012/";
             },},{id: "projects-passively-pitching-flapping-wings-in-hover",
