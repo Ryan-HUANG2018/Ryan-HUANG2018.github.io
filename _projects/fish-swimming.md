@@ -1,12 +1,14 @@
 ---
 layout: simulation
 title: Fish swimming
-description: An undulating swimmer and the vortices in its wake, shown by vorticity.
+description: A two-dimensional undulating swimmer at Re = 400 and St = 0.573, with the vortices shed into its wake.
 importance: 7
 category: Bio-locomotion
 tags: ["2D", "FSI"]
 summary: >
-  Two-dimensional undulatory swimming, shown by vorticity.
+  A two-dimensional fish-like body swims by sending a travelling wave along its length. At a Reynolds number of 400 and
+  a Strouhal number of 0.573, each tail beat sheds a pair of opposite-signed vortices into the wake. Colours show the
+  vorticity.
 thumbnail: assets/video/fish-swimming/preview.webm
 thumbnail_poster: assets/video/fish-swimming/preview.jpg
 variants:
@@ -18,5 +20,9 @@ variants:
     }
 media_aspect: 2 / 1
 params:
-  - { label: Dimension, value: 2D }
+  - { label: Reynolds number, value: "400" }
+  - { label: Strouhal number, value: "0.573" }
+  - { label: Method, value: IB–LBM }
+links:
+  video: https://youtu.be/H9pJUSb2LOY
 ---
