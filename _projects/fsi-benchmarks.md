@@ -5,6 +5,7 @@ description: Two standard fluid–structure interaction benchmarks, a 2D flexibl
 importance: 4
 category: FSI methods
 tags: ["2D", "3D", "FSI", "Verification"]
+stack: ["LBM", "Immersed boundary", "FEM", "FDM"]
 summary: >
   A flexible filament in a uniform flow (2D) and a flapping flag (3D), solved with my coupled immersed
   boundary–lattice Boltzmann and structural solvers, and compared with published results.

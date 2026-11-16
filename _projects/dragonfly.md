@@ -5,6 +5,7 @@ description: A three-dimensional dragonfly with flapping fore- and hindwings tha
 importance: 8
 category: Bio-locomotion
 tags: ["3D", "Flapping flight"]
+stack: ["LBM", "Immersed boundary"]
 summary: >
   A whole three-dimensional dragonfly, with its fore- and hindwings flapping and pitching passively, simulated with my
   immersed boundary–lattice Boltzmann fluid–structure interaction solver. This is a demonstration of the solver and has

@@ -23,7 +23,8 @@
 
 ## 已确认的规格调整（优先于 REDESIGN.md）
 
-- 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
+- 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / Heat transfer / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
+- 首屏 IMPACT 下面有 TOOLKIT 面板：内容在 `_data/toolkit.yml`，每项按 `key` 自动链接到 `stack:` 里含这个 key 的仿真项目。项目页参数卡下方显示该项目的 `stack:`。工具和方法只写 ai-profile 里确认过或文件记载的，不凭印象加；某个项目用了什么，没有记录就不写进它的 `stack:`。
 - 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
 - 首屏下方有学术指标面板（`_pages/about.md` 的 `impact`）：数字必须带快照日期和来源；快照超过 3 个月时提醒用户更新。Journal papers 只计研究论文（不含社论）。
 - 未确认的内容一律写成 `[占位]`，网页上不显示；整块没有内容就整块隐藏。不要编造论文、数据或经历。

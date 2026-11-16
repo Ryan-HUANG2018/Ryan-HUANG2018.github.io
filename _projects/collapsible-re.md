@@ -5,6 +5,7 @@ description: A 2D channel with two elastic wall segments — depending on Re and
 importance: 0 # first card (SIM-01)
 category: FSI methods
 tags: ["2D", "FSI", "Collapsible channel"]
+stack: ["LBM", "Immersed boundary", "FDM", "OpenMP", "MPI"]
 summary: >
   Flow through a two-dimensional channel in which a segment of both walls is elastic, a model of the Starling resistor
   and of collapsible vessels such as compressed coronary arteries. Over 100 ≤ Re ≤ 3000 and wall-to-fluid mass ratios

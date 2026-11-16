@@ -12,6 +12,7 @@ layout: default
     media_aspect:  optional player aspect ratio, e.g. "4 / 1" (default: fixed height)
     t_end:         non-dimensional end time t* of the videos
     links:         { paper: ..., code: ..., video: ... }
+    stack:         methods and tools used, e.g. ["LBM", "IBM", "OpenMP"]; keys match _data/toolkit.yml
 {% endcomment %}
 {% assign sims = site.projects | sort: 'importance' %}
 {% for sim in sims %}
@@ -138,6 +139,19 @@ layout: default
   {% endcapture %}
   {% if params_html != blank %}
     <section class="rh-sim-params rh-mono">{{ params_html }}</section>
+  {% endif %}
+
+  {% if page.stack %}
+    <section class="rh-sim-stack rh-mono" aria-label="Toolkit">
+      <a class="rh-param-label" href="{{ '/#toolkit' | relative_url }}">TOOLKIT</a>
+      <div class="rh-tags">
+        {%- for item in page.stack -%}
+          {%- unless item contains '[' -%}
+            <span class="rh-tag">{{ item }}</span>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+    </section>
   {% endif %}
 
   {% capture resources_html %}

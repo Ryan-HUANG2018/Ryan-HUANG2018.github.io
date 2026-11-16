@@ -1,0 +1,48 @@
+{% comment %}
+  TOOLKIT panel under IMPACT. Groups and items come from _data/toolkit.yml.
+  An item with a `key` links to every simulation whose `stack:` contains that key (SIM numbers follow `importance`).
+  Notes written as [placeholders] are not shown; an item with neither a note nor a matching simulation is skipped.
+{% endcomment %}
+{% assign sims = site.projects | sort: 'importance' %}
+{% capture groups_html %}
+  {%- for group in site.data.toolkit -%}
+    {%- capture items_html -%}
+      {%- for item in group.items -%}
+        {%- capture links_html -%}
+          {%- if item.key -%}
+            {%- for sim in sims -%}
+              {%- if sim.stack contains item.key -%}
+                {%- assign sim_num = forloop.index | prepend: '0' | slice: -2, 2 -%}
+                <a href="{{ sim.url | relative_url }}" title="{{ sim.title | escape }}">SIM-{{ sim_num }}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endcapture -%}
+        {%- assign note = item.note -%}
+        {%- if note contains '[' -%}{%- assign note = nil -%}{%- endif -%}
+        {%- if links_html != blank or note -%}
+          <li class="rh-toolkit-item">
+            <div class="rh-toolkit-name">{{ item.name }}</div>
+            {%- if note %}<div class="rh-toolkit-note">{{ note }}</div>{% endif -%}
+            {%- if links_html != blank %}<div class="rh-toolkit-sims">{{ links_html }}</div>{% endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- if items_html != blank -%}
+      <div class="rh-toolkit-group">
+        <div class="rh-param-label">{{ group.group | upcase }}</div>
+        <ul>{{ items_html }}</ul>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+{% endcapture %}
+{% if groups_html != blank %}
+  <section id="toolkit" class="rh-toolkit rh-mono" aria-label="Toolkit">
+    <div class="rh-impact-head">
+      <span>TOOLKIT</span>
+      <span>methods · code · software — with the simulations that use them</span>
+    </div>
+    <div class="rh-toolkit-grid">{{ groups_html }}</div>
+  </section>
+{% endif %}

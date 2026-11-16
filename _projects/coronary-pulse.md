@@ -5,6 +5,7 @@ description: Pulsatile flow rates at the outlets of the left and right coronary 
 importance: 6
 category: Cardiovascular
 tags: ["3D", "Haemodynamics"]
+stack: ["Windkessel outlets", "Automated workflow"]
 summary: >
   Pulsatile blood flow through a coronary artery tree, with the flow rate traced at each outlet branch
   (LAD, LCx, RCA, PDA) over successive cardiac cycles. The case is set up automatically: boundary conditions, meshing
