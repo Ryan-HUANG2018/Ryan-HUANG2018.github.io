@@ -1,0 +1,5 @@
+# Claims check: python3 ../ai-profile/tools/check_claims.py .
+# Teraviq public-copy scope is not applied here: owner decision 2026-11-16 (toolkit entry kept).
+scopes: all
+ignore: assets/**
+ignore: docs/**   # design references, excluded from the published site

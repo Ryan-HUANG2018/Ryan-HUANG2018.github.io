@@ -52,3 +52,7 @@ docker compose down         # 停止
 ```
 
 预览地址：http://localhost:8080 。修改其他文件会自动重建；但 Windows 上的挂载收不到文件事件，**修改 `_config.yml` 后必须手动 `docker compose restart`**。
+
+## 共享规则
+
+所有仓库共用的规则见 `AGENTS.md`：开始前先同步远程；关于用户的事实以 ai-profile 为准；提交前运行声明检查；更正时找全所有副本；发现 AI 写错的内容记入 ai-profile 的错误日志。
