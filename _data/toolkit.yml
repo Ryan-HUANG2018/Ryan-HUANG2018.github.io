@@ -30,7 +30,7 @@
 
 - group: Engineering CFD software
   items:
-    - { name: OpenFOAM, note: "simpleFoam, pimpleFoam; blockMesh, snappyHexMesh, cfMesh; coronary CFD pipeline" }
+    - { name: OpenFOAM, key: OpenFOAM, note: "simpleFoam, pimpleFoam; blockMesh, snappyHexMesh, cfMesh; coronary CFD pipeline" }
     - { name: ANSYS Fluent, note: "UDFs for pulsatile inlets and non-Newtonian blood; VOF two-phase; k–ε, Spalart–Allmaras" }
     - { name: Cross-validation, note: "OpenFOAM vs ANSYS Fluent coronary flow: velocities within 0.35%" }
 
