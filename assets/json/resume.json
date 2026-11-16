@@ -111,6 +111,11 @@
     }
   ],
   "awards": [
+    {
+      "title": "Seal of Excellence",
+      "date": "2025-02",
+      "awarder": "European Commission"
+    },
     { "title": "Third Prize, Presentation", "date": "2023-11", "awarder": "Australian MCS Symposium" },
     { "title": "Third Prize, Presentation", "date": "2019-11", "awarder": "UNSW Canberra Research Day" },
     { "title": "APS Student Travel Grant", "date": "2019-09", "awarder": "American Physical Society" },
