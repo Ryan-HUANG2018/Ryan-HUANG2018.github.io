@@ -7,7 +7,7 @@ category: Heat transfer
 tags: ["2D", "Heat transfer", "IB–LBM"]
 stack: ["LBM", "Immersed boundary", "FDM", "Heat transfer"]
 summary: >
-  Two convective heat-transfer cases from my PhD. Heat leaves a heated cylinder in cross-flow and is carried
+  Two convective heat-transfer cases from my PhD work (unpublished). Heat leaves a heated cylinder in cross-flow and is carried
   downstream by the shed vortices; in a channel with a constriction, the jet and the recirculation behind the
   constriction reshape the thermal boundary layers on the heated walls. The temperature equation is solved with finite
   differences and coupled to my immersed boundary–lattice Boltzmann flow solver.
@@ -17,8 +17,6 @@ params:
   - { label: Flow solver, value: IB–LBM }
   - { label: Temperature solver, value: Finite differences }
   - { label: Energy equation, value: Advection–diffusion }
-links:
-  paper: https://doi.org/10.26190/unsworks/3993
 ---
 
 ## Setup
@@ -34,7 +32,7 @@ where _T_ is the temperature, **u** the flow velocity and _α_ the thermal diffu
 - **Heated cylinder in cross-flow.** A cylinder held at a higher temperature than the incoming flow.
 - **Stenotic channel.** A two-dimensional channel with a constriction on one wall and heated walls.
 
-Both cases are part of my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (UNSW, 2021).
+Both cases were run during my PhD at UNSW Canberra. They are not part of the thesis or a paper.
 
 ## Results
 
