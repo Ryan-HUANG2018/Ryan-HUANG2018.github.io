@@ -7,7 +7,7 @@ category: Heat transfer
 tags: ["2D", "Heat transfer", "IB–LBM"]
 stack: ["LBM", "Immersed boundary", "FDM", "Heat transfer"]
 summary: >
-  Two convective heat-transfer cases from my PhD. Heat leaves a heated cylinder in cross-flow and is carried
+  Two convective heat-transfer cases from my PhD work (unpublished). Heat leaves a heated cylinder in cross-flow and is carried
   downstream by the shed vortices; in a channel with a constriction, the jet and the recirculation behind the
   constriction reshape the thermal boundary layers on the heated walls. The temperature equation is solved with finite
   differences and coupled to my immersed boundary–lattice Boltzmann flow solver.
@@ -17,8 +17,6 @@ params:
   - { label: Flow solver, value: IB–LBM }
   - { label: Temperature solver, value: Finite differences }
   - { label: Energy equation, value: Advection–diffusion }
-links:
-  paper: https://doi.org/10.26190/unsworks/3993
 ---
 
 ## Setup
@@ -34,7 +32,7 @@ where _T_ is the temperature, **u** the flow velocity and _α_ the thermal diffu
 - **Heated cylinder in cross-flow.** A cylinder held at a higher temperature than the incoming flow.
 - **Stenotic channel.** A two-dimensional channel with a constriction on one wall and heated walls.
 
-Both cases are part of my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (UNSW, 2021).
+Both cases were run during my PhD at UNSW Canberra. They are not part of the thesis or a paper.
 
 ## Results
 
@@ -44,6 +42,19 @@ Both cases are part of my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (
   <figure>
     <img src="{{ '/assets/img/heat-transfer/heated-cylinder-temperature.png' | relative_url }}" alt="Temperature field around a heated cylinder in cross-flow, with warm fluid carried downstream in a wavy wake" loading="lazy">
     <figcaption>Heated cylinder in cross-flow: temperature.</figcaption>
+  </figure>
+</div>
+
+The flow fields of the same case show the stagnation pressure on the upstream face and the alternating low-pressure vortex cores in the wake that carry the heat away.
+
+<div class="rh-figs">
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/heated-cylinder-velocity.png' | relative_url }}" alt="Streamwise velocity around the heated cylinder, with a wavy wake of slow fluid" loading="lazy">
+    <figcaption>Heated cylinder: streamwise velocity <em>u</em>.</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/heated-cylinder-pressure.png' | relative_url }}" alt="Pressure around the heated cylinder, high at the front and low in the vortex cores of the wake" loading="lazy">
+    <figcaption>Heated cylinder: pressure <em>p</em>.</figcaption>
   </figure>
 </div>
 
@@ -60,6 +71,15 @@ Both cases are part of my [PhD thesis](https://doi.org/10.26190/unsworks/3993) (
   <figure>
     <img src="{{ '/assets/img/heat-transfer/stenotic-channel-temperature.png' | relative_url }}" alt="Temperature in the same channel, with thermal boundary layers on both walls deformed by the constriction" loading="lazy">
     <figcaption>Stenotic channel: temperature.</figcaption>
+  </figure>
+</div>
+
+Most of the pressure drop occurs across the constriction, with the lowest pressure just downstream of the throat, followed by a partial recovery further downstream.
+
+<div class="rh-figs is-single">
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/stenotic-channel-pressure.png' | relative_url }}" alt="Pressure in the stenotic channel, high upstream and dropping sharply across the constriction" loading="lazy">
+    <figcaption>Stenotic channel: pressure <em>p</em>.</figcaption>
   </figure>
 </div>
 
