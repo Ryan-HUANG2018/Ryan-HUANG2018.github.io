@@ -5,7 +5,7 @@ description: Pulsatile flow rates at the outlets of the left and right coronary 
 importance: 6
 category: Cardiovascular
 tags: ["3D", "Haemodynamics"]
-stack: ["Windkessel outlets", "Automated workflow"]
+stack: ["OpenFOAM", "Windkessel outlets", "Automated workflow"]
 summary: >
   Pulsatile blood flow through a coronary artery tree, with the flow rate traced at each outlet branch
   (LAD, LCx, RCA, PDA) over successive cardiac cycles. The case is set up automatically: boundary conditions, meshing
@@ -24,10 +24,11 @@ params:
   - { label: Flow, value: Pulsatile }
   - { label: Outlet conditions, value: Windkessel }
   - { label: Workflow, value: Automated }
+  - { label: Solver, value: OpenFOAM }
 ---
 
 ## Setup
 
-The whole case is prepared without manual steps: case set-up, boundary-condition configuration, meshing of the computational domain, and the CFD solve. Windkessel boundary conditions are applied at the aortic outlet and at every coronary outlet. Their parameters are derived automatically from physiological measurements: heart rate, systolic blood pressure and myocardial volume.
+The whole case is prepared without manual steps: case set-up, boundary-condition configuration, meshing of the computational domain, and the CFD solve in OpenFOAM. Windkessel boundary conditions are applied at the aortic outlet and at every coronary outlet. Their parameters are derived automatically from physiological measurements: heart rate, systolic blood pressure and myocardial volume.
 
 A [video of the coronary model](https://youtu.be/H_Fi8QXyQ0g) is on my YouTube channel.
