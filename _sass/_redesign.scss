@@ -1558,3 +1558,100 @@ a.rh-news-item:hover .rh-news-text {
     max-width: 520px;
   }
 }
+
+// TOOLKIT panel under IMPACT (_includes/home/toolkit.liquid): methods and tools, each linked to the simulations that use them
+
+.rh-toolkit {
+  margin-bottom: 56px;
+  border: 1px solid var(--rh-border);
+  border-radius: 12px;
+  background: var(--rh-card);
+  scroll-margin-top: calc(var(--rh-nav-height) + 16px);
+}
+
+.rh-toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.rh-toolkit-group {
+  padding: 18px 16px;
+  border-right: 1px solid var(--rh-divider);
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  ul {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.rh-toolkit-item {
+  padding: 8px 0;
+  border-top: 1px solid var(--rh-divider);
+
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+.rh-toolkit-name {
+  font-size: 13px;
+  color: var(--rh-text);
+}
+
+.rh-toolkit-note {
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--rh-text-muted);
+}
+
+.rh-toolkit-sims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 4px;
+  font-size: 11px;
+
+  a {
+    color: var(--rh-link);
+  }
+
+  a:hover {
+    color: var(--rh-link-hover);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rh-toolkit-group {
+    border-right: 0;
+    border-bottom: 1px solid var(--rh-divider);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+// Toolkit row on a simulation page, under the parameter cards
+
+.rh-sim-stack {
+  margin-top: -28px; // sits close to the parameter cards above
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  > a.rh-param-label {
+    color: var(--rh-text-muted);
+  }
+
+  > a.rh-param-label:hover {
+    color: var(--rh-link);
+  }
+}

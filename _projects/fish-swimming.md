@@ -5,6 +5,7 @@ description: A two-dimensional undulating swimmer at Re = 400 and St = 0.573, wi
 importance: 7
 category: Bio-locomotion
 tags: ["2D", "FSI"]
+stack: ["LBM", "Immersed boundary"]
 summary: >
   A two-dimensional fish-like body swims by sending a travelling wave along its length. At a Reynolds number of 400 and
   a Strouhal number of 0.573, each tail beat sheds a pair of opposite-signed vortices into the wake. Colours show the

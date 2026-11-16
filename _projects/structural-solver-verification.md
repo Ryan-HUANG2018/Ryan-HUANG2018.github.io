@@ -5,6 +5,7 @@ description: Stand-alone tests of my in-house structural solvers, a large-deform
 importance: 3
 category: FSI methods
 tags: ["2D", "3D", "FEM", "Verification"]
+stack: ["FEM", "FDM"]
 summary: >
   Before coupling them to the flow, I verified both of my structural solvers on their own: a geometrically
   nonlinear beam solved with finite differences, and explicit three-dimensional finite elements with 20-node

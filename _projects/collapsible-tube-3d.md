@@ -5,6 +5,7 @@ description: A thin-walled elastic tube collapses into a two-lobed shape and osc
 importance: 2
 category: Cardiovascular
 tags: ["3D", "FSI", "Collapsible tube", "LES"]
+stack: ["LBM", "Immersed boundary", "FEM", "LES", "OpenMP", "MPI"]
 summary: >
   A three-dimensional thin-walled elastic tube, mounted between two rigid tubes and squeezed by an external pressure,
   collapses into a two-lobed shape and oscillates on its own. I simulated the full tube, without symmetry assumptions,

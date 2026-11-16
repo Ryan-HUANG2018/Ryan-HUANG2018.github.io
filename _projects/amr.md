@@ -5,6 +5,7 @@ description: A block-structured Cartesian grid refines and coarsens as an oscill
 importance: 9
 category: FSI methods
 tags: ["2D", "AMR", "IB–LBM"]
+stack: ["LBM", "Immersed boundary", "AMR"]
 summary: >
   The grid follows the body: fine cells cluster around an oscillating cylinder and a flapping NACA0015 foil, and coarsen again
   once the body has passed. The adaptive mesh refinement (AMR) framework of Liu et al. (2022) stores each refinement level
