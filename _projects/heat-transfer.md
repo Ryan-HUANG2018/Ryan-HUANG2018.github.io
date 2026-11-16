@@ -45,6 +45,19 @@ Both cases were run during my PhD at UNSW Canberra. They are not part of the the
   </figure>
 </div>
 
+The flow fields of the same case show the stagnation pressure on the upstream face and the alternating low-pressure vortex cores in the wake that carry the heat away.
+
+<div class="rh-figs">
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/heated-cylinder-velocity.png' | relative_url }}" alt="Streamwise velocity around the heated cylinder, with a wavy wake of slow fluid" loading="lazy">
+    <figcaption>Heated cylinder: streamwise velocity <em>u</em>.</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/heated-cylinder-pressure.png' | relative_url }}" alt="Pressure around the heated cylinder, high at the front and low in the vortex cores of the wake" loading="lazy">
+    <figcaption>Heated cylinder: pressure <em>p</em>.</figcaption>
+  </figure>
+</div>
+
 **Stenotic channel.** The constriction drives a fast jet along the opposite wall, with reversed flow behind the constriction. The thermal boundary layers grow from the heated walls; at the constriction the layer is squeezed against the narrowed wall, and downstream the flow pattern sets how far the warm near-wall fluid spreads into the channel.
 
 <div class="rh-figs is-single">
@@ -58,6 +71,15 @@ Both cases were run during my PhD at UNSW Canberra. They are not part of the the
   <figure>
     <img src="{{ '/assets/img/heat-transfer/stenotic-channel-temperature.png' | relative_url }}" alt="Temperature in the same channel, with thermal boundary layers on both walls deformed by the constriction" loading="lazy">
     <figcaption>Stenotic channel: temperature.</figcaption>
+  </figure>
+</div>
+
+Most of the pressure drop occurs across the constriction, with the lowest pressure just downstream of the throat, followed by a partial recovery further downstream.
+
+<div class="rh-figs is-single">
+  <figure>
+    <img src="{{ '/assets/img/heat-transfer/stenotic-channel-pressure.png' | relative_url }}" alt="Pressure in the stenotic channel, high upstream and dropping sharply across the constriction" loading="lazy">
+    <figcaption>Stenotic channel: pressure <em>p</em>.</figcaption>
   </figure>
 </div>
 
