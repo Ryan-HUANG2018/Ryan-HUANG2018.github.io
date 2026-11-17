@@ -197,6 +197,7 @@ exclude:
   - _pages/dropdown.md
   - _pages/profiles.md
   - docs/redesign
+  - docs/TODO.md
   - CLAUDE.md
   - CLAUDE.local.md
   - requirements.txt
