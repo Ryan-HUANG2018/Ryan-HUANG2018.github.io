@@ -1,5 +1,5 @@
 {% comment %}
-  TOOLKIT panel under IMPACT. Groups and items come from _data/toolkit.yml.
+  Full toolkit, collapsed under the methods ranking (REDESIGN.md §0). Groups and items come from _data/toolkit.yml.
   An item with a `key` links to every simulation whose `stack:` contains that key (SIM numbers follow `importance`).
   Notes written as [placeholders] are not shown; an item with neither a note nor a matching simulation is skipped.
 {% endcomment %}
@@ -38,11 +38,11 @@
   {%- endfor -%}
 {% endcapture %}
 {% if groups_html != blank %}
-  <section id="toolkit" class="rh-toolkit rh-mono" aria-label="Toolkit">
-    <div class="rh-impact-head">
-      <span>TOOLKIT</span>
-      <span>methods · code · software — with the simulations that use them</span>
-    </div>
+  <details id="toolkit" class="rh-toolkit rh-glass rh-mono">
+    <summary class="rh-impact-head">
+      <span>FULL TOOLKIT</span>
+      <span>methods · code · software, with the simulations that use them</span>
+    </summary>
     <div class="rh-toolkit-grid">{{ groups_html }}</div>
-  </section>
+  </details>
 {% endif %}

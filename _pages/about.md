@@ -12,11 +12,18 @@ hero:
     Visiting Fellow in the Cardiovascular Technology Laboratory, Centre for Biomedical Technologies, Queensland University of Technology (QUT).
     I develop high-fidelity fluid–structure interaction solvers and use them to study cardiovascular flows,
     insect flight and flapping-wing micro air vehicles.
-  viewport: VORTICITY · MECHANICAL HEART VALVE
-  video: assets/video/mechanical-heart-valve/mhv.webm # autoplay loop
-  video_mp4: assets/video/mechanical-heart-valve/MHV.mp4
-  poster: assets/video/mechanical-heart-valve/mhv.jpg
-  params: # up to 4 cells under the viewport, e.g. - { label: Re, value: "3,900" }; [placeholders] are hidden
+  portrait: assets/img/portrait.jpg
+  portrait_role: Visiting Fellow
+  portrait_unit: Cardiovascular Technology Laboratory
+  viewport: PASSIVELY PITCHING WINGS · JFM 2023
+  video: assets/video/passively-flapping-wings/passively_flapping_wings.webm # autoplay loop
+  video_mp4: assets/video/passively-flapping-wings/Passively_flapping_wings.mp4
+  poster: assets/video/passively-flapping-wings/passively_flapping_wings.jpg
+  params: # up to 4 cells under the viewport; [placeholders] are hidden. Values from _projects/passively-flapping-wings.md
+    - { label: Re, value: "300" }
+    - { label: Hinge Ch, value: "0.45 (soft)" }
+    - { label: Grid, value: "7.25 M" }
+    - { label: Method, value: "IB–LBM" }
 
 # Impact panel under the hero. Update by hand from Google Scholar and refresh `snapshot`;
 # metrics older than 3 months should be re-checked before relying on them.

@@ -6,7 +6,7 @@
   {% assign news_limit = news.size %}
 {% endif %}
 <div class="rh-section-head">
-  {% include section_title.liquid num='03' title='News' %}
+  {% include section_title.liquid title='News' %}
   <a class="rh-mono rh-section-link" href="{{ '/news/' | relative_url }}">all news →</a>
 </div>
 
@@ -29,6 +29,10 @@
                 loading="lazy"
               >
             {% endif %}
+          </div>
+        {% else %}
+          <div class="rh-card-media rh-news-glyph" aria-hidden="true">
+            <span>{{ featured.category | default: 'NEWS' }}</span>
           </div>
         {% endif %}
         <div class="rh-card-body">

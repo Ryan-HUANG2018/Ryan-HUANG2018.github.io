@@ -1,6 +1,9 @@
 {% assign sims = site.projects | sort: 'importance' %}
+{% comment %} The project with `featured: true` (else the first) is the large autoplaying card; it is rendered first. {% endcomment %}
+{% assign featured_sim = sims | where: 'featured', true | first %}
+{% unless featured_sim %}{% assign featured_sim = sims.first %}{% endunless %}
 <div class="rh-section-head">
-  {% include section_title.liquid num='01' title='Simulations' %}
+  {% include section_title.liquid title='Simulations' sub='Cases from my in-house solvers. Hover a card to play it.' %}
   <div class="rh-filters" role="group" aria-label="Filter simulations by category">
     <button type="button" class="rh-chip is-active" data-rh-filter="all" aria-pressed="true">All</button>
     {% for category in page.simulations.categories %}
@@ -10,40 +13,52 @@
 </div>
 
 <div class="rh-grid">
-  {% for sim in sims %}
-    {% assign sim_num = forloop.index | prepend: '0' | slice: -2, 2 %}
-    <a
-      class="rh-card rh-sim-card"
-      href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
-      data-rh-category="{{ sim.category | slugify }}"
-    >
-      <div class="rh-card-media">
-        {% if sim.thumbnail %}
-          {% include sim_media.liquid src=sim.thumbnail poster=sim.thumbnail_poster hover=true %}
-          {% assign media_kind = 'ANIMATION' %}
-        {% elsif sim.img %}
-          <img class="rh-media-video" src="{{ sim.img | relative_url }}" alt="" loading="lazy">
-          {% assign media_kind = 'STILL' %}
-        {% else %}
-          {% include sim_media.liquid variant='card' %}
-          {% assign media_kind = null %}
-        {% endif %}
-        {% if media_kind %}
-          <div class="rh-card-badge">▶ {{ media_kind }}</div>
-        {% endif %}
-        <div class="rh-card-id">SIM-{{ sim_num }}</div>
-      </div>
-      <div class="rh-card-body">
-        <h3 class="rh-card-title">{{ sim.title }}</h3>
-        <p class="rh-card-text">{{ sim.description }}</p>
-        {% if sim.tags %}
-          <div class="rh-tags">
-            {% for tag in sim.tags %}
-              <span class="rh-tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
-    </a>
+  {% for pass in (1..2) %}
+    {% for sim in sims %}
+      {% if pass == 1 and sim.url != featured_sim.url %}{% continue %}{% endif %}
+      {% if pass == 2 and sim.url == featured_sim.url %}{% continue %}{% endif %}
+      {% assign is_featured = false %}
+      {% if pass == 1 %}{% assign is_featured = true %}{% endif %}
+      {% assign sim_num = forloop.index | prepend: '0' | slice: -2, 2 %}
+      <a
+        class="rh-card rh-sim-card{% if is_featured %} rh-sim-featured{% endif %}"
+        href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
+        data-rh-category="{{ sim.category | slugify }}"
+      >
+        <div class="rh-card-media">
+          {% if sim.thumbnail %}
+            {% if is_featured %}
+              {% assign f_src = sim.featured_video | default: sim.thumbnail %}
+              {% assign f_poster = sim.featured_poster | default: sim.thumbnail_poster %}
+              {% include sim_media.liquid src=f_src poster=f_poster %}
+            {% else %}
+              {% include sim_media.liquid src=sim.thumbnail poster=sim.thumbnail_poster hover=true %}
+            {% endif %}
+            {% assign media_kind = 'ANIMATION' %}
+          {% elsif sim.img %}
+            <img class="rh-media-video" src="{{ sim.img | relative_url }}" alt="" loading="lazy">
+            {% assign media_kind = 'STILL' %}
+          {% else %}
+            {% include sim_media.liquid variant='card' %}
+            {% assign media_kind = null %}
+          {% endif %}
+          {% if media_kind %}
+            <div class="rh-card-badge">▶ {{ media_kind }}</div>
+          {% endif %}
+          <div class="rh-card-id">SIM-{{ sim_num }}</div>
+        </div>
+        <div class="rh-card-body">
+          <h3 class="rh-card-title">{{ sim.title }}</h3>
+          <p class="rh-card-text">{{ sim.description }}</p>
+          {% if sim.tags %}
+            <div class="rh-tags">
+              {% for tag in sim.tags %}
+                <span class="rh-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
   {% endfor %}
 </div>

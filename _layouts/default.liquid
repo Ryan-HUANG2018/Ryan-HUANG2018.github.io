@@ -17,6 +17,12 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Blurred simulation backdrop behind the glass panels (REDESIGN.md §0) -->
+    <div class="rh-backdrop" aria-hidden="true">
+      <img src="{{ 'assets/video/passively-flapping-wings/preview.jpg' | relative_url }}" alt="">
+      <img src="{{ 'assets/video/collapsible-tube-3d/preview.jpg' | relative_url }}" alt="">
+    </div>
+
     <!-- Header -->
     {% include header.liquid %}
 

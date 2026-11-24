@@ -1,9 +1,11 @@
 <header>
+  {% assign rh_has_field = false %}
+  {% if site.data.field and site.data.field.size > 0 %}{% assign rh_has_field = true %}{% endif %}
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-expand-lg rh-nav {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="rh-container">
       <a class="navbar-brand rh-brand" href="{{ '/' | relative_url }}">
-        <span class="rh-brand-mark" aria-hidden="true"></span>
+        <img class="rh-brand-avatar" src="{{ 'assets/img/avatar.jpg' | relative_url }}" alt="" width="34" height="34">
         <span>{{ site.first_name | slice: 0 | upcase }}.{{ site.last_name | upcase }}</span>
         <span class="rh-brand-sub">// fluid dynamics</span>
       </a>
@@ -26,19 +28,21 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/#sims' | relative_url }}"><span class="rh-num">01</span> simulations</a>
+            <a class="nav-link" href="{{ '/#sims' | relative_url }}">Simulations</a>
           </li>
           <li class="nav-item {% if page.url contains '/publications/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/#pubs' | relative_url }}"><span class="rh-num">02</span> publications</a>
+            <a class="nav-link" href="{{ '/#pubs' | relative_url }}">Publications</a>
           </li>
+          {% if rh_has_field %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ '/#field' | relative_url }}">In the field</a>
+            </li>
+          {% endif %}
           <li class="nav-item {% if page.url contains '/news/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/#news' | relative_url }}"><span class="rh-num">03</span> news</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/#connect' | relative_url }}"><span class="rh-num">04</span> connect</a>
+            <a class="nav-link" href="{{ '/#news' | relative_url }}">News</a>
           </li>
           <li class="nav-item {% if page.url contains '/cv/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/cv/' | relative_url }}"><span class="rh-num">05</span> cv</a>
+            <a class="nav-link" href="{{ '/cv/' | relative_url }}">CV</a>
           </li>
           {% if site.search_enabled %}
             <!-- Search -->
@@ -48,6 +52,9 @@
               </button>
             </li>
           {% endif %}
+          <li class="nav-item rh-nav-cta">
+            <a class="rh-btn rh-btn-solid" href="{{ '/#connect' | relative_url }}">Contact</a>
+          </li>
         </ul>
       </div>
     </div>

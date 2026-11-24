@@ -1,0 +1,12 @@
+# "In the field" photo section on the homepage (_includes/home/field.liquid, REDESIGN.md §0).
+# Only photos the owner has approved one by one: they show other people.
+# Images: strip EXIF/GPS, long side at most 1600 px, stored in assets/img/field/.
+# The section and its nav link stay hidden while this list is empty.
+# The first photo is the large one. Fields: src, alt, title, place, year.
+#
+# - src: assets/img/field/example.jpg
+#   alt: Speaking at a conference
+#   title: Early-career talk
+#   place: Brisbane
+#   year: 2023
+[]

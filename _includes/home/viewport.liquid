@@ -1,0 +1,26 @@
+{% assign hero = page.hero %}
+<figure class="rh-viewport rh-glass">
+  <div class="rh-viewport-bar">
+    <span>VIEWPORT · {{ hero.viewport | default: 'VORTICITY |ω|' }}</span>
+    <span class="rh-accent">● LIVE</span>
+  </div>
+  <div class="rh-viewport-media">
+    {%
+      include sim_media.liquid variant='hero' src=hero.video mp4=hero.video_mp4 poster=hero.poster
+      label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
+    %}
+  </div>
+  {% capture params_html %}
+      {%- for p in hero.params -%}
+        {%- unless p.value contains '[' -%}
+          <div class="rh-param">
+            <div class="rh-param-label">{{ p.label }}</div>
+            <div class="rh-param-value">{{ p.value }}</div>
+          </div>
+        {%- endunless -%}
+      {%- endfor -%}
+    {% endcapture %}
+  {% if params_html != blank %}
+    <div class="rh-params">{{ params_html }}</div>
+  {% endif %}
+</figure>
