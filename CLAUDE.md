@@ -48,7 +48,7 @@
 2. **本地预览**：用 docker compose 在 http://localhost:8080 预览，确认网站照常生成、改动的页面显示正常，并告诉用户该看哪个页面。
 3. **PR**：推送分支，用 `gh pr create` 开 Pull Request。
 4. **检查全部通过**：用 `gh pr checks` 等所有 GitHub Actions 检查通过（包括 Prettier 格式检查）。没通过就在同一分支上修好再推。
-5. **用户确认后合并**：把 PR 链接和检查结果告诉用户，由用户决定是否合并。不要自己合并。
+5. **检查通过后合并**：用户 2026-11-25 同意 Claude 自己合并它开的 PR。所有检查通过后直接合并，再把 PR 链接和上线内容告诉用户。照片等需要用户确认的内容，仍要先确认再放进 PR。
 
 提交前用 Prettier 检查格式。CI 用的是 `package.json` 里锁定的版本（Prettier 3.1.1、Liquid 插件 1.4.0），不是最新版；本地用 Node 镜像在仓库里 `npm install --no-save` 后运行 `npx prettier . --check --end-of-line auto`（Windows 下文件是 CRLF 换行，需要这个参数）。`docs/redesign/` 在 `.prettierignore` 里，不格式化。
 
