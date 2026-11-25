@@ -1,0 +1,44 @@
+{% comment %}
+  Methods ranking: how many simulation projects list each method in their `stack:`.
+  Only stack keys that appear in _data/toolkit.yml under "Methods & algorithms" or "Code & HPC" are counted,
+  so names stay the confirmed ones. Top 7, bar length relative to the most used.
+{% endcomment %}
+{% assign sims = site.projects %}
+{% capture rows %}
+  {%- for group in site.data.toolkit -%}
+    {%- for item in group.items -%}
+      {%- if item.key -%}
+        {%- assign n = 0 -%}
+        {%- for sim in sims -%}
+          {%- if sim.stack contains item.key -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if n > 0 -%}
+          {%- assign padded = n | prepend: '000' | slice: -3, 3 -%}
+          {{- padded }}|{{ item.name }};
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{% endcapture %}
+{% assign ranked = rows | strip | split: ';' | sort | reverse %}
+{% if ranked.size > 0 %}
+  {% assign top = ranked.first | split: '|' | first | plus: 0 %}
+  <section class="rh-methods rh-glass" aria-label="Methods behind the simulations">
+    <h3 class="rh-methods-title">Methods behind {{ sims.size }} simulations</h3>
+    <p class="rh-methods-sub rh-mono">projects using each method</p>
+    <ol class="rh-methods-list">
+      {% for row in ranked limit: 7 %}
+        {% assign parts = row | split: '|' %}
+        {% assign n = parts[0] | plus: 0 %}
+        {% assign pct = n | times: 100 | divided_by: top %}
+        <li class="rh-methods-row{% if forloop.index > 3 %} is-dim{% endif %}">
+          <span class="rh-methods-i rh-mono">{{ forloop.index }}</span>
+          <span class="rh-methods-name">{{ parts[1] }}</span>
+          <span class="rh-methods-n rh-mono">{{ n }}</span>
+          <span class="rh-methods-bar" aria-hidden="true"><i style="width: {{ pct }}%"></i></span>
+        </li>
+      {% endfor %}
+    </ol>
+    <a class="rh-methods-more rh-mono" href="#toolkit" onclick="document.getElementById('toolkit').open = true">full toolkit ↓</a>
+  </section>
+{% endif %}

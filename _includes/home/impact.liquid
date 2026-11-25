@@ -1,29 +1,28 @@
-{% comment %} Academic impact snapshot (page.impact in _pages/about.md); [placeholders] are not shown. {% endcomment %}
+{% comment %} Academic impact snapshot (page.impact in _pages/about.md); [placeholders] are not shown. The first metric is highlighted. {% endcomment %}
 {% assign impact = page.impact %}
 {% capture metrics_html %}
+  {%- assign shown = 0 -%}
   {%- for m in impact.metrics -%}
     {%- unless m.value contains '[' or m.value == blank -%}
-      <div class="rh-impact-metric">
-        <div class="rh-param-label">{{ m.label | upcase }}</div>
+      <div class="rh-impact-metric rh-glass{% if shown == 0 %} is-featured{% endif %}">
+        <div class="rh-impact-label">{{ m.label }}</div>
         <div class="rh-impact-value">{{ m.value }}</div>
-        {%- if m.note %}<div class="rh-impact-note">{{ m.note }}</div>{% endif -%}
+        <div class="rh-impact-note">{{ m.note | default: impact.source }}</div>
       </div>
+      {%- assign shown = shown | plus: 1 -%}
     {%- endunless -%}
   {%- endfor -%}
 {% endcapture %}
 {% if metrics_html != blank %}
-  <section class="rh-impact rh-mono" aria-label="Research impact">
-    <div class="rh-impact-head">
-      <span>IMPACT</span>
-      <span>
-        {%- if impact.url -%}
-          <a href="{{ impact.url }}">{{ impact.source }}</a>
-        {%- else -%}
-          {{- impact.source -}}
-        {%- endif %}
-        · snapshot {{ impact.snapshot | date: '%Y-%m-%d' -}}
-      </span>
-    </div>
+  <section class="rh-impact" aria-label="Research impact">
     <div class="rh-impact-grid">{{ metrics_html }}</div>
+    <div class="rh-impact-src rh-mono">
+      snapshot {{ impact.snapshot | date: '%Y-%m-%d' }} ·
+      {% if impact.url -%}
+        <a href="{{ impact.url }}">{{ impact.source }}</a>
+      {%- else -%}
+        {{- impact.source -}}
+      {%- endif %}
+    </div>
   </section>
 {% endif %}

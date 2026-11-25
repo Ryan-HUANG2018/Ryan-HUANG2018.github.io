@@ -4,11 +4,18 @@ layout: default
 <div class="rh-home">
   {% include home/hero.liquid %}
   {% include home/impact.liquid %}
+
+  <div class="rh-bento rh-bento-lab">
+    {% include home/viewport.liquid %}
+    {% include home/methods.liquid %}
+  </div>
   {% include home/toolkit.liquid %}
 
   <section id="sims" class="rh-section">
     {% include home/simulations.liquid %}
   </section>
+
+  {% include home/field.liquid %}
 
   <section id="pubs" class="rh-section">
     {% include home/publications.liquid %}

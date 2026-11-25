@@ -1,3 +1,6 @@
-<h2 class="rh-section-title">
-  <span class="rh-section-num">{{ include.num }}</span>{{ include.title }}
-</h2>
+<div class="rh-section-titles">
+  <h2 class="rh-section-title">{{ include.title }}</h2>
+  {% if include.sub %}
+    <p class="rh-section-sub">{{ include.sub }}</p>
+  {% endif %}
+</div>

@@ -1,11 +1,11 @@
 {% assign hero = page.hero %}
 {% assign socials = site.data.socials %}
 {% assign cv_page = site.pages | where: 'permalink', '/cv/' | first %}
-<section class="rh-hero">
-  <div class="rh-hero-text">
+<section class="rh-hero rh-bento">
+  <div class="rh-hero-text rh-glass">
     <div class="rh-status">
       <span class="rh-status-dot rh-pulse" aria-hidden="true"></span>
-      <span>SOLVER RUNNING · {{ hero.status | default: '[YOUR INSTITUTION]' }}</span>
+      <span>{{ hero.status | default: '[YOUR INSTITUTION]' }}</span>
     </div>
     <h1 class="rh-hero-name">{% include rh_name.liquid %}</h1>
     <p class="rh-hero-focus">{{ hero.focus | default: '[YOUR RESEARCH FOCUS]' }}</p>
@@ -34,29 +34,15 @@
     </div>
   </div>
 
-  <figure class="rh-viewport">
-    <div class="rh-viewport-bar">
-      <span>VIEWPORT · {{ hero.viewport | default: 'VORTICITY |ω|' }}</span>
-      <span class="rh-accent">● LIVE</span>
-    </div>
-    <div class="rh-viewport-media">
-      {%
-        include sim_media.liquid variant='hero' src=hero.video mp4=hero.video_mp4 poster=hero.poster
-        label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
-      %}
-    </div>
-    {% capture params_html %}
-      {%- for p in hero.params -%}
-        {%- unless p.value contains '[' -%}
-          <div class="rh-param">
-            <div class="rh-param-label">{{ p.label }}</div>
-            <div class="rh-param-value">{{ p.value }}</div>
-          </div>
-        {%- endunless -%}
-      {%- endfor -%}
-    {% endcapture %}
-    {% if params_html != blank %}
-      <div class="rh-params">{{ params_html }}</div>
-    {% endif %}
-  </figure>
+  {% if hero.portrait %}
+    <figure class="rh-portrait rh-glass">
+      <img src="{{ hero.portrait | relative_url }}" alt="Portrait of {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}">
+      {% if hero.portrait_role %}
+        <figcaption class="rh-portrait-cap rh-glass">
+          <span class="rh-portrait-k">{{ hero.portrait_role }}</span>
+          <span class="rh-portrait-t">{{ hero.portrait_unit }}</span>
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
 </section>
