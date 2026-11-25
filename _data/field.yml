@@ -29,38 +29,25 @@
   title: AFMC 2022
   year: 2022
   size: wide
-- src: assets/img/field/phd-2022-portrait.jpg
-  alt: Qiuxiang (Ryan) Huang in PhD academic dress at the UNSW Canberra graduation
-  title: PhD graduation, UNSW Canberra
-  year: 2022
-  size: tall
-  focus: center 30%
-- src: assets/img/field/apcom-2025-delegates.jpg
-  alt: Qiuxiang (Ryan) Huang with the APCOM–ACCM 2025 conference team
-  title: APCOM–ACCM 2025 team
-  year: 2025
-  size: wide
-- src: assets/img/field/phd-2022-stage.jpg
-  alt: Qiuxiang (Ryan) Huang on stage at the UNSW Canberra PhD graduation ceremony
-  title: Graduation ceremony
-  year: 2022
-  size: wide
-- src: assets/img/field/phd-2022-unsw-sign.jpg
-  alt: Qiuxiang (Ryan) Huang with a fellow graduate by the UNSW Canberra sign
-  title: Graduation day
-  year: 2022
-  size: tall
 - src: assets/img/field/apcom-2025-group.jpg
   alt: Qiuxiang (Ryan) Huang with fellow delegates at APCOM–ACCM 2025
   title: APCOM–ACCM 2025
+  year: 2025
+- src: assets/img/field/apcom-2025-delegates.jpg
+  alt: Qiuxiang (Ryan) Huang with the APCOM–ACCM 2025 conference team
+  title: APCOM–ACCM 2025 team
   year: 2025
   size: wide
 - src: assets/img/field/qut-2025-retreat.jpg
   alt: Qiuxiang (Ryan) Huang with colleagues at a QUT two-day research retreat
   title: QUT 2-Day Retreat
   year: 2025
+- src: assets/img/field/phd-2022-stage.jpg
+  alt: Qiuxiang (Ryan) Huang on stage at the UNSW Canberra PhD graduation ceremony
+  title: Graduation ceremony
+  year: 2022
+  size: wide
 - src: assets/img/field/unsw-2022-keynote-badge.jpg
   alt: Name card for Qiuxiang (Ryan) Huang, keynote speaker at the UNSW Canberra SEIT HDR Conference
   title: Keynote, SEIT HDR Conference
   year: 2022
-  size: wide

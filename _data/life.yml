@@ -2,13 +2,15 @@
 # Only life photos the owner picked one by one; no family, children or home. Images in assets/img/life/, EXIF/GPS stripped, long side at most 1600 px.
 # Layout: three tiles per row; size: wide takes two thirds, size: pano a full row.
 - src: assets/img/life/christmas-2018.jpg
-  alt: Qiuxiang (Ryan) Huang on a grand staircase in front of a Christmas tree
+  alt: Qiuxiang (Ryan) Huang on a grand staircase in front of a Christmas tree in Sydney
   title: Christmas
+  place: Sydney
   year: 2018
   focus: center 70%
 - src: assets/img/life/palms-2020.jpg
-  alt: Qiuxiang (Ryan) Huang in a sunny courtyard under palm trees
+  alt: Qiuxiang (Ryan) Huang in a sunny courtyard under palm trees in San Diego
   title: Under the palms
+  place: San Diego
   year: 2020
   focus: center 70%
 - src: assets/img/life/seattle-2019.jpg
