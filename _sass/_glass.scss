@@ -95,7 +95,7 @@ body {
 
   .rh-brand {
     gap: 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
   }
 
@@ -110,7 +110,7 @@ body {
     align-items: center;
     gap: 2px;
     font-family: var(--rh-font-body);
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .nav-link,
@@ -133,7 +133,7 @@ body {
 
   #search-toggle .nav-link {
     font-family: var(--rh-font-mono);
-    font-size: 12px;
+    font-size: 13px;
     color: var(--rh-text-muted);
   }
 
@@ -141,8 +141,8 @@ body {
     margin-left: 6px;
 
     .rh-btn {
-      min-height: 40px;
-      font-size: 14px;
+      min-height: 42px;
+      font-size: 15px;
     }
   }
 
@@ -578,6 +578,15 @@ body {
     cursor: pointer;
     list-style: none;
     border-bottom: 0;
+    align-items: baseline;
+    padding: 18px 22px;
+    font-size: 13px;
+
+    > span:first-child {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--rh-text);
+    }
 
     &::-webkit-details-marker {
       display: none;
@@ -598,12 +607,28 @@ body {
   }
 }
 
+// Toolkit list text, one step up from the base layer so it reads at a glance
 .rh-toolkit-group {
+  padding: 22px;
   border-color: var(--rh-glass-line);
+
+  .rh-param-label {
+    font-size: 12px;
+  }
 }
 
 .rh-toolkit-item {
+  padding: 10px 0;
   border-color: var(--rh-glass-line);
+}
+
+.rh-toolkit-name {
+  font-size: 15px;
+}
+
+.rh-toolkit-note,
+.rh-toolkit-sims {
+  font-size: 13px;
 }
 
 // Cards: glass with a rounded media "mat"
@@ -807,9 +832,13 @@ body {
   padding: 24px;
 }
 
+// Teraviq mark (assets/img/teraviq/teraviq-mark.svg, cut from the full logo): the SVG brings its own rounded tile
 .rh-teraviq-icon {
+  width: 64px;
+  border: 0;
   border-radius: 16px;
-  background: rgba(63, 224, 208, 0.16);
+  background: none;
+  box-shadow: 0 0 0 1px var(--rh-glass-line);
 }
 
 .rh-socials {
