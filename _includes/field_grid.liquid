@@ -1,10 +1,10 @@
 {% comment %}
-  Photo grid for "In the field". Data: _data/field.yml.
-  Params: limit (optional) shows only the first N photos; their layout follows the count shown.
+  Photo grid for "In the field". Data: _data/field.yml, or another list passed as `photos`.
+  Params: photos (optional list), limit (optional) shows only the first N, thirds=true uses the three-per-row layout.
 {% endcomment %}
-{% assign photos = site.data.field %}
-{% if include.limit %}{% assign photos = site.data.field | slice: 0, include.limit %}{% endif %}
-<div class="rh-field rh-field-n{{ photos.size }}{% if photos.size > 3 %} rh-field-many{% endif %}">
+{% assign photos = include.photos | default: site.data.field %}
+{% if include.limit %}{% assign photos = photos | slice: 0, include.limit %}{% endif %}
+<div class="rh-field rh-field-n{{ photos.size }}{% if include.thirds %} rh-field-thirds{% elsif photos.size > 3 %} rh-field-many{% endif %}">
   {% for p in photos %}
     <figure class="rh-field-item rh-field-{{ forloop.index }}{% if p.size %} is-{{ p.size }}{% endif %}">
       <img

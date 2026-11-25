@@ -1,0 +1,43 @@
+# "Beyond the lab" strip at the bottom of /field/ (_pages/field.md). Same fields as _data/field.yml.
+# Only life photos the owner picked one by one; no family, children or home. Images in assets/img/life/, EXIF/GPS stripped, long side at most 1600 px.
+# Layout: three tiles per row; size: wide takes two thirds, size: pano a full row.
+- src: assets/img/life/christmas-2018.jpg
+  alt: Qiuxiang (Ryan) Huang on a grand staircase in front of a Christmas tree
+  title: Christmas
+  year: 2018
+  focus: center 70%
+- src: assets/img/life/palms-2020.jpg
+  alt: Qiuxiang (Ryan) Huang in a sunny courtyard under palm trees
+  title: Under the palms
+  year: 2020
+  focus: center 70%
+- src: assets/img/life/seattle-2019.jpg
+  alt: The Space Needle in Seattle under a blue sky
+  title: Seattle
+  year: 2019
+- src: assets/img/life/coast-2022.jpg
+  alt: Waves along a cliff-lined coast
+  title: Coastline
+  year: 2022
+- src: assets/img/life/rocky-coast-2023.jpg
+  alt: Rocky shore and sea under white clouds
+  title: Rocky shore
+  year: 2023
+- src: assets/img/life/canberra-2021.jpg
+  alt: Canberra seen from a lookout on a clear morning
+  title: Canberra from above
+  year: 2021
+- src: assets/img/life/lakers-2020.jpg
+  alt: A Lakers basketball game seen from the upper seats
+  title: Lakers game, Los Angeles
+  year: 2020
+  size: wide
+- src: assets/img/life/tsinghua-sigs-2023.jpg
+  alt: Qiuxiang (Ryan) Huang at the entrance of Tsinghua Shenzhen International Graduate School
+  title: Tsinghua SIGS, Shenzhen
+  year: 2023
+- src: assets/img/life/sunset-2023.jpg
+  alt: Panorama of a sunset over trees and hills
+  title: Sunset
+  year: 2023
+  size: pano
