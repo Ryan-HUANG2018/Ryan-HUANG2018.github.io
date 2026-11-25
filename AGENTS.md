@@ -15,7 +15,7 @@ The authoritative text is section 13 of `AI_COLLABORATION_RULES.md` in the owner
 - When you correct a claim, search every file and repository that may hold the same claim, not only the one in front of you.
 - If you find an error that an AI wrote or copied in, add a line to `ai-profile/ai-error-log.md`. If `ai-profile` is not available in your session, list the error under "Errors found" in the pull request description.
 - If `../ai-profile` is not available, say so. Never skip the check silently.
-- Work on a branch and open a pull request. Only the owner merges.
+- Work on a branch and open a pull request. After a second-round check of every entry against its source (put anything uncertain in `ai-profile/career/review-needed.md`), the AI merges the pull request itself with a normal merge, never rebase or squash. Deleting, renaming or moving files still needs the owner's approval first (section 2B of `AI_COLLABORATION_RULES.md` in `ai-profile`).
 
 ## AI 录入来源（文档）
 
