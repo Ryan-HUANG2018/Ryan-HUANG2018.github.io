@@ -897,3 +897,11 @@ footer.rh-footer {
 .rh-news-featured .rh-media-contain {
   background: radial-gradient(circle at 50% 50%, rgba(63, 224, 208, 0.22), transparent 70%), var(--rh-media);
 }
+
+// Two photos: equal halves
+@media (min-width: 901px) {
+  .rh-field-n2 .rh-field-item {
+    grid-column: span 6;
+    grid-row: span 3;
+  }
+}

@@ -5,7 +5,7 @@
     <div class="rh-section-head">
       {% include section_title.liquid title='In the field' sub='Talks, workshops and the people I work with.' %}
     </div>
-    <div class="rh-field">
+    <div class="rh-field rh-field-n{{ photos.size }}">
       {% for p in photos %}
         <figure class="rh-field-item rh-field-{{ forloop.index }}">
           <img src="{{ p.src | relative_url }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy">
