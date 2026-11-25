@@ -905,3 +905,19 @@ footer.rh-footer {
     grid-row: span 3;
   }
 }
+
+// Three photos: one large on the left, two stacked on the right
+@media (min-width: 901px) {
+  .rh-field-n3 {
+    .rh-field-1 {
+      grid-column: span 7;
+      grid-row: span 4;
+    }
+
+    .rh-field-2,
+    .rh-field-3 {
+      grid-column: span 5;
+      grid-row: span 2;
+    }
+  }
+}

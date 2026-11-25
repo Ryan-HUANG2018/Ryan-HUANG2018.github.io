@@ -2,13 +2,18 @@
 # Only photos the owner has approved one by one: they show other people.
 # Images: strip EXIF/GPS, long side at most 1600 px, stored in assets/img/field/.
 # The section and its nav link stay hidden while this list is empty.
-# The first photo is the large one. Fields: src, alt, title, place, year.
+# The first photo is the large one. Fields: src, alt, title, place, year, focus (optional CSS object-position).
 #
 # - src: assets/img/field/example.jpg
 #   alt: Speaking at a conference
 #   title: Early-career talk
 #   place: Brisbane
 #   year: 2023
+- src: assets/img/field/cbt-2023-talk.jpg
+  alt: Qiuxiang (Ryan) Huang presenting at the QUT Centre for Biomedical Technologies conference
+  title: Talk at QUT CBT Conference
+  year: 2023
+  focus: 65% center
 - src: assets/img/field/cbt-2023-group.jpg
   alt: Qiuxiang (Ryan) Huang with colleagues at the QUT Centre for Biomedical Technologies conference
   title: QUT CBT Conference
