@@ -28,7 +28,7 @@
 - 2026-11 起整体改成磨砂玻璃风格，规格见 REDESIGN.md §0（优先于该文件其余冲突项）。
 - TOOLKIT：首页显示"方法排行"卡（按项目 `stack:` 统计），完整列表在可展开的 Full toolkit 面板里。内容在 `_data/toolkit.yml`，每项按 `key` 自动链接到 `stack:` 里含这个 key 的仿真项目。项目页参数卡下方显示该项目的 `stack:`。工具和方法只写 ai-profile 里确认过或文件记载的，不凭印象加；某个项目用了什么，没有记录就不写进它的 `stack:`。
 - 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
-- In the field 照片区：数据在 `_data/field.yml`，只放用户逐张确认过的照片（照片里有他人）。图片去掉 EXIF/GPS、长边不超过 1600px，放在 `assets/img/field/`；原图在用户的照片库里，只读。
+- In the field 照片区：首页只预览前 3 张，全部照片在单独页面 `/field/`（用户 2026-11-25 要求首页不要放太多照片）。数据在 `_data/field.yml`，只放用户逐张确认过的照片（照片里有他人）。图片去掉 EXIF/GPS、长边不超过 1600px，放在 `assets/img/field/`；原图在用户的照片库里，只读。
 - 首屏下方有学术指标面板（`_pages/about.md` 的 `impact`）：数字必须带快照日期和来源；快照超过 3 个月时提醒用户更新。Journal papers 只计研究论文（不含社论）。
 - 未确认的内容一律写成 `[占位]`，网页上不显示；整块没有内容就整块隐藏。不要编造论文、数据或经历。
 
