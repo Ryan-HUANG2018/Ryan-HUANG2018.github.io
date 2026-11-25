@@ -34,8 +34,8 @@
             <a class="nav-link" href="{{ '/#pubs' | relative_url }}">Publications</a>
           </li>
           {% if rh_has_field %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ '/#field' | relative_url }}">In the field</a>
+            <li class="nav-item {% if page.url contains '/field/' %}active{% endif %}">
+              <a class="nav-link" href="{{ '/field/' | relative_url }}">In the field</a>
             </li>
           {% endif %}
           <li class="nav-item {% if page.url contains '/news/' %}active{% endif %}">

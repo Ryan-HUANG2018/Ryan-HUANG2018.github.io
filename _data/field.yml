@@ -1,8 +1,8 @@
 # "In the field" photo section on the homepage (_includes/home/field.liquid, REDESIGN.md §0).
 # Only photos the owner has approved one by one: they show other people.
 # Images: strip EXIF/GPS, long side at most 1600 px, stored in assets/img/field/.
-# The section and its nav link stay hidden while this list is empty.
-# The first photo is the large one. Fields: src, alt, title, place, year, focus (optional CSS object-position),
+# The section, the /field/ page content and the nav link stay hidden while this list is empty.
+# The homepage previews the first three; /field/ shows them all. The first photo is the large one. Fields: src, alt, title, place, year, focus (optional CSS object-position),
 # size (optional, used when there are 4+ photos: big, wide or tall; default is a small tile).
 #
 # - src: assets/img/field/example.jpg
@@ -29,11 +29,6 @@
   title: AFMC 2022
   year: 2022
   size: wide
-- src: assets/img/field/apcom-2025-p2.jpg
-  alt: Qiuxiang (Ryan) Huang with a colleague at APCOM–ACCM 2025
-  title: APCOM–ACCM 2025
-  year: 2025
-  size: tall
 - src: assets/img/field/apcom-2025-group.jpg
   alt: Qiuxiang (Ryan) Huang with fellow delegates at APCOM–ACCM 2025
   title: APCOM–ACCM 2025
@@ -42,16 +37,8 @@
   alt: Qiuxiang (Ryan) Huang with the APCOM–ACCM 2025 conference team
   title: APCOM–ACCM 2025 team
   year: 2025
+  size: wide
 - src: assets/img/field/qut-2025-retreat.jpg
   alt: Qiuxiang (Ryan) Huang with colleagues at a QUT two-day research retreat
   title: QUT 2-Day Retreat
   year: 2025
-- src: assets/img/field/cbt-2023-evening.jpg
-  alt: Qiuxiang (Ryan) Huang with colleagues at the QUT CBT Conference evening event
-  title: QUT CBT Conference evening
-  year: 2023
-- src: assets/img/field/afms-2022-badge.jpg
-  alt: Conference badge of Qiuxiang (Ryan) Huang, early-career researcher at the AFMS Retreat 2022
-  title: AFMS ECR Retreat
-  year: 2022
-  focus: center 60%

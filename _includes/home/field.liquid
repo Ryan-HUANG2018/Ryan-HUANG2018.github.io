@@ -1,30 +1,13 @@
-{% comment %} "In the field": approved conference and group photos from _data/field.yml. Hidden while the list is empty. {% endcomment %}
+{% comment %} "In the field" preview on the homepage: the first three photos, with a link to /field/ for the rest. Hidden while _data/field.yml is empty. {% endcomment %}
 {% assign photos = site.data.field %}
 {% if photos and photos.size > 0 %}
   <section id="field" class="rh-section">
     <div class="rh-section-head">
       {% include section_title.liquid title='In the field' sub='Talks, workshops and the people I work with.' %}
+      {% if photos.size > 3 %}
+        <a class="rh-mono rh-section-link" href="{{ '/field/' | relative_url }}">all {{ photos.size }} photos →</a>
+      {% endif %}
     </div>
-    <div class="rh-field rh-field-n{{ photos.size }}{% if photos.size > 3 %} rh-field-many{% endif %}">
-      {% for p in photos %}
-        <figure class="rh-field-item rh-field-{{ forloop.index }}{% if p.size %} is-{{ p.size }}{% endif %}">
-          <img
-            src="{{ p.src | relative_url }}"
-            alt="{{ p.alt | default: p.title | escape }}"
-            loading="lazy"
-            {% if p.focus %}
-              style="object-position: {{ p.focus }}"
-            {% endif %}
-          >
-          <figcaption class="rh-glass">
-            <span class="rh-field-t">{{ p.title }}</span>
-            <span class="rh-field-k rh-mono">
-              {%- if p.place %}{{ p.place | upcase }} · {% endif -%}
-              {{- p.year -}}
-            </span>
-          </figcaption>
-        </figure>
-      {% endfor %}
-    </div>
+    {% include field_grid.liquid limit=3 %}
   </section>
 {% endif %}

@@ -922,27 +922,28 @@ footer.rh-footer {
   }
 }
 
-// Four or more photos: bento tiles sized by `size:` in _data/field.yml
+// Four or more photos (the /field/ page): bento tiles sized by `size:` in _data/field.yml.
+// Big and wide tiles take 7 of 12 columns and pair with a 5-column small tile on each row.
 .rh-field-many {
   grid-auto-flow: dense;
 
   .rh-field-item {
-    grid-column: span 4;
+    grid-column: span 5;
     grid-row: span 2;
   }
 
   .rh-field-item.is-big {
-    grid-column: span 8;
+    grid-column: span 7;
     grid-row: span 4;
   }
 
   .rh-field-item.is-wide {
-    grid-column: span 8;
+    grid-column: span 7;
     grid-row: span 2;
   }
 
   .rh-field-item.is-tall {
-    grid-column: span 4;
+    grid-column: span 5;
     grid-row: span 4;
   }
 }
