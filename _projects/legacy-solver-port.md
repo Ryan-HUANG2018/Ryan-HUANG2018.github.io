@@ -15,7 +15,7 @@ thumbnail: assets/video/legacy-solver-port/preview.webm
 thumbnail_poster: assets/video/legacy-solver-port/preview.jpg
 variants:
   - {
-      name: Flow through a 90° bend up to peak systole,
+      name: Flow through a 90° bend over three cardiac cycles,
       src: assets/video/legacy-solver-port/bend-peak-systole.webm,
       mp4: assets/video/legacy-solver-port/bend-peak-systole.mp4,
       poster: assets/video/legacy-solver-port/bend-peak-systole.jpg,
