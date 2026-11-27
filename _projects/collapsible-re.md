@@ -147,6 +147,6 @@ The dominant Lyapunov exponents confirm the classification (_M_ = 1, _K<sub>s</s
 
 ## Publication
 
-Huang, Q., Tian, F.-B., Young, J. & Lai, J.C.S. (2021). Transition to chaos in a two-sided collapsible channel flow. _Journal of Fluid Mechanics_ 926, A15.
+Huang, Q., Tian, F.-B., Young, J. & Lai, J.C.S. (2021). Transition to chaos in a two-sided collapsible channel flow. _Journal of Fluid Mechanics_ 926, A15. [doi:10.1017/jfm.2021.710](https://doi.org/10.1017/jfm.2021.710)
 
-Luo, X.Y., Cai, Z.X., Li, W.G. & Pedley, T.J. (2008). The cascade structure of linear instability in collapsible channel flows. _Journal of Fluid Mechanics_ 600, 45–76.
+Luo, X.Y., Cai, Z.X., Li, W.G. & Pedley, T.J. (2008). The cascade structure of linear instability in collapsible channel flows. _Journal of Fluid Mechanics_ 600, 45–76. [doi:10.1017/S0022112008000293](https://doi.org/10.1017/S0022112008000293)

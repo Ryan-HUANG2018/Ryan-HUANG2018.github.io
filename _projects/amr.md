@@ -73,6 +73,6 @@ As the body moves, the grid is refined around its new position and coarsened whe
 
 ## Publications
 
-Liu, Z., Huang, Q., Li, Z., Li, Y. & Feng, X. (2023). Partial confinement effects on the performance of a flapping foil power generator. _Physics of Fluids_ 35(2), 027108.
+Liu, Z., Huang, Q., Li, Z., Li, Y. & Feng, X. (2023). Partial confinement effects on the performance of a flapping foil power generator. _Physics of Fluids_ 35(2), 027108. [doi:10.1063/5.0134701](https://doi.org/10.1063/5.0134701)
 
 Liu, Z., Tian, F.-B. & Feng, X. (2022). An efficient geometry-adaptive mesh refinement framework and its application in the immersed boundary lattice Boltzmann method. _Computer Methods in Applied Mechanics and Engineering_ 392, 114662. [doi:10.1016/j.cma.2022.114662](https://doi.org/10.1016/j.cma.2022.114662)

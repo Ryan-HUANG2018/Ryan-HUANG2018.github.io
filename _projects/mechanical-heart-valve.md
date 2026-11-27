@@ -86,6 +86,6 @@ After about four cycles, the leaflet motion repeats from cycle to cycle. The val
 
 ## Publication
 
-Huang, Q., Li, Z. & Li, Z. (2024). Numerical analysis of aortic valve dynamics in patients with supravalvular aortic stenosis. _Proceedings of the 24th Australasian Fluid Mechanics Conference_ (AFMC2024), Canberra, Paper AFMC2024-158.
+Huang, Q., Li, Z. & Li, Z. (2024). Numerical analysis of aortic valve dynamics in patients with supravalvular aortic stenosis. _Proceedings of the 24th Australasian Fluid Mechanics Conference_ (AFMC2024), Canberra, Paper AFMC2024-158. [doi:10.5281/zenodo.14213360](https://doi.org/10.5281/zenodo.14213360)
 
-Stijnen, J.M.A., de Hart, J., Bovendeerd, P.H.M. & van de Vosse, F.N. (2004). Evaluation of a fictitious domain method for predicting dynamic response of mechanical heart valves. _Journal of Fluids and Structures_ 19(6), 835–850.
+Stijnen, J.M.A., de Hart, J., Bovendeerd, P.H.M. & van de Vosse, F.N. (2004). Evaluation of a fictitious domain method for predicting dynamic response of mechanical heart valves. _Journal of Fluids and Structures_ 19(6), 835–850. [doi:10.1016/j.jfluidstructs.2004.04.007](https://doi.org/10.1016/j.jfluidstructs.2004.04.007)
