@@ -696,11 +696,91 @@ footer.rh-footer {
   border-bottom: 1px solid var(--rh-divider);
 }
 
-.rh-pub-year {
-  flex: 0 0 64px;
+// Thumbnail on the left: a frame from the paper's simulations, or the journal abbreviation
+.rh-pub-thumb {
+  position: relative;
+  flex: 0 0 200px;
+  height: 112px;
+  overflow: hidden;
+  border: 1px solid var(--rh-border);
+  border-radius: 10px;
+  background: var(--rh-media);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.is-contain {
+    background: #fff;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &.is-glyph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: radial-gradient(circle at 30% 20%, rgba(94, 234, 212, 0.16), transparent 60%), var(--rh-media);
+
+    > span:first-child {
+      font-family: var(--rh-font-mono);
+      font-size: 17px;
+      text-align: center;
+      color: var(--rh-accent);
+    }
+  }
+}
+
+.rh-pub-thumb-year {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(10, 12, 15, 0.72);
   font-family: var(--rh-font-mono);
-  font-size: 13px;
-  color: var(--rh-accent);
+  font-size: 11px;
+  color: #fff;
+}
+
+// Impact badges under each paper
+.rh-pub-impact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.rh-pub-badge {
+  padding: 2px 9px;
+  border: 1px solid var(--rh-border-soft);
+  border-radius: 999px;
+  font-family: var(--rh-font-mono);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--rh-text-body-2);
+
+  &.is-role {
+    border-color: var(--rh-accent);
+    color: var(--rh-accent);
+  }
+
+  &.is-metric {
+    border-color: transparent;
+    background: rgba(94, 234, 212, 0.1);
+    color: var(--rh-text-body);
+  }
+}
+
+.rh-pub-snapshot {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--rh-text-muted);
 }
 
 .rh-pub-body {
@@ -783,8 +863,9 @@ footer.rh-footer {
 }
 
 @media (max-width: 575.98px) {
-  .rh-pub-year {
+  .rh-pub-thumb {
     flex-basis: 100%;
+    height: 150px;
   }
 }
 
@@ -1653,5 +1734,74 @@ a.rh-news-item:hover .rh-news-text {
 
   > a.rh-param-label:hover {
     color: var(--rh-link);
+  }
+}
+
+// Publications page: section headings and the conference list
+
+.rh-pub-heading {
+  margin: 40px 0 14px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--rh-text);
+}
+
+.rh-conf-list {
+  margin: 0;
+  padding: 0 22px;
+  list-style: none;
+}
+
+.rh-conf {
+  display: flex;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rh-divider);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.rh-conf-year {
+  flex: 0 0 44px;
+  font-family: var(--rh-font-mono);
+  font-size: 13px;
+  color: var(--rh-accent);
+}
+
+.rh-conf-body {
+  min-width: 0;
+}
+
+.rh-conf-title {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--rh-text);
+
+  a {
+    color: var(--rh-text);
+    border-bottom: 1px dashed var(--rh-border-soft);
+
+    &:hover {
+      color: var(--rh-link-hover);
+    }
+  }
+}
+
+.rh-conf-meta {
+  margin-top: 3px;
+  font-size: 13px;
+  color: var(--rh-text-muted);
+
+  em {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--rh-text);
+  }
+
+  .rh-pub-badge {
+    margin-left: 6px;
+    font-size: 10px;
   }
 }

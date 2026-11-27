@@ -769,7 +769,8 @@ body {
 
 // Publications
 
-.publications ol.bibliography {
+.publications ol.bibliography,
+.rh-conf-list {
   @include rh-glass;
   padding: 0 22px;
 }

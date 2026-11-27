@@ -1,0 +1,121 @@
+# Conference papers and presentations, newest first (source: Ryan's CV, content/publications.tex, 2026-10-29).
+# type: "Full paper" (paper in the proceedings) or "Abstract"; all were oral presentations.
+# Own name is written "Q. Huang" (CLAUDE.md) and highlighted on the page.
+
+- year: 2026
+  authors: Q. Huang and Z. Li
+  title: "Immersed boundary–lattice Boltzmann method and its applications for the fluid–structure interaction: from blood flow to insect flight"
+  venue: 2nd Australasian Conference on Particle Approaches and Applications in Fluids (ACPAAF 2026), Sydney, Australia
+  type: Abstract
+- year: 2025
+  authors: Q. Huang, H. Xie, Y. Mao, J. Zhao and Z. Li
+  title: Numerical evaluation of a novel mechanical heart valve design
+  venue: 9th Asian Pacific Congress on Computational Mechanics / 7th Australasian Conference on Computational Mechanics (APCOM–ACCM 2025), Brisbane, Australia
+  type: Abstract
+- year: 2024
+  authors: Q. Huang and Z. Li
+  title: Investigating the role of arteriovenous crossings in the pathogenesis of retinal vein occlusion
+  venue: QCVRN & Heart Foundation Research Showcase 2024, Gold Coast, Australia
+  type: Abstract
+- year: 2024
+  authors: O. Aref, R. Rahimi, Q. Huang, L. Wang, J. Young and F. Tian
+  title: "Dynamic behaviors for a stenosed channel: an FSI study"
+  venue: 24th Australasian Fluid Mechanics Conference (AFMC), Canberra, Australia
+  type: Full paper
+- year: 2024
+  authors: S. Ravi, K. Dhileep, D. Sofge, Q. Huang, F.-B. Tian, J. Young and J. Lai
+  title: "Gait control for undulatory swimmers: inspiration from biological systems to robots"
+  venue: Unmanned Systems Technology XXVI, Maryland, USA
+  type: Abstract
+- year: 2023
+  authors: Q. Huang, J. B. Mendieta, H. Xie, H. Yu and Z. Li
+  title: Numerical analysis of aortic valve mechanics in patients with supravalvular aortic stenosis
+  venue: Australian Mechanical Circulatory Support Symposium 2023, Melbourne, Australia
+  type: Abstract
+- year: 2023
+  authors: Q. Huang, J. Ma, H. Xie, H. Yu, J. B. Mendieta and Z. Li
+  title: Development and application of a high-fidelity fluid–structure interaction solver for simulating cardiovascular diseases
+  venue: QCVRN & Heart Foundation Research Showcase 2023, Brisbane, Australia
+  type: Abstract
+- year: 2023
+  authors: K. Dhileep, Q. Huang, F.-B. Tian, J. Young, J. Lai, D. Sofge and S. Ravi
+  title: Investigation of bio-inspired tail-first swimming using numerical and robotic models
+  venue: IEEE International Conference on Robotics and Biomimetics (ROBIO 2023), Koh Samui, Thailand
+  type: Full paper
+- year: 2023
+  authors: C. L. Shah, K. Dhileep, Q. Huang, S. Ravi and S. Sarkar
+  title: Exploring forward and backward swimming dynamics in bioinspired undulatory swimmers
+  venue: 76th Annual Meeting of the APS Division of Fluid Dynamics, Washington, USA
+  type: Abstract
+  url: https://meetings.aps.org/Meeting/DFD23/Session/J09.6
+- year: 2023
+  authors: Q. Huang, J. Kou, F.-B. Tian, J. Young, J. C. S. Lai and S. Ravi
+  title: Dynamic mode decomposition for unsteady flow over flapping wings
+  venue: AIAA SciTech 2023 Forum, MD, USA
+  type: Full paper
+  url: https://doi.org/10.2514/6.2023-1618
+- year: 2023
+  authors: Q. Huang, F.-B. Tian, J. Young, J. C. S. Lai and S. Ravi
+  title: Numerical study of passively pitching tandem dragonfly wings for hovering flight
+  venue: AIAA SciTech 2023 Forum, MD, USA
+  type: Full paper
+  url: https://doi.org/10.2514/6.2023-1027
+- year: 2022
+  authors: Q. Huang, F.-B. Tian, J. Young, J. C. S. Lai and S. Ravi
+  title: Numerical modelling of under-actuated flapping wings inspired by the indirect-flight muscles of insects
+  venue: 23rd Australasian Fluid Mechanics Conference (AFMC), Sydney, Australia
+  type: Full paper
+  url: https://www.afms.org.au/proceedings/23/Huang_et_al_2022.pdf
+- year: 2022
+  authors: Q. Huang, L. Wang, S. Ravi and F.-B. Tian
+  title: Velocity error and consequences of the feedback immersed boundary method
+  venue: 75th Annual Meeting of the APS Division of Fluid Dynamics, Indiana, USA
+  type: Abstract
+  url: https://meetings.aps.org/Meeting/DFD22/Session/A09.9
+- year: 2022
+  authors: Q. Huang, Z. Liu, A. Moni, S. Ravi, F.-B. Tian, J. Young and J. C. S. Lai
+  title: Reducing velocity error and its consequences by an iterative feedback immersed boundary method
+  venue: 15th World Congress on Computational Mechanics (WCCM–APCOM 2022), Yokohama, Japan
+  type: Full paper
+  url: https://doi.org/10.23967/wccm-apcom.2022.098
+- year: 2021
+  authors: Q. Huang, S. Mazharmanesh, F.-B. Tian, J. Young, J. C. S. Lai and S. Ravi
+  title: CFD solver validations for simulating passively pitching tandem wings in hovering flight
+  venue: 24th International Congress on Modelling and Simulation (MODSIM 2021), Sydney, Australia
+  type: Full paper
+  url: https://doi.org/10.36334/modsim.2021.A2.huang
+- year: 2021
+  authors: Q. Huang, L. Wang, S. Ravi, F.-B. Tian, J. Young and J. C. S. Lai
+  title: Benchmarking a coupled finite element–immersed boundary–lattice Boltzmann method solver for simulations of collapsible tube flows
+  venue: 5th Australasian Conference on Computational Mechanics (ACCM 2021), Sydney, Australia
+  type: Full paper
+  url: https://www.researchgate.net/publication/357202571_Benchmarking_a_coupled_finite_element-immersed_boundary-lattice_Boltzmann_method_solver_for_simulations_of_collapsible_tube_flows
+- year: 2021
+  authors: E. C. Yeo and Q. Huang
+  title: Numerical study of passively pitching flapping wings in hovering flight
+  venue: AIAA Region VII Student Conference, Australia
+  type: Full paper
+  url: https://www.researchgate.net/publication/356382521_Numerical_study_of_passively_pitching_flapping_wings_in_hovering_flight
+- year: 2021
+  authors: Q. Huang, L. Wang, F.-B. Tian, J. Young and J. C. S. Lai
+  title: A diffused interface immersed boundary–lattice Boltzmann method for simulation of stenosis
+  venue: 14th WCCM – 8th ECCOMAS Congress, Paris, France
+  type: Full paper
+  url: https://doi.org/10.23967/wccm-eccomas.2020.013
+- year: 2020
+  authors: Q. Huang, F.-B. Tian, J. Young and J. C. S. Lai
+  title: A diffused interface immersed boundary–lattice Boltzmann method for simulation of channel flow
+  venue: 22nd Australasian Fluid Mechanics Conference (AFMC), Brisbane, Australia
+  type: Full paper
+  url: https://doi.org/10.14264/86312dd
+- year: 2019
+  authors: Q. Huang, F.-B. Tian, J. Young and J. C. S. Lai
+  title: Rich dynamic behaviors of self-excited oscillation of collapsible channel
+  venue: 72nd Annual Meeting of the APS Division of Fluid Dynamics, Seattle, USA (C30.002)
+  type: Abstract
+  url: https://ui.adsabs.harvard.edu/abs/2019APS..DFDC30002H/abstract
+- year: 2015
+  authors: Q. Huang, J. Sun and C. Xu
+  title: Effects of different flow waveforms on the blood flow characteristics in a 90-degree curved tube
+  venue: Chinese Congress of Theoretical and Applied Mechanics (CCTAM 2015), Shanghai, China
+  type: Full paper
