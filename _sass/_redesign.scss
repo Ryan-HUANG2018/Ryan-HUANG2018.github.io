@@ -712,6 +712,14 @@ footer.rh-footer {
     object-fit: cover;
   }
 
+  &.is-contain {
+    background: #fff;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
   &.is-glyph {
     display: flex;
     align-items: center;

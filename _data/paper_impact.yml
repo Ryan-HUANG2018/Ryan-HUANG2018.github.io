@@ -1,5 +1,6 @@
 # Per-paper extras for the publication list, keyed by the bib key in _bibliography/papers.bib.
-#   figure:     thumbnail on the left (own simulation frames or own redrawn figures only)
+#   figure:     thumbnail on the left (own simulation frames, own redrawn figures or the paper's graphical abstract)
+#   figure_fit: contain  -> show the whole figure on white instead of cropping it to the thumbnail
 #   role:       Ryan's role, shown as a badge ("First author", "Corresponding author")
 #   citations:  { count, source, date }  -- always with source and date (CLAUDE.md)
 #   highlights: short notes such as "Top 7% most cited in JFM 2021"
@@ -7,6 +8,9 @@
 
 huang2026nonnewtonian:
   role: First author
+  figure: /assets/img/publications/huang2026nonnewtonian-vortex.jpg # Fig. 4 of the paper (sent by Ryan, 2026-11-27)
+  figure_fit: contain
+  figure_credit: "Fig. 4 of the paper, CC BY 4.0"
 
 zou2025residual:
   role: Corresponding author
@@ -17,7 +21,9 @@ huang2024selfexcited:
 
 huang2023power:
   role: First author
-  figure: /assets/video/passively-flapping-wings/preview.jpg
+  figure: /assets/img/publications/huang2023power-graphical-abstract.jpg # graphical abstract made for JFM (Ryan, 2026-11-27)
+  figure_fit: contain
+  highlights: ["FWCI 1.67 (Scopus, 2025)", "Top 7% most cited in JFM 2023"] # Scopus snapshot 2 May 2025 (ai-profile S52)
 
 liu2023partial:
   figure: /assets/video/amr/preview.jpg

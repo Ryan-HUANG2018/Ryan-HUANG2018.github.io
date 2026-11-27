@@ -4,9 +4,19 @@
 {%- assign journal = site.data.journals[entry.journal] -%}
 <article class="rh-pub">
   <!-- Thumbnail: a figure from the paper's own simulations (_data/paper_impact.yml), else the journal abbreviation -->
-  <div class="rh-pub-thumb{% unless impact.figure %} is-glyph{% endunless %}" aria-hidden="true">
+  <div
+    class="rh-pub-thumb{% unless impact.figure %} is-glyph{% endunless %}{% if impact.figure_fit == 'contain' %} is-contain{% endif %}"
+    aria-hidden="true"
+  >
     {%- if impact.figure -%}
-      <img src="{{ impact.figure | relative_url }}" alt="" loading="lazy">
+      <img
+        src="{{ impact.figure | relative_url }}"
+        alt=""
+        loading="lazy"
+        {% if impact.figure_credit %}
+          title="{{ impact.figure_credit }}"
+        {% endif %}
+      >
     {%- else -%}
       <span>
         {%- if journal.abbr %}{{ journal.abbr }}{% else %}{{ entry.year }}{% endif -%}
