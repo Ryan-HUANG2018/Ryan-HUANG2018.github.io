@@ -16,10 +16,6 @@
   year: 2023
   size: big
   focus: 65% center
-- src: assets/img/field/cbt-2023-ecr-presenters.jpg
-  alt: Qiuxiang (Ryan) Huang with fellow early-career presenters at the QUT CBT Conference
-  title: ECR presenters, QUT CBT
-  year: 2023
 - src: assets/img/field/cbt-2023-group.jpg
   alt: Qiuxiang (Ryan) Huang with colleagues at the QUT Centre for Biomedical Technologies conference
   title: QUT CBT Conference
@@ -39,8 +35,9 @@
   year: 2025
   size: wide
 - src: assets/img/field/qut-2025-retreat.jpg
-  alt: Qiuxiang (Ryan) Huang with colleagues at a QUT two-day research retreat
-  title: QUT 2-Day Retreat
+  alt: Qiuxiang (Ryan) Huang with colleagues at the QUT 2-Day Industry Engagement Retreat on the Gold Coast
+  title: 2-Day Industry Engagement Retreat
+  place: Gold Coast
   year: 2025
 - src: assets/img/field/phd-2022-stage.jpg
   alt: Qiuxiang (Ryan) Huang on stage at the UNSW Canberra PhD graduation ceremony
