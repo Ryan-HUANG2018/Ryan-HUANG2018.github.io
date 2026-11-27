@@ -1,6 +1,21 @@
 # "Beyond the lab" strip at the bottom of /field/ (_pages/field.md). Same fields as _data/field.yml.
 # Only life photos the owner picked one by one; no family, children or home. Images in assets/img/life/, EXIF/GPS stripped, long side at most 1600 px.
 # Layout: three tiles per row; size: wide takes two thirds, size: pano a full row.
+- src: assets/img/life/jacaranda-2023.jpg
+  alt: Qiuxiang (Ryan) Huang in a black T-shirt under flowering jacaranda trees
+  title: Jacaranda season
+  year: 2023
+  focus: center 30%
+- src: assets/img/life/deep-space-2018.jpg
+  alt: Qiuxiang (Ryan) Huang in front of a large radio antenna dish at the Canberra Deep Space Communication Complex
+  title: Deep Space Communication Complex
+  place: Canberra
+  year: 2018
+- src: assets/img/life/lake-burley-griffin-2018.jpg
+  alt: Qiuxiang (Ryan) Huang seated by Lake Burley Griffin with the National Carillon in the distance
+  title: Lake Burley Griffin
+  place: Canberra
+  year: 2018
 - src: assets/img/life/christmas-2018.jpg
   alt: Qiuxiang (Ryan) Huang on a grand staircase in front of a Christmas tree in Sydney
   title: Christmas
@@ -43,3 +58,16 @@
   title: Sunset
   year: 2023
   size: pano
+- src: assets/img/life/hilltop-sunset-2023.jpg
+  alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset
+  title: Hilltop sunset
+  year: 2023
+- src: assets/img/life/smiley-rock-2023.jpg
+  alt: Qiuxiang (Ryan) Huang next to a rock carved with a smiling face in a park
+  title: Smiley rock
+  year: 2023
+  focus: center 60%
+- src: assets/img/life/pier-2023.jpg
+  alt: Qiuxiang (Ryan) Huang on a long wooden pier over the sea
+  title: On the pier
+  year: 2023
