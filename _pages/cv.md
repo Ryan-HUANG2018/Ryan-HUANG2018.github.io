@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: Qiuxiang_Huang_CV.pdf # public version of the academic CV (no phone, grant amounts or referees)
+cv_pdf: # no public CV PDF (Ryan, 2026-11-27): the CV is only for job applications
 description:
 toc:
   sidebar: left

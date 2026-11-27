@@ -2,7 +2,7 @@
 layout: simulation
 title: Porting the blood-flow solver from my master's research to modern C++
 description: An AI-assisted port of a legacy Fortran finite element solver, checked to reproduce the original bit for bit.
-importance: 12
+importance: 3.5 # next to the FSI benchmarks (Ryan, 2026-11-27)
 category: Cardiovascular
 tags: ["3D", "FEM", "Haemodynamics", "Verification"]
 stack: ["FEM", "OpenMP", "Fortran", "AI coding assistant"]
