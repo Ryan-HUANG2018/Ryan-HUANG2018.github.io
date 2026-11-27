@@ -43,7 +43,9 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # The Sass partials live in _sass/. The old 'assets/_sass' does not exist, so the hash never changed
+      # and browsers kept serving a stale main.css after style changes.
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end
