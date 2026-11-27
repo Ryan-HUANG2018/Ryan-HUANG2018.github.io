@@ -34,29 +34,35 @@
   title: Seattle
   year: 2019
 - src: assets/img/life/hilltop-sunset-2023.jpg
-  alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset
+  alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset at the Mount Tamborine sunset lookout
   title: Hilltop sunset
+  place: Mount Tamborine
   year: 2023
 - src: assets/img/life/smiley-rock-2023.jpg
-  alt: Qiuxiang (Ryan) Huang next to a rock carved with a smiling face in a park
+  alt: Qiuxiang (Ryan) Huang next to a rock carved with a smiling face at The University of Queensland
   title: Smiley rock
+  place: UQ
   year: 2023
   focus: center 60%
 - src: assets/img/life/pier-2023.jpg
-  alt: Qiuxiang (Ryan) Huang on a long wooden pier over the sea
+  alt: Qiuxiang (Ryan) Huang on a long wooden pier over the sea at Wellington Point
   title: On the pier
+  place: Wellington Point
   year: 2023
 - src: assets/img/life/coast-2022.jpg
-  alt: Waves along a cliff-lined coast
+  alt: Waves along a cliff-lined coast on the Great Ocean Road
   title: Coastline
+  place: Great Ocean Road
   year: 2022
 - src: assets/img/life/rocky-coast-2023.jpg
-  alt: Rocky shore and sea under white clouds
+  alt: Rocky shore and sea under white clouds at Kiama
   title: Rocky shore
+  place: Kiama
   year: 2023
 - src: assets/img/life/canberra-2021.jpg
-  alt: Canberra seen from a lookout on a clear morning
-  title: Canberra from above
+  alt: Canberra seen from the Mount Ainslie lookout on a clear morning
+  title: Canberra from Mount Ainslie
+  place: Canberra
   year: 2021
 - src: assets/img/life/lakers-2020.jpg
   alt: A Lakers basketball game seen from the upper seats
