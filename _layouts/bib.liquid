@@ -1,7 +1,19 @@
 ---
 ---
+{%- assign impact = site.data.paper_impact[entry.key] -%}
+{%- assign journal = site.data.journals[entry.journal] -%}
 <article class="rh-pub">
-  <div class="rh-pub-year">{{ entry.year }}</div>
+  <!-- Thumbnail: a figure from the paper's own simulations (_data/paper_impact.yml), else the journal abbreviation -->
+  <div class="rh-pub-thumb{% unless impact.figure %} is-glyph{% endunless %}" aria-hidden="true">
+    {%- if impact.figure -%}
+      <img src="{{ impact.figure | relative_url }}" alt="" loading="lazy">
+    {%- else -%}
+      <span>
+        {%- if journal.abbr %}{{ journal.abbr }}{% else %}{{ entry.year }}{% endif -%}
+      </span>
+    {%- endif -%}
+    <span class="rh-pub-thumb-year">{{ entry.year }}</span>
+  </div>
 
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="rh-pub-body">
@@ -143,11 +155,43 @@
       {% endif %}
       {% assign entrytype_text = entrytype | strip_html | strip %}
       {% if entrytype_text != '' %}
-        <span class="periodical">· {{ entrytype | strip }}</span>
+        <span class="periodical"
+          >· {{ entrytype | strip -}}
+          {%- if entry.volume %} {{ entry.volume }}{% endif -%}
+          {%- if entry.pages %}, {{ entry.pages }}{% endif %} ({{ entry.year }})</span
+        >
       {% endif %}
     </div>
     {% if entry.note %}
       <div class="periodical">{{ entry.note | strip }}</div>
+    {% endif %}
+
+    <!-- Impact: role, journal metrics (_data/journals.yml), citations and highlights (_data/paper_impact.yml) -->
+    {% if impact or journal %}
+      <div class="rh-pub-impact">
+        {% if impact.role -%}
+          <span class="rh-pub-badge is-role">{{ impact.role }}</span>
+        {%- endif %}
+        {% if journal.impact_factor -%}
+          <span class="rh-pub-badge">IF {{ journal.impact_factor }}</span>
+        {%- endif %}
+        {% if journal.jcr -%}
+          <span class="rh-pub-badge">JCR {{ journal.jcr }}</span>
+        {%- endif %}
+        {% if journal.sjr -%}
+          <span class="rh-pub-badge">SJR {{ journal.sjr }}</span>
+        {%- endif %}
+        {% if impact.citations %}
+          <span class="rh-pub-badge is-metric" title="{{ impact.citations.source }}, {{ impact.citations.date }}">
+            {{- impact.citations.count }} citations ({{ impact.citations.source }},
+            {{ impact.citations.date | split: ' ' | slice: 1, 2 | join: ' ' }})
+            {{- '' -}}
+          </span>
+        {% endif %}
+        {% for h in impact.highlights -%}
+          <span class="rh-pub-badge is-metric">{{ h }}</span>
+        {%- endfor %}
+      </div>
     {% endif %}
 
     <!-- Links/Buttons -->

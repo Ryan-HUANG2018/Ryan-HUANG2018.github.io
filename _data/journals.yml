@@ -1,0 +1,17 @@
+# Journal metrics shown under each paper on the homepage and /publications/.
+# Source: Ryan's CV (content/publications.tex, 2026-10-29). Snapshot and source are printed on the page
+# (see `snapshot` below); refresh these when the next JCR / SJR release is out (CLAUDE.md: metrics carry a date).
+# `abbr` labels the thumbnail when a paper has no figure.
+
+snapshot: "Journal metrics: Clarivate JCR impact factor and quartile, SCImago (SJR) decile, as listed in my CV (Oct 2026)."
+
+"Journal of Fluid Mechanics": { abbr: JFM, impact_factor: "3.6", jcr: Q1, sjr: D1 }
+"Physics of Fluids": { abbr: PoF, impact_factor: "4.1", jcr: Q1, sjr: D1 }
+"Journal of Non-Newtonian Fluid Mechanics": { abbr: JNNFM, impact_factor: "2.8", jcr: Q1 }
+"Proceedings of the Royal Society A": { abbr: Proc. R. Soc. A, impact_factor: "3.2", jcr: Q1 }
+"Information Fusion": { abbr: Inf. Fusion, impact_factor: "14.8", jcr: Q1 }
+"Frontiers in Bioengineering and Biotechnology": { abbr: Front. Bioeng., impact_factor: "4.8", jcr: Q1 }
+"IEEE Access": { abbr: IEEE Access, impact_factor: "3.467", jcr: Q1 }
+"Computer Methods and Programs in Biomedicine": { abbr: CMPB, impact_factor: "5.5", jcr: Q1 }
+"Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science":
+  { abbr: Proc. IMechE C, impact_factor: "1.8", jcr: Q2 }

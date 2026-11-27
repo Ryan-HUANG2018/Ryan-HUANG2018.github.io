@@ -1,0 +1,38 @@
+# Per-paper extras for the publication list, keyed by the bib key in _bibliography/papers.bib.
+#   figure:     thumbnail on the left (own simulation frames or own redrawn figures only)
+#   role:       Ryan's role, shown as a badge ("First author", "Corresponding author")
+#   citations:  { count, source, date }  -- always with source and date (CLAUDE.md)
+#   highlights: short notes such as "Top 7% most cited in JFM 2021"
+# Sources: Ryan's CV (content/publications.tex, 2026-10-29) and ai-profile career/publications.md.
+
+huang2026nonnewtonian:
+  role: First author
+
+zou2025residual:
+  role: Corresponding author
+
+huang2024selfexcited:
+  role: First author
+  figure: /assets/video/collapsible-tube-3d/preview.jpg
+
+huang2023power:
+  role: First author
+  figure: /assets/video/passively-flapping-wings/preview.jpg
+
+liu2023partial:
+  figure: /assets/video/amr/preview.jpg
+
+huang2022streamline:
+  role: First author
+  citations: { count: 57, source: Google Scholar, date: 30 Oct 2026 }
+  highlights: ["FWCI 2.60", "Top 10% most cited in PoF 2022"]
+
+huang2021transition:
+  role: First author
+  figure: /assets/video/collapsible-re/preview.jpg
+  citations: { count: 53, source: Google Scholar, date: 30 Oct 2026 }
+  highlights: ["FWCI 2.57", "Top 7% most cited in JFM 2021"]
+
+huang2020waveform:
+  role: First author
+  figure: /assets/video/legacy-solver-port/preview.jpg

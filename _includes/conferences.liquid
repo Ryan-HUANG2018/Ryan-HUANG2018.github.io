@@ -1,0 +1,21 @@
+{%- comment -%} Conference papers and presentations (_data/conferences.yml). Own name "Q. Huang" is highlighted. {%- endcomment -%}
+<ol class="rh-conf-list">
+  {% for c in site.data.conferences %}
+    <li class="rh-conf">
+      <span class="rh-conf-year">{{ c.year }}</span>
+      <div class="rh-conf-body">
+        <div class="rh-conf-title">
+          {% if c.url -%}
+            <a href="{{ c.url }}">{{ c.title }}</a>
+          {%- else -%}
+            {{- c.title -}}
+          {%- endif %}
+        </div>
+        <div class="rh-conf-meta">
+          {{ c.authors | replace: 'Q. Huang', '<em>Q. Huang</em>' }} · {{ c.venue }}
+          <span class="rh-pub-badge">{{ c.type }}</span>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ol>
