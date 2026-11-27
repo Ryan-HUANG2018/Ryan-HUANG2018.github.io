@@ -30,7 +30,7 @@
 2. 指标：每个指标一张卡，第一张用青色实底；快照日期和来源放在卡片下方一行小字。
 3. 仿真视口 + 方法排行并排：视口同原规范；排行卡统计每种方法出现在几个项目的 `stack:` 里，前 7 名，横条长度按比例。完整 TOOLKIT 列表放进可展开的"Full toolkit"面板，默认收起。
 4. Simulations：排序第一的项目做主推大卡（占两列两行、自动播放），其余卡悬停播放。媒体放在 20px 圆角的"画框"里。
-5. In the field：会议报告、合影等现场照片，数据在 `_data/field.yml`。首页只预览前 3 张（第一张为大图），超过 3 张时显示 "all N photos →" 链接；全部照片在单独页面 `/field/`（`_pages/field.md`），导航栏 In the field 指向该页面。`/field/` 底部有 "Beyond the lab" 生活照（`_data/life.yml`），每行三张，`size: wide` 占三分之二，`size: pano` 占整行。照片多于 3 张时按每项的 `size:`（big / wide / tall）排成拼贴。只放用户逐张确认过的照片；图片去掉 EXIF/GPS、长边不超过 1600px；列表为空时整块隐藏。
+5. In the field：会议报告、合影等现场照片，数据在 `_data/field.yml`。首页只预览前 3 张（第一张为大图），超过 3 张时显示 "all N photos →" 链接；全部照片在单独页面 `/field/`（`_pages/field.md`），导航栏 In the field 指向该页面。`/field/` 底部有 "Beyond the lab" 生活照（`_data/life.yml`），每行三张，`size: wide` 占三分之二，`size: pano` 占整行。所有照片（含首页预览和 Beyond the lab）的标题和地点·年份写在照片下方（纯文字两行，不用玻璃框），不压在照片上（用户 2026-11-28）。照片多于 3 张时按每项的 `size:`（big / wide / tall）排成拼贴。只放用户逐张确认过的照片；图片去掉 EXIF/GPS、长边不超过 1600px；列表为空时整块隐藏。
 6. Publications、News、Connect 同原规范，套玻璃样式。News 大卡没有配图时显示带分类字样的发光占位，不留空白。
 
 **亮色主题（2026-11-27 用户确认）**：在深色版之外加一套"暖纸"亮色主题，导航栏右边（Contact 左侧；手机上在汉堡菜单左侧）放日/月切换按钮。默认一律深色（2026-11-27 用户改定，不跟随系统），点过以后记在浏览器里（`localStorage` 的 `theme`）。深色版外观保持不变。样式在 `_sass/_light.scss`，全部挂在 `html[data-theme="light"]` 下，通过覆盖 `--rh-*` 变量实现；al-folio 的 `--global-*` 亮色值在 `_sass/_themes.scss`。

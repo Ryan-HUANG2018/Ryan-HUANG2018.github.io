@@ -8,9 +8,10 @@
   focus: center 30%
 - src: assets/img/life/deep-space-2018.jpg
   alt: Qiuxiang (Ryan) Huang in front of a large radio antenna dish at the Canberra Deep Space Communication Complex
-  title: Deep Space Communication Complex
+  title: Deep space antenna
   place: Canberra
   year: 2018
+  focus: 58% center
 - src: assets/img/life/lake-burley-griffin-2018.jpg
   alt: Qiuxiang (Ryan) Huang seated by Lake Burley Griffin with the National Carillon in the distance
   title: Lake Burley Griffin
@@ -32,6 +33,19 @@
   alt: The Space Needle in Seattle under a blue sky
   title: Seattle
   year: 2019
+- src: assets/img/life/hilltop-sunset-2023.jpg
+  alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset
+  title: Hilltop sunset
+  year: 2023
+- src: assets/img/life/smiley-rock-2023.jpg
+  alt: Qiuxiang (Ryan) Huang next to a rock carved with a smiling face in a park
+  title: Smiley rock
+  year: 2023
+  focus: center 60%
+- src: assets/img/life/pier-2023.jpg
+  alt: Qiuxiang (Ryan) Huang on a long wooden pier over the sea
+  title: On the pier
+  year: 2023
 - src: assets/img/life/coast-2022.jpg
   alt: Waves along a cliff-lined coast
   title: Coastline
@@ -58,16 +72,3 @@
   title: Sunset
   year: 2023
   size: pano
-- src: assets/img/life/hilltop-sunset-2023.jpg
-  alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset
-  title: Hilltop sunset
-  year: 2023
-- src: assets/img/life/smiley-rock-2023.jpg
-  alt: Qiuxiang (Ryan) Huang next to a rock carved with a smiling face in a park
-  title: Smiley rock
-  year: 2023
-  focus: center 60%
-- src: assets/img/life/pier-2023.jpg
-  alt: Qiuxiang (Ryan) Huang on a long wooden pier over the sea
-  title: On the pier
-  year: 2023
