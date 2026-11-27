@@ -1,0 +1,192 @@
+// Light theme, "warm paper" (docs/redesign/REDESIGN.md §0, 2026-11-27).
+// Loaded after _glass.scss. Dark stays the default look; this file only applies when
+// <html data-theme="light"> is set by assets/js/theme.js (system preference or the sun/moon toggle).
+
+html[data-theme="light"] {
+  --rh-bg: #{$rh-light-bg};
+  --rh-card: #fbfaf7;
+  --rh-media: #e9e4dc;
+  --rh-border: rgba(40, 30, 20, 0.12);
+  --rh-divider: rgba(40, 30, 20, 0.08);
+  --rh-border-soft: rgba(40, 30, 20, 0.16);
+  --rh-accent: #{$rh-light-accent};
+  --rh-link: #{$rh-light-link};
+  --rh-link-hover: #{$rh-light-link-hover};
+  --rh-text: #{$rh-light-text};
+  --rh-text-body: #{$rh-light-text-body};
+  --rh-text-body-2: #474c53;
+  --rh-text-muted: #{$rh-light-text-muted};
+  --rh-status: #1f9d57;
+  --rh-warm: #c8662f;
+  --rh-glass: rgba(255, 255, 255, 0.56);
+  --rh-glass-hi: rgba(255, 255, 255, 0.85);
+  --rh-glass-line: rgba(255, 255, 255, 0.8);
+  --rh-glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 2px rgba(60, 45, 30, 0.06), 0 14px 40px rgba(60, 45, 30, 0.1);
+  --rh-glow: 0 0 0 1px #{$rh-light-accent}, 0 14px 36px rgba(14, 138, 126, 0.16);
+  --rh-ink: #16181b;
+
+  // Backdrop: the same blurred simulation frames, washed out to a warm paper tone
+  .rh-backdrop {
+    img {
+      opacity: 0.32;
+      filter: blur(80px) saturate(1.1);
+    }
+
+    img:last-child {
+      opacity: 0.22;
+    }
+
+    &::after {
+      background: radial-gradient(ellipse at 50% 0%, rgba(241, 237, 230, 0.35), rgba(241, 237, 230, 0.86) 70%);
+    }
+  }
+
+  // Glass panels need a faint dark hairline to read on a light page
+  .rh-glass,
+  .navbar.rh-nav > .rh-container {
+    outline: 1px solid rgba(60, 45, 30, 0.06);
+    outline-offset: -1px;
+  }
+
+  // Navigation: active page is a white pill (dark text), as in the reference
+  .navbar.rh-nav .nav-item.active > .nav-link {
+    background: #fff;
+    color: var(--rh-ink);
+    box-shadow: 0 1px 3px rgba(60, 45, 30, 0.12);
+  }
+
+  .navbar.rh-nav .navbar-toggler .icon-bar {
+    background-color: var(--rh-text);
+  }
+
+  // Primary buttons are ink-black with white text; the teal accent stays for links and highlights
+  .rh-btn-solid,
+  .rh-tag-solid {
+    border-color: var(--rh-ink);
+    background: var(--rh-ink);
+    color: #fff;
+
+    &:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  .rh-btn:not(.rh-btn-solid) {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(40, 30, 20, 0.12);
+  }
+
+  .rh-chip.is-active {
+    background: var(--rh-ink);
+    color: #fff;
+  }
+
+  .rh-variant.is-active {
+    background: rgba(14, 138, 126, 0.1);
+  }
+
+  // Featured metric: solid teal card with white text
+  .rh-impact-metric.is-featured {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: linear-gradient(160deg, #5cbfae, #2c8c7e);
+    color: #fff;
+
+    .rh-impact-value,
+    .rh-impact-label,
+    .rh-impact-note {
+      color: #fff;
+    }
+  }
+
+  .rh-methods-bar {
+    background: rgba(40, 30, 20, 0.08);
+  }
+
+  // Overlays sitting on top of media keep a dark chip so they stay legible on any frame
+  .rh-card-badge,
+  .rh-media-placeholder {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--rh-text);
+  }
+
+  .rh-card:hover,
+  .rh-card:focus-visible {
+    border-color: rgba(14, 138, 126, 0.5);
+    box-shadow:
+      0 0 0 1px rgba(14, 138, 126, 0.35),
+      0 20px 48px rgba(60, 45, 30, 0.16);
+  }
+
+  // Text on the glowing placeholders
+  .rh-news-glyph span {
+    text-shadow: none;
+  }
+
+  // al-folio tables and code blocks
+  .table {
+    color: var(--rh-text-body);
+  }
+
+  ::selection {
+    background: rgba(14, 138, 126, 0.2);
+  }
+}
+
+// Sun/moon theme toggle in the navigation
+
+.rh-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-left: 4px;
+  padding: 0;
+  border: 1px solid var(--rh-glass-line);
+  border-radius: 50%;
+  background: var(--rh-glass);
+  color: var(--rh-text);
+  font-size: 18px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: var(--rh-glass-hi);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--rh-accent);
+    outline-offset: 2px;
+  }
+
+  // Show the icon of the theme you would switch to
+  .rh-theme-icon-sun {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .rh-theme-toggle {
+  .rh-theme-icon-sun {
+    display: inline;
+  }
+
+  .rh-theme-icon-moon {
+    display: none;
+  }
+}
+
+html[data-theme="light"] .rh-theme-toggle {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(40, 30, 20, 0.12);
+}
+
+.rh-theme-toggle-mobile {
+  width: 38px;
+  height: 38px;
+  margin-right: 4px;
+  font-size: 17px;
+}

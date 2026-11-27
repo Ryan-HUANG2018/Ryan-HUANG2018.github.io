@@ -9,9 +9,20 @@
         <span>{{ site.first_name | slice: 0 | upcase }}.{{ site.last_name | upcase }}</span>
         <span class="rh-brand-sub">// fluid dynamics</span>
       </a>
+      {% if site.enable_darkmode %}
+        <button
+          class="rh-theme-toggle rh-theme-toggle-mobile d-lg-none ml-auto"
+          type="button"
+          title="Switch light / dark theme"
+          aria-label="Switch light / dark theme"
+        >
+          <i class="ti ti-sun rh-theme-icon-sun" aria-hidden="true"></i>
+          <i class="ti ti-moon rh-theme-icon-moon" aria-hidden="true"></i>
+        </button>
+      {% endif %}
       <!-- Navbar Toggle -->
       <button
-        class="navbar-toggler collapsed ml-auto"
+        class="navbar-toggler collapsed {% unless site.enable_darkmode %}ml-auto{% endunless %}"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -49,6 +60,14 @@
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
                 <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          {% endif %}
+          {% if site.enable_darkmode %}
+            <li class="nav-item d-none d-lg-block">
+              <button class="rh-theme-toggle" type="button" title="Switch light / dark theme" aria-label="Switch light / dark theme">
+                <i class="ti ti-sun rh-theme-icon-sun" aria-hidden="true"></i>
+                <i class="ti ti-moon rh-theme-icon-moon" aria-hidden="true"></i>
               </button>
             </li>
           {% endif %}
