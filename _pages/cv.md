@@ -4,20 +4,12 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: # your CV PDF in assets/pdf/ (or a URL); the Download CV button stays hidden until this is set
+cv_pdf: Qiuxiang_Huang_CV.pdf # public version of the academic CV (no phone, grant amounts or referees)
 description:
 toc:
   sidebar: left
 ---
 
-Experienced academic and researcher with over 10 years of expertise in Mechanical and Biomedical Engineering, specialising in computational fluid dynamics, fluid-structure interaction, and AI-driven modelling for biomedical, aerospace, and energy applications.
+Computational fluid dynamics researcher (PhD, UNSW Canberra, 2021) with over 10 years of experience developing numerical methods for biological, biomedical and bio-inspired flows. I develop and parallelise (OpenMP/MPI) immersed boundary–lattice Boltzmann solvers for fluid–structure interaction and apply them to collapsible vessels and airways, non-Newtonian blood flow, deformable capsules and flapping wings.
 
-Dedicated to advancing the frontiers of Mechanical and Biomedical Engineering through innovative research and education, including curriculum development, graduate supervision, and collaborative research initiatives. Maintains an increasing emphasis on translating cutting-edge technologies into practical applications, particularly in digital health (e.g., cardiovascular modelling, medical device design) and sustainable engineering (e.g., renewable energy systems, eco-friendly aerodynamics).
-
-Currently, I am a Visiting Fellow in the Cardiovascular Technology Laboratory at the [Centre for Biomedical Technologies](https://research.qut.edu.au/cbt/), [Queensland University of Technology](https://www.qut.edu.au/) (QUT), where I apply advanced computational modelling techniques to interdisciplinary biomedical research.
-
-From 2023 to 2025, I was a Research Fellow in the School of Mechanical, Medical and Process Engineering at QUT. Before that, from 2021 to 2023, I worked as a Research Associate in Aerospace Engineering at the [University of New South Wales](https://www.unsw.edu.au/) (UNSW). During this period, I leveraged my expertise in fluid-structure interaction (FSI) solvers to investigate aerodynamic mechanisms in insect flight and the design of flapping-wing micro air vehicles, bridging theoretical modelling with applied aerospace engineering.
-
-I completed my PhD in Mechanical Engineering at UNSW in 2021, focusing on the development of cutting-edge FSI solvers for biological applications. My doctoral research addressed critical challenges in modelling complex biological systems, such as cardiovascular fluid dynamics and biomechanical interactions, through the creation of high-fidelity computational frameworks.
-
-Earlier, in 2013, I earned a Bachelor of Engineering in Mechanical Engineering from the Nanjing University of Aeronautics & Astronautics - one of China’s preeminent institutions in aerospace and mechanical engineering - where I established a foundational expertise in mechanical systems and engineering principles.
+At QUT's [Centre for Biomedical Technologies](https://research.qut.edu.au/cbt/) I was Lead on CFD development for EzyCardio, a CTCA-based coronary diagnostic platform funded by the MRFF, and I am extending image-based haemodynamic modelling to cardiac and retinal circulations. I am currently a Visiting Fellow in the Cardiovascular Technology Laboratory at the [Queensland University of Technology](https://www.qut.edu.au/) (QUT).
