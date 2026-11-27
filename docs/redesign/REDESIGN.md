@@ -33,7 +33,7 @@
 5. In the field：会议报告、合影等现场照片，数据在 `_data/field.yml`。首页只预览前 3 张（第一张为大图），超过 3 张时显示 "all N photos →" 链接；全部照片在单独页面 `/field/`（`_pages/field.md`），导航栏 In the field 指向该页面。`/field/` 底部有 "Beyond the lab" 生活照（`_data/life.yml`），每行三张，`size: wide` 占三分之二，`size: pano` 占整行。照片多于 3 张时按每项的 `size:`（big / wide / tall）排成拼贴。只放用户逐张确认过的照片；图片去掉 EXIF/GPS、长边不超过 1600px；列表为空时整块隐藏。
 6. Publications、News、Connect 同原规范，套玻璃样式。News 大卡没有配图时显示带分类字样的发光占位，不留空白。
 
-**亮色主题（2026-11-27 用户确认）**：在深色版之外加一套"暖纸"亮色主题，导航栏右边（Contact 左侧；手机上在汉堡菜单左侧）放日/月切换按钮。访客没点过时跟随系统设置，点过以后记在浏览器里（`localStorage` 的 `theme`）。深色版外观保持不变。样式在 `_sass/_light.scss`，全部挂在 `html[data-theme="light"]` 下，通过覆盖 `--rh-*` 变量实现；al-folio 的 `--global-*` 亮色值在 `_sass/_themes.scss`。
+**亮色主题（2026-11-27 用户确认）**：在深色版之外加一套"暖纸"亮色主题，导航栏右边（Contact 左侧；手机上在汉堡菜单左侧）放日/月切换按钮。默认一律深色（2026-11-27 用户改定，不跟随系统），点过以后记在浏览器里（`localStorage` 的 `theme`）。深色版外观保持不变。样式在 `_sass/_light.scss`，全部挂在 `html[data-theme="light"]` 下，通过覆盖 `--rh-*` 变量实现；al-folio 的 `--global-*` 亮色值在 `_sass/_themes.scss`。
 
 | 项目 | 亮色取值 |
 |---|---|
@@ -63,7 +63,7 @@
 | 卡片悬停 | 边框变 accent + `0 0 32px rgba(63,224,208,.18)` 外发光 + 上移 2px |
 | 章节标题 | 前面加等宽字体编号（`01`、`02`…），颜色为 accent |
 
-（已被 §0 的"亮色主题"取代：现在有深色和亮色两套，默认跟随系统。）
+（已被 §0 的"亮色主题"取代：现在有深色和亮色两套，默认深色。）
 
 ## 2. 首页结构（自上而下）
 
