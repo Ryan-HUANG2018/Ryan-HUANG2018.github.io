@@ -3,7 +3,11 @@
     "name": "Qiuxiang (Ryan) Huang",
     "label": "Visiting Fellow, Queensland University of Technology",
     "summary": "Computational fluid dynamics — fluid–structure interaction, lattice Boltzmann and immersed boundary methods, and cardiovascular and biological flows.",
-    "location": { "city": "Brisbane", "region": "QLD", "countryCode": "AU" }
+    "location": {
+      "city": "Brisbane",
+      "region": "QLD",
+      "countryCode": "AU"
+    }
   },
   "work": [
     {
@@ -11,7 +15,12 @@
       "position": "Visiting Fellow",
       "url": "https://www.qut.edu.au/",
       "startDate": "2025-03",
-      "summary": "Cardiovascular Technology Laboratory, Centre for Biomedical Technologies, School of Mechanical, Medical and Process Engineering"
+      "summary": "Cardiovascular Technology Laboratory, Centre for Biomedical Technologies, School of Mechanical, Medical and Process Engineering",
+      "highlights": [
+        "Image-based CFD of a glaucomatous retinal arterial network (manuscript in preparation)",
+        "Lead CI, QUT ECR Ideas Scheme project on fluid–structure–electrophysiology–acoustics interactions of the left atrium (2025–2026)",
+        "Founder, Teraviq (2026): software for large-scale fluid–structure interaction simulation"
+      ]
     },
     {
       "name": "Queensland University of Technology",
@@ -19,7 +28,13 @@
       "url": "https://www.qut.edu.au/",
       "startDate": "2023-03",
       "endDate": "2025-03",
-      "summary": "School of Mechanical, Medical and Process Engineering"
+      "summary": "Centre for Biomedical Technologies, School of Mechanical, Medical and Process Engineering",
+      "highlights": [
+        "Lead on CFD development for EzyCardio, a coronary diagnostic platform integrating CTCA, CFD and clinical reporting",
+        "Deep-learning surrogates for haemodynamic prediction (Zou et al. 2025)",
+        "Modelling of arterial plaque/thrombus growth, erosion and rupture (QUT MMPE ECR Seed Grant, Lead CI)",
+        "IB–LBM solvers for capsule dynamics in viscoelastic fluids (Ma et al. 2023)"
+      ]
     },
     {
       "name": "UNSW Canberra",
@@ -27,7 +42,11 @@
       "url": "https://www.unsw.edu.au/canberra",
       "startDate": "2021-05",
       "endDate": "2023-03",
-      "summary": "School of Engineering and Technology"
+      "summary": "Bioengineering Group, School of Engineering and Technology",
+      "highlights": [
+        "LBM–IBM modelling of compliant musculoskeletal actuation in flying insects (Journal of Fluid Mechanics 2023)",
+        "Computational studies of bio-inspired forward and backward swimming (Proc. R. Soc. A 2025)"
+      ]
     }
   ],
   "education": [
@@ -37,21 +56,26 @@
       "studyType": "PhD",
       "startDate": "2017",
       "endDate": "2021-04",
-      "courses": ["Thesis: Low Reynolds number turbulent FSI and its applications in biological flows"]
+      "courses": [
+        "Thesis: Low Reynolds number turbulent FSI and its applications in biological flows",
+        "2D and 3D IB–LBM FSI solvers (OpenMP/MPI) for collapsible channel and tube flows"
+      ]
     },
     {
       "institution": "Nanjing University of Aeronautics and Astronautics",
-      "area": "Mechanical Engineering",
+      "area": "Man-Machine and Environment Engineering",
       "studyType": "MEng",
       "startDate": "2013",
-      "endDate": "2016"
+      "endDate": "2016",
+      "courses": ["Thesis: haemodynamics of pulsatile non-Newtonian blood flow in curved-tube and artery-bifurcation models"]
     },
     {
       "institution": "Nanjing University of Aeronautics and Astronautics",
-      "area": "Mechanical Engineering",
+      "area": "Building Environment and Equipment Engineering",
       "studyType": "BEng",
       "startDate": "2009",
-      "endDate": "2013"
+      "endDate": "2013",
+      "courses": ["Thesis: numerical simulation of a jet impinging a free surface in a wave environment"]
     }
   ],
   "projects": [
@@ -70,6 +94,12 @@
     {
       "name": "Effects of an oscillatory high-flow nasal cannula interface in hypoxaemic patients",
       "summary": "QUT MMPE ECR Seed Grant — Chief Investigator",
+      "startDate": "2024",
+      "endDate": "2025"
+    },
+    {
+      "name": "MRFF CTCA-POC: CT coronary angiography inspired point-of-care technology for coronary artery disease",
+      "summary": "Medical Research Future Fund (2016165) — Lead on CFD development",
       "startDate": "2024",
       "endDate": "2025"
     },
@@ -116,10 +146,26 @@
       "date": "2025-02",
       "awarder": "European Commission"
     },
-    { "title": "Third Prize, Presentation", "date": "2023-11", "awarder": "Australian MCS Symposium" },
-    { "title": "Third Prize, Presentation", "date": "2019-11", "awarder": "UNSW Canberra Research Day" },
-    { "title": "APS Student Travel Grant", "date": "2019-09", "awarder": "American Physical Society" },
-    { "title": "PhD Tuition Fee Scholarship with living allowance", "date": "2017-02", "awarder": "UNSW" },
+    {
+      "title": "Third Prize, Presentation",
+      "date": "2023-11",
+      "awarder": "Australian MCS Symposium"
+    },
+    {
+      "title": "Third Prize, Presentation",
+      "date": "2019-11",
+      "awarder": "UNSW Canberra Research Day"
+    },
+    {
+      "title": "APS Student Travel Grant",
+      "date": "2019-09",
+      "awarder": "American Physical Society"
+    },
+    {
+      "title": "PhD Tuition Fee Scholarship with living allowance",
+      "date": "2017-02",
+      "awarder": "UNSW"
+    },
     {
       "title": "Master's tuition scholarship with living allowance",
       "date": "2013-09",
@@ -127,22 +173,113 @@
     }
   ],
   "publications": [
-    { "name": "Sydney–Glasgow Ignition Symposium", "publisher": "University of Sydney", "releaseDate": "2024-01" },
-    { "name": "Hypersonics Paper Club", "publisher": "UNSW Canberra", "releaseDate": "2022-10" },
-    { "name": "SEIT HDR Conference (keynote)", "publisher": "UNSW Canberra", "releaseDate": "2022-09" },
-    { "name": "LAMSES Laboratory", "publisher": "Queensland University of Technology", "releaseDate": "2021-10" },
-    { "name": "Conversations in Fluids", "publisher": "Australasian Fluid Mechanics Society", "releaseDate": "2021-07" },
-    { "name": "AFMS Summer School", "publisher": "Australasian Fluid Mechanics Society", "releaseDate": "2019-12" },
-    { "name": "FSI Workshop", "publisher": "Flow Science Lab, UNSW Canberra", "releaseDate": "2018-05" }
+    {
+      "name": "From Collapsing Vessels to Microfluidic Confinements: A Mesoscopic Fluid–Structure Interaction Framework for Biomedical Flow Simulation",
+      "publisher": "QUATRI Seminar, Griffith University",
+      "releaseDate": "2026-05"
+    },
+    {
+      "name": "A Lattice Boltzmann Approach to Biomedical Flows: What it Can Do That Traditional CFD Struggles With",
+      "publisher": "QUT Fluids Workshop, Queensland University of Technology",
+      "releaseDate": "2026-07"
+    },
+    {
+      "name": "Sydney–Glasgow Ignition Symposium",
+      "publisher": "University of Sydney",
+      "releaseDate": "2024-01"
+    },
+    {
+      "name": "Hypersonics Paper Club",
+      "publisher": "UNSW Canberra",
+      "releaseDate": "2022-10"
+    },
+    {
+      "name": "SEIT HDR Conference (keynote)",
+      "publisher": "UNSW Canberra",
+      "releaseDate": "2022-09"
+    },
+    {
+      "name": "LAMSES Laboratory",
+      "publisher": "Queensland University of Technology",
+      "releaseDate": "2021-10"
+    },
+    {
+      "name": "Conversations in Fluids",
+      "publisher": "Australasian Fluid Mechanics Society",
+      "releaseDate": "2021-07"
+    },
+    {
+      "name": "AFMS Summer School",
+      "publisher": "Australasian Fluid Mechanics Society",
+      "releaseDate": "2019-12"
+    },
+    {
+      "name": "FSI Workshop",
+      "publisher": "Flow Science Lab, UNSW Canberra",
+      "releaseDate": "2018-05"
+    }
   ],
   "volunteer": [
-    { "organization": "Frontiers in Mechanical Engineering", "position": "Topic Editor", "startDate": "2022" },
-    { "organization": "Frontiers in Bioengineering and Biotechnology", "position": "Topic Coordinator", "startDate": "2024", "endDate": "2025" },
-    { "organization": "ACPAAF 2024", "position": "Scientific Committee", "startDate": "2024", "endDate": "2024" },
-    { "organization": "Queensland University of Technology", "position": "Tutor, EGH423 Fluid Dynamics", "startDate": "2023", "endDate": "2023" },
-    { "organization": "UNSW Canberra", "position": "Guest Lecturer, ZEIT8512", "startDate": "2023", "endDate": "2023" },
-    { "organization": "UNSW Canberra", "position": "Tutor, ZEIT2503 Fluid Mechanics", "startDate": "2022", "endDate": "2022" },
-    { "organization": "UNSW", "position": "Graduate Teaching Training Program (with merit)", "startDate": "2022", "endDate": "2022" },
+    {
+      "organization": "Frontiers in Mechanical Engineering",
+      "position": "Topic Editor",
+      "startDate": "2022",
+      "endDate": "2023"
+    },
+    {
+      "organization": "Frontiers in Bioengineering and Biotechnology",
+      "position": "Topic Coordinator",
+      "startDate": "2024",
+      "endDate": "2025"
+    },
+    {
+      "organization": "ACPAAF 2024",
+      "position": "Scientific Committee",
+      "startDate": "2024",
+      "endDate": "2024"
+    },
+    {
+      "organization": "Queensland University of Technology",
+      "position": "Tutor, EGH423 Fluid Dynamics",
+      "startDate": "2023",
+      "endDate": "2023"
+    },
+    {
+      "organization": "UNSW Canberra",
+      "position": "Guest Lecturer, ZEIT8512",
+      "startDate": "2023",
+      "endDate": "2023"
+    },
+    {
+      "organization": "UNSW Canberra",
+      "position": "Tutor, ZEIT2503 Fluid Mechanics",
+      "startDate": "2022",
+      "endDate": "2022"
+    },
+    {
+      "organization": "UNSW",
+      "position": "Graduate Teaching Training Program (with merit)",
+      "startDate": "2022",
+      "endDate": "2022"
+    },
+    {
+      "organization": "QUT and UNSW",
+      "position": "Co-supervision of 3 PhD students",
+      "startDate": "2021",
+      "endDate": "2024"
+    },
+    {
+      "organization": "UNSW Canberra",
+      "position": "Supervision of an honours student (UNSW University Medallist 2021) and 3 summer interns",
+      "startDate": "2021",
+      "endDate": "2022"
+    },
+    {
+      "organization": "Queensland University of Technology",
+      "position": "Panel member, PhD final seminars and confirmation of candidature",
+      "startDate": "2023",
+      "endDate": "2026"
+    },
     {
       "organization": "Journal of Fluid Mechanics; Physics of Fluids; Journal of Fluids and Structures; Computers in Biology and Medicine",
       "position": "Reviewer"
