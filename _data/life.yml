@@ -29,10 +29,10 @@
   place: San Diego
   year: 2020
   focus: center 70%
-- src: assets/img/life/seattle-2019.jpg
-  alt: The Space Needle in Seattle under a blue sky
-  title: Seattle
-  year: 2019
+- src: assets/img/life/tsinghua-sigs-2023.jpg
+  alt: Qiuxiang (Ryan) Huang at the entrance of Tsinghua Shenzhen International Graduate School
+  title: Tsinghua SIGS, Shenzhen
+  year: 2023
 - src: assets/img/life/hilltop-sunset-2023.jpg
   alt: Qiuxiang (Ryan) Huang crouching on a hilltop at sunset at the Mount Tamborine sunset lookout
   title: Hilltop sunset
@@ -69,10 +69,11 @@
   title: Lakers game, Los Angeles
   year: 2020
   size: wide
-- src: assets/img/life/tsinghua-sigs-2023.jpg
-  alt: Qiuxiang (Ryan) Huang at the entrance of Tsinghua Shenzhen International Graduate School
-  title: Tsinghua SIGS, Shenzhen
-  year: 2023
+- src: assets/img/life/seattle-2019.jpg
+  alt: The Space Needle in Seattle under a blue sky
+  title: Space Needle
+  place: Seattle
+  year: 2019
 - src: assets/img/life/sunset-2023.jpg
   alt: Panorama of a sunset over trees and hills
   title: Sunset
