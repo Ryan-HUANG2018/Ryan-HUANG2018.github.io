@@ -80,7 +80,7 @@ openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX
 # GoatCounter (https://www.goatcounter.com/): counts visits and shows the total in the footer.
 # Set to your site code (e.g. "ryanhuang" for ryanhuang.goatcounter.com) and enable
 # "Allow adding visitor counts on your website" in the GoatCounter settings. Blank disables it.
-goatcounter_code:
+goatcounter_code: ginnohuang # https://ginnohuang.goatcounter.com
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)
