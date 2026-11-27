@@ -88,4 +88,4 @@ These results suggest that matching wing shape to hinge stiffness lets insects, 
 
 ## Publication
 
-Huang, Q., Bhat, S.S., Yeo, E.C., Young, J., Lai, J.C.S., Tian, F.-B. & Ravi, S. (2023). Power synchronisations determine the hovering flight efficiency of passively pitching flapping wings. _Journal of Fluid Mechanics_ 974, A41.
+Huang, Q., Bhat, S.S., Yeo, E.C., Young, J., Lai, J.C.S., Tian, F.-B. & Ravi, S. (2023). Power synchronisations determine the hovering flight efficiency of passively pitching flapping wings. _Journal of Fluid Mechanics_ 974, A41. [doi:10.1017/jfm.2023.821](https://doi.org/10.1017/jfm.2023.821)

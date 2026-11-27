@@ -79,4 +79,4 @@ The fluid is solved with a lattice Boltzmann method on a uniform grid of 0.02*D*
 
 ## Publication
 
-Huang, Q., Ji, X., Ma, J., Wang, L., Young, J. & Lai, J.C.S. (2024). Self-excited oscillations of three-dimensional collapsible tubes conveying both laminar and turbulent flows. _Physics of Fluids_ 36(12), 121920.
+Huang, Q., Ji, X., Ma, J., Wang, L., Young, J. & Lai, J.C.S. (2024). Self-excited oscillations of three-dimensional collapsible tubes conveying both laminar and turbulent flows. _Physics of Fluids_ 36(12), 121920. [doi:10.1063/5.0243758](https://doi.org/10.1063/5.0243758)

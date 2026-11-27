@@ -1,4 +1,5 @@
-# Conference papers and presentations, newest first (source: Ryan's CV, content/publications.tex, 2026-10-29).
+# Conference papers and presentations, newest first (source: Ryan's CV, content/publications.tex, 2026-10-29,
+# plus the AFMC 2024 aortic-valve paper from Zenodo, added by Ryan 2026-11-27).
 # type: "Full paper" (paper in the proceedings) or "Abstract"; all were oral presentations.
 # Own name is written "Q. Huang" (CLAUDE.md) and highlighted on the page.
 
@@ -17,6 +18,12 @@
   title: Investigating the role of arteriovenous crossings in the pathogenesis of retinal vein occlusion
   venue: QCVRN & Heart Foundation Research Showcase 2024, Gold Coast, Australia
   type: Abstract
+- year: 2024
+  authors: Q. Huang, Z. Li and Z. Li
+  title: Numerical analysis of aortic valve dynamics in patients with supravalvular aortic stenosis
+  venue: 24th Australasian Fluid Mechanics Conference (AFMC), Canberra, Australia (paper 158)
+  type: Full paper
+  url: https://doi.org/10.5281/zenodo.14213360 # not in the CV list; added at Ryan's request 2026-11-27
 - year: 2024
   authors: O. Aref, R. Rahimi, Q. Huang, L. Wang, J. Young and F. Tian
   title: "Dynamic behaviors for a stenosed channel: an FSI study"

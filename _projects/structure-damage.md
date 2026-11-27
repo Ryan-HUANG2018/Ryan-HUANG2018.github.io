@@ -46,4 +46,4 @@ params:
 
 The overall error is 3.1%.
 
-Piekutowski, A.J. et al. (1996). Perforation of aluminum plates with ogive-nose steel rods at normal and oblique impacts. _International Journal of Impact Engineering_ 18(7–8), 877–887.
+Piekutowski, A.J. et al. (1996). Perforation of aluminum plates with ogive-nose steel rods at normal and oblique impacts. _International Journal of Impact Engineering_ 18(7–8), 877–887. [doi:10.1016/S0734-743X(96)00011-5](<https://doi.org/10.1016/S0734-743X(96)00011-5>)
