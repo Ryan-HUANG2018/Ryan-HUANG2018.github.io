@@ -20,11 +20,13 @@
 - group: Code & HPC
   items:
     - { name: C++, note: "in-house IB–LBM and structural solvers (earlier versions in Fortran and MATLAB)" }
+    - { name: Fortran, key: Fortran, note: "finite element blood-flow solver from my master's research, now ported to C++17" }
     - { name: OpenMP, key: OpenMP }
     - { name: MPI, key: MPI }
     - { name: Python, note: "post-processing and analysis" }
     - { name: Linux HPC, note: "NCI, UNSW and QUT clusters; CMake builds; up to 96 cores" }
     - { name: Automated workflows, key: Automated workflow, note: "geometry → mesh → solve → report" }
+    - { name: AI coding assistants, key: AI coding assistant, note: "for code porting, with requirements, review and verification by me" }
     - { name: Git · Docker, note: "version control and reproducible environments" }
     - { name: AMReX, note: "GPU and adaptive-mesh port of my solver, in development (Teraviq)" }
 
