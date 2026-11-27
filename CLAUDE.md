@@ -26,7 +26,7 @@
 
 - 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / Heat transfer / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
 - 2026-11 起整体改成磨砂玻璃风格，规格见 REDESIGN.md §0（优先于该文件其余冲突项）。
-- 2026-11-27 起有亮色主题（"暖纸"风）和日/月切换按钮，默认跟随系统，规格见 REDESIGN.md §0 的"亮色主题"。改样式时两套主题都要检查。
+- 2026-11-27 起有亮色主题（"暖纸"风）和日/月切换按钮，默认深色（不跟随系统，用户 2026-11-27 改定），规格见 REDESIGN.md §0 的"亮色主题"。改样式时两套主题都要检查。
 - TOOLKIT：首页显示"方法排行"卡（按项目 `stack:` 统计），完整列表在可展开的 Full toolkit 面板里。内容在 `_data/toolkit.yml`，每项按 `key` 自动链接到 `stack:` 里含这个 key 的仿真项目。项目页参数卡下方显示该项目的 `stack:`。工具和方法只写 ai-profile 里确认过或文件记载的，不凭印象加；某个项目用了什么，没有记录就不写进它的 `stack:`。
 - 页脚右边有访问数（GoatCounter，`_config.yml` 的 `goatcounter_code`）和 "theme based on al-folio" 链接。
 - In the field 照片区：首页只预览前 3 张，全部照片在单独页面 `/field/`（用户 2026-11-25 要求首页不要放太多照片）。`/field/` 底部有 "Beyond the lab" 生活照一栏，数据在 `_data/life.yml`、图片在 `assets/img/life/`，同样只放用户逐张选过的照片，不放家人、孩子、住处。数据在 `_data/field.yml`，只放用户逐张确认过的照片（照片里有他人）。图片去掉 EXIF/GPS、长边不超过 1600px，放在 `assets/img/field/`；原图在用户的照片库里，只读。
