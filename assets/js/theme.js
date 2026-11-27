@@ -1,15 +1,9 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Sun/moon toggle: switch to the opposite of the theme currently shown and remember it.
+// Until the visitor clicks, the setting is "system" and follows the OS preference.
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
+  setThemeSetting(determineComputedTheme() == "dark" ? "light" : "dark");
 };
 
 // Change the theme setting and apply the theme.
@@ -284,10 +278,11 @@ let initTheme = () => {
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
+    // The nav has two sun/moon buttons: one in the menu (desktop), one beside the hamburger (mobile).
+    document.querySelectorAll(".rh-theme-toggle").forEach((mode_toggle) => {
+      mode_toggle.addEventListener("click", function () {
+        toggleThemeSetting();
+      });
     });
   });
 
