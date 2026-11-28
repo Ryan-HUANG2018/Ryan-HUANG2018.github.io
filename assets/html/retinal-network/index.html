@@ -41,9 +41,15 @@
         --on-accent: #ffffff;
         color-scheme: light;
       }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
       html,
       body {
         margin: 0;
+        overflow-x: hidden;
         background: transparent;
         color: var(--fg);
         font-family: var(--sans);
