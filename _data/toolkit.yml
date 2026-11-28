@@ -1,6 +1,7 @@
 # Homepage TOOLKIT panel (_includes/home/toolkit.liquid).
 # Each item with a `key` lists the simulations whose front matter `stack:` contains that key,
 # so the evidence links update themselves. Items without a key show their `note` instead.
+# `papers:` (optional) adds links to papers, e.g. { label: PoF 2022, url: https://doi.org/... }.
 # Source: ai-profile (career/verified-facts.md). Only list tools the user has confirmed or that
 # documents report; never add a tool on impression. Items whose note starts with "[" are hidden.
 
@@ -16,6 +17,8 @@
     - { name: Multi-block grids, key: Multi-block grids }
     - { name: Material point method, key: MPM }
     - { name: Windkessel outlet models, key: Windkessel outlets }
+    - { name: Finite volume method, note: "through Fluent and OpenFOAM; SIMPLE and PISO" }
+    - { name: Dynamic mode decomposition, note: "applied to flapping-wing flow fields (AIAA SciTech 2023)" }
 
 - group: Code & HPC
   items:
@@ -24,6 +27,7 @@
     - { name: OpenMP, key: OpenMP }
     - { name: MPI, key: MPI }
     - { name: Python, note: "post-processing and analysis" }
+    - { name: MATLAB, note: "data processing and analysis" }
     - { name: Linux HPC, note: "NCI, UNSW and QUT clusters; CMake builds; up to 96 cores" }
     - { name: Automated workflows, key: Automated workflow, note: "geometry → mesh → solve → report" }
     - { name: AI coding assistants, key: AI coding assistant, note: "for code porting, with requirements, review and verification by me" }
@@ -33,11 +37,15 @@
 - group: Engineering CFD software
   items:
     - { name: OpenFOAM, key: OpenFOAM, note: "simpleFoam, pimpleFoam; blockMesh, snappyHexMesh, cfMesh; coronary CFD pipeline" }
-    - { name: ANSYS Fluent, note: "UDFs for pulsatile inlets and non-Newtonian blood; VOF two-phase; k–ε, Spalart–Allmaras" }
+    - name: ANSYS Fluent
+      note: "reference solution for the stenosis validation case in my 2022 PoF paper; UDFs for pulsatile inlets and non-Newtonian blood; aircraft fuel diffuser and drag parachutes (master's); VOF wave tank in my bachelor's thesis; k–ε, RNG k–ε, Spalart–Allmaras"
+      papers:
+        - { label: PoF 2022, url: "https://doi.org/10.1063/5.0101584" }
     - { name: Cross-validation, note: "OpenFOAM vs ANSYS Fluent coronary flow: velocities within 0.35%" }
 
 - group: CAD, meshing & visualisation
   items:
-    - { name: CAD, note: "CATIA, SolidWorks, FreeCAD" }
-    - { name: Meshing, note: "ANSYS ICEM CFD, Gmsh, snappyHexMesh, cfMesh, Pointwise (2013)" }
+    - { name: CAD, note: "CATIA (aircraft fuel diffuser, drag parachutes, fighter aircraft), SolidWorks, FreeCAD" }
+    - { name: Meshing, note: "ANSYS ICEM CFD, Gmsh, blockMesh, snappyHexMesh, cfMesh, Pointwise (2013)" }
+    - { name: Medical imaging, note: "3D Slicer vessel segmentation from MRA" }
     - { name: Visualisation, note: "ParaView, Tecplot, VTK" }

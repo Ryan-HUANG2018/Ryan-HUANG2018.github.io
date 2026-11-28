@@ -17,6 +17,9 @@
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
+          {%- for paper in item.papers -%}
+            <a href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.label }}</a>
+          {%- endfor -%}
         {%- endcapture -%}
         {%- assign note = item.note -%}
         {%- if note contains '[' -%}{%- assign note = nil -%}{%- endif -%}
