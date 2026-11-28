@@ -2,13 +2,21 @@
 <figure class="rh-viewport rh-glass">
   <div class="rh-viewport-bar">
     <span>VIEWPORT · {{ hero.viewport | default: 'VORTICITY |ω|' }}</span>
-    <span class="rh-accent">● LIVE</span>
+    {% if hero.link %}
+      <a class="rh-accent" href="{{ hero.link | relative_url }}">{{ hero.link_text | default: 'OPEN →' }}</a>
+    {% else %}
+      <span class="rh-accent">● LIVE</span>
+    {% endif %}
   </div>
-  <div class="rh-viewport-media">
-    {%
-      include sim_media.liquid variant='hero' src=hero.video mp4=hero.video_mp4 poster=hero.poster
-      label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
-    %}
+  <div class="rh-viewport-media{% if hero.iframe %} rh-viewport-frame{% endif %}">
+    {% if hero.iframe %}
+      <iframe src="{{ hero.iframe | relative_url }}" title="{{ hero.iframe_title | default: 'Interactive simulation' }}" loading="lazy"></iframe>
+    {% else %}
+      {%
+        include sim_media.liquid variant='hero' src=hero.video mp4=hero.video_mp4 poster=hero.poster
+        label='[HERO CFD ANIMATION · autoplay loop, .webm / .mp4]'
+      %}
+    {% endif %}
   </div>
   {% capture params_html %}
       {%- for p in hero.params -%}

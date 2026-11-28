@@ -443,6 +443,23 @@ body {
   overflow: hidden;
 }
 
+// Interactive viewer in the viewport (hero.iframe)
+.rh-viewport-media.rh-viewport-frame {
+  background: var(--rh-media);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+  }
+}
+
+.rh-viewport-bar a {
+  white-space: nowrap;
+}
+
 .rh-viewport-bar {
   padding: 6px 10px 0;
   border-bottom: 0;
@@ -696,6 +713,15 @@ body {
     .rh-card-title {
       font-size: 24px;
     }
+  }
+}
+
+// Large card showing a whole white-background frame (featured_fit: contain)
+.rh-card-media-contain {
+  background: #fff;
+
+  .rh-media-video {
+    object-fit: contain;
   }
 }
 

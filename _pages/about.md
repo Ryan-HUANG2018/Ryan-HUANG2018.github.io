@@ -15,15 +15,19 @@ hero:
   portrait: assets/img/portrait.jpg
   portrait_role: Visiting Fellow
   portrait_unit: Cardiovascular Technology Laboratory
-  viewport: PASSIVELY PITCHING WINGS · JFM 2023
-  video: assets/video/passively-flapping-wings/passively_flapping_wings.webm # autoplay loop
+  viewport: RETINAL ARTERIAL NETWORK · DRAG TO ROTATE
+  iframe: /assets/html/retinal-network/index.html?view=compact # interactive viewer (Ryan, 2026-11-28); remove to fall back to the video below
+  iframe_title: Interactive 3-D retinal arterial network coloured by pressure
+  link: /projects/retinal-arterial/
+  link_text: FULL VIEWER →
+  video: assets/video/passively-flapping-wings/passively_flapping_wings.webm # used only when iframe is empty
   video_mp4: assets/video/passively-flapping-wings/Passively_flapping_wings.mp4
   poster: assets/video/passively-flapping-wings/passively_flapping_wings.jpg
-  params: # up to 4 cells under the viewport; [placeholders] are hidden. Values from _projects/passively-flapping-wings.md
-    - { label: Re, value: "300" }
-    - { label: Hinge Ch, value: "0.45 (soft)" }
-    - { label: Grid, value: "7.25 M" }
-    - { label: Method, value: "IB–LBM" }
+  params: # up to 4 cells under the viewport; [placeholders] are hidden. Values from _projects/retinal-arterial.md
+    - { label: Segments, value: "82" }
+    - { label: Outlets, value: "42" }
+    - { label: Blood, value: "Non-Newtonian" }
+    - { label: Solver, value: "OpenFOAM" }
 
 # Impact panel under the hero. Update by hand from Google Scholar and refresh `snapshot`;
 # metrics older than 3 months should be re-checked before relying on them.

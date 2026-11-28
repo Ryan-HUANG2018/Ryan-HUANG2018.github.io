@@ -3,6 +3,7 @@ layout: simulation
 title: Passively pitching flapping wings in hover
 description: An insect-like wing flaps on a prescribed stroke while a torsional spring at the hinge lets it pitch freely — wing shape and hinge stiffness set the lift and the power economy.
 importance: 1
+featured: true # large autoplaying card on the homepage (Ryan, 2026-11-28); the retinal viewer is in the hero viewport
 category: Bio-locomotion
 tags: ["3D", "FSI", "Insect flight"]
 stack: ["LBM", "Immersed boundary", "Multi-block grids"]
@@ -14,6 +15,9 @@ summary: >
   Journal of Fluid Mechanics paper.
 thumbnail: assets/video/passively-flapping-wings/preview.webm
 thumbnail_poster: assets/video/passively-flapping-wings/preview.jpg
+featured_video: assets/video/passively-flapping-wings/passively_flapping_wings.webm # full frame for the large card
+featured_poster: assets/video/passively-flapping-wings/passively_flapping_wings.jpg
+featured_fit: contain # show the whole frame (lift plot + colour bar) on white
 variant_label: case
 variants:
   - {

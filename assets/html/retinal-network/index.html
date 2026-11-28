@@ -11,6 +11,8 @@
           t = localStorage.getItem("theme") || "dark";
         } catch (e) {}
         document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+        // ?view=compact: plot only, no controls or axes (homepage viewport)
+        if (new URLSearchParams(location.search).get("view") === "compact") document.documentElement.classList.add("compact");
       })();
     </script>
     <!-- Plotly (gl3d bundle, v2.35.2) served next to this page so it does not depend on a CDN -->
@@ -122,6 +124,21 @@
       .note b {
         color: var(--fg);
         font-weight: 500;
+      }
+      .compact,
+      .compact body {
+        height: 100%;
+        overflow: hidden;
+      }
+      .compact .controls,
+      .compact .note {
+        display: none;
+      }
+      .compact #plot {
+        height: 100vh;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
       }
     </style>
   </head>
@@ -286,7 +303,9 @@
         function layout() {
           const fg2 = css("--fg2"),
             surf = css("--surface");
+          const compact = document.documentElement.classList.contains("compact");
           const ax = (t) => ({
+            visible: !compact,
             title: { text: t, font: { color: fg2, size: 11 } },
             color: fg2,
             showbackground: false,
@@ -303,7 +322,7 @@
               yaxis: ax("y (mm)"),
               zaxis: ax("z (mm)"),
               aspectmode: "data",
-              camera: { eye: { x: 0, y: 0, z: 1.6 }, up: { x: 0, y: -1, z: 0 } },
+              camera: { eye: { x: 0, y: 0, z: compact ? 1.5 : 1.6 }, up: { x: 0, y: -1, z: 0 } },
             },
             font: { family: css("--sans") },
           };
@@ -327,7 +346,7 @@
               responsive: true,
               displaylogo: false,
               modeBarButtonsToRemove: ["toImage"],
-              displayModeBar: "hover",
+              displayModeBar: document.documentElement.classList.contains("compact") ? false : "hover",
             });
           else
             Plotly.react(

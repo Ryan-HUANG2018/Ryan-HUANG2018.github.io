@@ -25,7 +25,7 @@
         href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
         data-rh-category="{{ sim.category | slugify }}"
       >
-        <div class="rh-card-media">
+        <div class="rh-card-media{% if is_featured and sim.featured_fit == 'contain' %} rh-card-media-contain{% endif %}">
           {% if sim.thumbnail %}
             {% if is_featured %}
               {% assign f_src = sim.featured_video | default: sim.thumbnail %}
