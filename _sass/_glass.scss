@@ -775,6 +775,40 @@ body {
   color: var(--rh-text-body);
 }
 
+// Early design work (_data/design.yml): four CAD tiles in a row under Simulations
+.rh-design-block {
+  margin-top: 48px;
+}
+
+.rh-design {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+
+  .rh-design-item {
+    grid-column: auto;
+    grid-row: auto;
+
+    img {
+      flex: 0 0 auto;
+      aspect-ratio: 3 / 2;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .rh-design {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .rh-field-t {
+      font-size: 12px;
+      line-height: 1.3;
+      white-space: normal;
+    }
+  }
+}
+
 // Publications
 
 .publications ol.bibliography,
