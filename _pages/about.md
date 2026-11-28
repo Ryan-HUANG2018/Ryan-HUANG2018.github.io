@@ -39,7 +39,7 @@ impact:
 
 # Filter chips above the simulation cards; each matches a project's `category`.
 simulations:
-  categories: [Cardiovascular, Bio-locomotion, Heat transfer, Multiphase, FSI methods]
+  categories: [Cardiovascular, Bio-locomotion, Heat transfer, Multiphase, Aerospace, FSI methods]
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 

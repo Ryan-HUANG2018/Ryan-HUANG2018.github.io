@@ -23,7 +23,7 @@
       <a
         class="rh-card rh-sim-card{% if is_featured %} rh-sim-featured{% endif %}"
         href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
-        data-rh-category="{{ sim.category | slugify }}"
+        data-rh-category="{{ sim.category | slugify }}{% for extra in sim.also %} {{ extra | slugify }}{% endfor %}"
       >
         <div class="rh-card-media">
           {% if sim.thumbnail %}

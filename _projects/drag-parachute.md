@@ -2,6 +2,7 @@
 layout: simulation
 title: Drag parachutes behind a test sled and an aircraft
 description: ANSYS Fluent simulations of drag parachutes in the wake of rocket sleds and a fighter aircraft, used to correct sled-test drag.
+category: Aerospace
 importance: 10.7 # master's Fluent results, shown at Ryan's request 2026-11-28; placement not yet confirmed
 tags: ["3D", "Turbulent", "External aerodynamics", "ANSYS Fluent"]
 stack: ["ANSYS Fluent"]
@@ -16,6 +17,7 @@ params:
   - { label: Forebodies, value: "Three sleds, a fighter aircraft" }
   - { label: Turbulence, value: RNG k–ε }
   - { label: Solver, value: "ANSYS Fluent · density-based" }
+  - { label: Mesh, value: "3.6–6.4 M cells (sled)" }
 ---
 
 ## Setup

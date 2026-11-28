@@ -4,7 +4,8 @@ title: A red blood cell squeezing through a microchannel constriction
 description: A deformable capsule or red blood cell passes through a narrow constriction, with Newtonian or viscoelastic fluid inside and outside the membrane.
 importance: 4.2 # after the FSI benchmarks; placement not yet confirmed by Ryan
 category: Cardiovascular
-tags: ["3D", "FSI", "Viscoelastic", "Red blood cell"]
+also: [Multiphase] # two fluids separated by the membrane (Ryan picked this, 2026-11-28)
+tags: ["3D", "FSI", "Two-fluid", "Viscoelastic", "Red blood cell"]
 stack: ["LBM", "Immersed boundary", "Fortran"]
 summary: >
   A deformable capsule, or a red blood cell, is carried by pressure-driven flow through a square microchannel with a
@@ -42,7 +43,7 @@ The microchannel has a square cross-section of 4*H<sub>c</sub>* × 4*H<sub>c</su
   </figure>
 </div>
 
-The capsule membrane is an elastic surface of zero thickness with stretching and bending resistance. Stretching follows either the strain-softening neo-Hookean law or the strain-hardening Skalak law, and bending follows the Helfrich energy model. The viscoelastic fluid is a Boger fluid described by the FENE-CR constitutive equation. A front-tracking step marks which fluid is inside and which is outside the membrane, so the two can have different properties: a Newtonian or viscoelastic capsule in a viscoelastic or Newtonian matrix. The flow and the membrane are coupled with the immersed boundary–lattice Boltzmann framework, so the membrane moves freely through a fixed grid.
+The capsule membrane is an elastic surface of zero thickness with stretching and bending resistance. Stretching follows either the strain-softening neo-Hookean law or the strain-hardening Skalak law, and bending follows the Helfrich energy model. The viscoelastic fluid is a Boger fluid described by the FENE-CR constitutive equation. A front-tracking step marks which fluid is inside and which is outside the membrane, so the two can have different properties: a Newtonian or viscoelastic capsule in a viscoelastic or Newtonian matrix. This makes it a two-fluid problem, with the membrane as the moving interface between the phases. The flow and the membrane are coupled with the immersed boundary–lattice Boltzmann framework, so the membrane moves freely through a fixed grid.
 
 ## Results
 

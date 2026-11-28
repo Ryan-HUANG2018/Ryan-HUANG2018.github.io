@@ -28,7 +28,8 @@
     });
   };
 
-  // Category chips above the simulation grid; matches each card's data-rh-category.
+  // Category chips above the simulation grid; matches each card's data-rh-category
+  // (space-separated: the main `category` plus any `also:` categories).
   const initFilters = () => {
     document.querySelectorAll(".rh-filters").forEach((group) => {
       const grid = group.closest("section").querySelector(".rh-grid");
@@ -41,7 +42,7 @@
             c.setAttribute("aria-pressed", c === chip);
           });
           grid.querySelectorAll("[data-rh-category]").forEach((card) => {
-            card.hidden = filter !== "all" && card.dataset.rhCategory !== filter;
+            card.hidden = filter !== "all" && !card.dataset.rhCategory.split(" ").includes(filter);
           });
         });
       });

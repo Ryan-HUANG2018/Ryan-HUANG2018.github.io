@@ -2,6 +2,7 @@
 layout: simulation
 title: Even outflow from an aircraft fuel diffuser
 description: ANSYS Fluent design study of a perforated fuel diffuser for the pressure-refuelling system of the AG600 amphibious aircraft, from failed hole layouts to an internal baffle design.
+category: Aerospace
 importance: 10.6 # master's Fluent results, shown at Ryan's request 2026-11-28; placement not yet confirmed
 tags: ["3D", "Turbulent", "Internal flow", "ANSYS Fluent"]
 stack: ["ANSYS Fluent"]
