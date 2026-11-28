@@ -16,6 +16,7 @@
     - { name: Adaptive mesh refinement, key: AMR }
     - { name: Multi-block grids, key: Multi-block grids }
     - { name: Material point method, key: MPM }
+    - { name: Volume of fluid (VOF), key: VOF, note: "free-surface water–air flow in ANSYS Fluent" }
     - { name: Windkessel outlet models, key: Windkessel outlets }
     - { name: Finite volume method, note: "through Fluent and OpenFOAM; SIMPLE and PISO" }
     - { name: Dynamic mode decomposition, note: "applied to flapping-wing flow fields (AIAA SciTech 2023)" }
@@ -54,6 +55,7 @@
   items:
     - { name: OpenFOAM, key: OpenFOAM, note: "simpleFoam, pimpleFoam; blockMesh, snappyHexMesh, cfMesh; coronary CFD pipeline" }
     - name: ANSYS Fluent
+      key: ANSYS Fluent
       note: "reference solution for the stenosis validation case in my 2022 PoF paper; UDFs for pulsatile inlets and non-Newtonian blood; aircraft fuel diffuser and drag parachutes (master's); VOF wave tank in my bachelor's thesis; k–ε, RNG k–ε, Spalart–Allmaras"
       papers:
         - { label: PoF 2022, url: "https://doi.org/10.1063/5.0101584" }
