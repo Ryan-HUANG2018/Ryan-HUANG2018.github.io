@@ -39,6 +39,7 @@
         - { label: JMES 2020, url: "https://doi.org/10.1177/0954406220911397" }
         - { label: JFM 2021, url: "https://doi.org/10.1017/jfm.2021.710" }
         - { label: PoF 2022, url: "https://doi.org/10.1063/5.0101584" }
+        - { label: PoF 2023 (Ma et al.), url: "https://doi.org/10.1063/5.0165614" }
     - { name: OpenMP, key: OpenMP }
     - { name: MPI, key: MPI }
     - { name: Python, note: "post-processing and analysis" }
