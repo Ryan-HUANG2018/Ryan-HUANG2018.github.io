@@ -24,7 +24,7 @@
 
 ## 已确认的规格调整（优先于 REDESIGN.md）
 
-- 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / Heat transfer / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer），列表在 `_pages/about.md` 的 `simulations.categories`。
+- 01 Simulations 的筛选分类是 **Cardiovascular / Bio-locomotion / Heat transfer / Multiphase / FSI methods**（不是规格里的 Turbulence / Multiphase / Heat transfer；Multiphase 是用户 2026-11-28 加的），列表在 `_pages/about.md` 的 `simulations.categories`。
 - 2026-11 起整体改成磨砂玻璃风格，规格见 REDESIGN.md §0（优先于该文件其余冲突项）。
 - 2026-11-27 起有亮色主题（"暖纸"风）和日/月切换按钮，默认深色（不跟随系统，用户 2026-11-27 改定），规格见 REDESIGN.md §0 的"亮色主题"。改样式时两套主题都要检查。
 - TOOLKIT：首页显示"方法排行"卡（按项目 `stack:` 统计），完整列表在可展开的 Full toolkit 面板里。内容在 `_data/toolkit.yml`，每项按 `key` 自动链接到 `stack:` 里含这个 key 的仿真项目。项目页参数卡下方显示该项目的 `stack:`。工具和方法只写 ai-profile 里确认过或文件记载的，不凭印象加；某个项目用了什么，没有记录就不写进它的 `stack:`。
