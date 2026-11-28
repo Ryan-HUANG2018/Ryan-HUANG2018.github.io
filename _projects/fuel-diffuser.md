@@ -48,3 +48,18 @@ I proposed internal baffles to even out the pressure inside the tube and simulat
 ## About this work
 
 A summer project in my master's at Nanjing University of Aeronautics and Astronautics (2014–2015), for the AG600 pressure-refuelling system. My co-supervisor received the project and gave me the design work: CATIA models, ICEM CFD meshing, Fluent simulations and Tecplot post-processing.
+
+## Other Fluent cases from my master's
+
+While learning CFD at NUAA I also ran ANSYS Fluent cases for two labmates' projects. These were their studies, not mine: I set up and ran the cases.
+
+<div class="rh-figs">
+  <figure>
+    <img src="{{ '/assets/img/fuel-diffuser/cockpit-temperature.jpg' | relative_url }}" alt="Temperature contours on a section through an aircraft cockpit with two seated occupants, cooler air near the supply vents" loading="lazy">
+    <figcaption>Aircraft cockpit thermal comfort: temperature on a section through the cockpit, with the energy equation and supply-air inlets.</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/fuel-diffuser/pche-temperature.jpg' | relative_url }}" alt="Temperature contours and velocity vectors in a wavy channel of a printed circuit heat exchanger" loading="lazy">
+    <figcaption>Printed circuit heat exchanger: temperature (K) and velocity vectors in a wavy channel, meshed in ICEM CFD.</figcaption>
+  </figure>
+</div>
