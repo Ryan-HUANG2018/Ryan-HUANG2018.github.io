@@ -55,8 +55,19 @@ While learning CFD at NUAA I also ran ANSYS Fluent cases for two labmates' proje
 
 <div class="rh-figs">
   <figure>
+    <img src="{{ '/assets/img/fuel-diffuser/cockpit-catia.jpg' | relative_url }}" alt="CATIA model of a two-seat aircraft cockpit with seated occupant models and ventilation outlets" loading="lazy">
+    <figcaption>Aircraft cockpit thermal comfort: the cockpit and occupants modelled in CATIA.</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/fuel-diffuser/cockpit-occupant.jpg' | relative_url }}" alt="Temperature contours around a seated occupant in the cockpit" loading="lazy">
+    <figcaption>Temperature around an occupant.</figcaption>
+  </figure>
+</div>
+
+<div class="rh-figs">
+  <figure>
     <img src="{{ '/assets/img/fuel-diffuser/cockpit-temperature.jpg' | relative_url }}" alt="Temperature contours on a section through an aircraft cockpit with two seated occupants, cooler air near the supply vents" loading="lazy">
-    <figcaption>Aircraft cockpit thermal comfort: temperature on a section through the cockpit, with the energy equation and supply-air inlets.</figcaption>
+    <figcaption>Temperature on a section through the cockpit, with the energy equation and supply-air inlets.</figcaption>
   </figure>
   <figure>
     <img src="{{ '/assets/img/fuel-diffuser/pche-temperature.jpg' | relative_url }}" alt="Temperature contours and velocity vectors in a wavy channel of a printed circuit heat exchanger" loading="lazy">
