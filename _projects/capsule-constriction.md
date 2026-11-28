@@ -33,7 +33,7 @@ links:
 
 ## Setup
 
-The microchannel has a square cross-section of 4*H<sub>c</sub>* × 4*H<sub>c</sub>* and a length of 20*H<sub>c</sub>*, with a constriction segment 4*H<sub>c</sub>* long and *H<sub>c</sub>* high. A fully developed laminar profile enters at the inlet, the outlet has Neumann conditions and the walls are no-slip.
+The microchannel has a square cross-section of 4*H<sub>c</sub>* × 4*H<sub>c</sub>* and a length of 20*H<sub>c</sub>*, with a constriction segment 4*H<sub>c</sub>* long and _H<sub>c</sub>_ high. A fully developed laminar profile enters at the inlet, the outlet has Neumann conditions and the walls are no-slip.
 
 The capsule membrane is an elastic surface of zero thickness with stretching and bending resistance. Stretching follows either the strain-softening neo-Hookean law or the strain-hardening Skalak law, and bending follows the Helfrich energy model. The viscoelastic fluid is a Boger fluid described by the FENE-CR constitutive equation. A front-tracking step marks which fluid is inside and which is outside the membrane, so the two can have different properties: a Newtonian or viscoelastic capsule in a viscoelastic or Newtonian matrix. The flow and the membrane are coupled with the immersed boundary–lattice Boltzmann framework, so the membrane moves freely through a fixed grid.
 
