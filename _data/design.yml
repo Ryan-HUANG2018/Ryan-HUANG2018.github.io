@@ -1,0 +1,24 @@
+# "Early design work" strip under Simulations on the homepage (_includes/home/design.liquid).
+# CATIA models the owner built during his master's at NUAA (2013–16), from his own slides (PPT-Library).
+# Only the model shapes: no report data or results (owner confirmed 2026-11-28).
+# Fields: src, alt, title, tool, year, focus (optional CSS object-position).
+- src: assets/img/design/ag600-fuel-diffuser.jpg
+  alt: CATIA model of a perforated fuel diffuser tube with an internal baffle
+  title: AG600 fuel diffuser with internal baffle
+  tool: CATIA
+  year: 2014
+- src: assets/img/design/drag-parachutes-aircraft.jpg
+  alt: Fighter aircraft model seen from behind with two drag parachutes deployed
+  title: Fighter model with drag parachutes
+  tool: CATIA
+  year: 2014–16
+- src: assets/img/design/cross-parachute.jpg
+  alt: CATIA model of a cross parachute canopy
+  title: Cross parachute
+  tool: CATIA
+  year: 2014
+- src: assets/img/design/circular-parachute.jpg
+  alt: CATIA model of a circular parachute canopy with gores
+  title: Circular parachute
+  tool: CATIA
+  year: 2014
