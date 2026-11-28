@@ -30,6 +30,8 @@ liu2023partial:
 
 huang2022streamline:
   role: First author
+  figure: /assets/img/publications/huang2022streamline-streamlines.jpg # streamlines with the dynamic feedback IBM, from the paper (sent by Ryan, 2026-11-28)
+  figure_credit: "Figure from the paper (Physics of Fluids, AIP Publishing), reused by the author"
   citations: { count: 57, source: Google Scholar, date: 30 Oct 2026 }
   highlights: ["FWCI 2.60", "Top 10% most cited in PoF 2022"]
 

@@ -2,7 +2,7 @@
 layout: simulation
 title: Pulsatile flow in a coronary artery tree
 description: Pulsatile flow rates at the outlets of the left and right coronary branches over successive cardiac cycles.
-importance: 6
+importance: 3.8 # SIM-06, after the C++ port (Ryan, 2026-11-28)
 category: Cardiovascular
 tags: ["3D", "Haemodynamics"]
 stack: ["OpenFOAM", "Windkessel outlets", "Automated workflow"]
