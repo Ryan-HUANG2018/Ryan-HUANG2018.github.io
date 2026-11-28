@@ -5,7 +5,7 @@ description: An insect-like wing flaps on a prescribed stroke while a torsional 
 importance: 1
 category: Bio-locomotion
 tags: ["3D", "FSI", "Insect flight"]
-stack: ["LBM", "Immersed boundary", "Multi-block grids"]
+stack: ["LBM", "Immersed boundary", "Multi-block grids", "C++"]
 summary: >
   A hovering insect-like wing flaps back and forth on a prescribed stroke, but its pitch is not prescribed: a torsional
   spring at the hinge lets it pitch passively under aerodynamic, inertial and elastic torques. I mapped eight wing shapes

@@ -2,10 +2,10 @@
 layout: simulation
 title: Pulsatile flow in a coronary artery tree
 description: Pulsatile flow rates at the outlets of the left and right coronary branches over successive cardiac cycles.
-importance: 3.8 # SIM-06, after the C++ port (Ryan, 2026-11-28)
+importance: 3.8 # SIM-07, after the C++ port (Ryan, 2026-11-28)
 category: Cardiovascular
 tags: ["3D", "Haemodynamics"]
-stack: ["OpenFOAM", "Windkessel outlets", "Automated workflow"]
+stack: ["OpenFOAM", "Windkessel outlets", "Automated workflow", "C++"]
 summary: >
   Pulsatile blood flow through a coronary artery tree, with the flow rate traced at each outlet branch
   (LAD, LCx, RCA, PDA) over successive cardiac cycles. The case is set up automatically: boundary conditions, meshing

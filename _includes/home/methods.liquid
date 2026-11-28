@@ -1,13 +1,13 @@
 {% comment %}
   Methods ranking: how many simulation projects list each method in their `stack:`.
   Only stack keys that appear in _data/toolkit.yml under "Methods & algorithms" or "Code & HPC" are counted,
-  so names stay the confirmed ones. Top 7, bar length relative to the most used.
+  so names stay the confirmed ones. Items with `rank: false` (programming languages) are left out. Top 7, bar length relative to the most used.
 {% endcomment %}
 {% assign sims = site.projects %}
 {% capture rows %}
   {%- for group in site.data.toolkit -%}
     {%- for item in group.items -%}
-      {%- if item.key -%}
+      {%- if item.key and item.rank != false -%}
         {%- assign n = 0 -%}
         {%- for sim in sims -%}
           {%- if sim.stack contains item.key -%}{%- assign n = n | plus: 1 -%}{%- endif -%}

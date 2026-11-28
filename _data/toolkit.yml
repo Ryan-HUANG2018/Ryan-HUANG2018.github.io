@@ -22,8 +22,23 @@
 
 - group: Code & HPC
   items:
-    - { name: C++, note: "in-house IB–LBM and structural solvers (earlier versions in Fortran and MATLAB)" }
-    - { name: Fortran, key: Fortran, note: "finite element blood-flow solver from my master's research, now ported to C++17" }
+    # C++ / Fortran project lists and papers from Ryan, 2026-11-28
+    - name: C++
+      key: C++
+      rank: false # not in the homepage methods ranking
+      note: "current in-house IB–LBM and structural solvers; C++17 port of my master's Fortran blood-flow solver"
+      papers:
+        - { label: JFM 2023, url: "https://doi.org/10.1017/jfm.2023.821" }
+        - { label: PoF 2024, url: "https://doi.org/10.1063/5.0243758" }
+        - { label: PoF 2026, url: "https://doi.org/10.1063/5.0315385" }
+    - name: Fortran
+      key: Fortran
+      rank: false
+      note: "earlier in-house IB–LBM, finite element and material point solvers"
+      papers:
+        - { label: JMES 2020, url: "https://doi.org/10.1177/0954406220911397" }
+        - { label: JFM 2021, url: "https://doi.org/10.1017/jfm.2021.710" }
+        - { label: PoF 2022, url: "https://doi.org/10.1063/5.0101584" }
     - { name: OpenMP, key: OpenMP }
     - { name: MPI, key: MPI }
     - { name: Python, note: "post-processing and analysis" }

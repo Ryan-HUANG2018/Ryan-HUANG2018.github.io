@@ -5,7 +5,7 @@ description: An AI-assisted port of a legacy Fortran finite element solver, chec
 importance: 3.5 # next to the FSI benchmarks (Ryan, 2026-11-27)
 category: Cardiovascular
 tags: ["3D", "FEM", "Haemodynamics", "Verification"]
-stack: ["FEM", "OpenMP", "Fortran", "AI coding assistant"]
+stack: ["FEM", "OpenMP", "AI coding assistant", "C++"]
 summary: >
   During my master's research (2013–2016) I simulated pulsatile, non-Newtonian blood flow with a Fortran finite
   element code. With an AI coding assistant, I have ported it routine by routine to C++17. Built with the same
