@@ -12,3 +12,5 @@ _sass/tabler-icons/*.scss
 _scripts/*
 # Redesign spec and mock-ups: kept exactly as authored
 docs/redesign/
+# Generated data for the retinal network viewer (minified on purpose)
+assets/html/retinal-network/network.json
