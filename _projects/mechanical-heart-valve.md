@@ -5,7 +5,7 @@ description: A rigid valve leaflet swings open and shut in pulsatile flow past a
 importance: 5
 category: Cardiovascular
 tags: ["2D", "FSI", "Heart valve"]
-stack: ["LBM", "Immersed boundary", "FDM"]
+stack: ["LBM", "Immersed boundary", "FDM", "Fortran"]
 summary: >
   A rigid mechanical heart-valve leaflet, hinged at the entrance of an aortic sinus, is driven open and shut by a pulsatile
   inflow. Its motion is not prescribed: the leaflet rotates under the torque of the blood flow. This is the benchmark

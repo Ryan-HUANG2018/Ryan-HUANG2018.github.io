@@ -3,7 +3,7 @@
 {% assign featured_sim = sims | where: 'featured', true | first %}
 {% unless featured_sim %}{% assign featured_sim = sims.first %}{% endunless %}
 <div class="rh-section-head">
-  {% include section_title.liquid title='Simulations' sub='Cases from my in-house solvers. Hover a card to play it.' %}
+  {% include section_title.liquid title='Simulations' sub='Cases from my in-house solvers, OpenFOAM and ANSYS Fluent. Hover a card to play it.' %}
   <div class="rh-filters" role="group" aria-label="Filter simulations by category">
     <button type="button" class="rh-chip is-active" data-rh-filter="all" aria-pressed="true">All</button>
     {% for category in page.simulations.categories %}
@@ -23,7 +23,7 @@
       <a
         class="rh-card rh-sim-card{% if is_featured %} rh-sim-featured{% endif %}"
         href="{% if sim.redirect %}{{ sim.redirect }}{% else %}{{ sim.url | relative_url }}{% endif %}"
-        data-rh-category="{{ sim.category | slugify }}"
+        data-rh-category="{{ sim.category | slugify }}{% for extra in sim.also %} {{ extra | slugify }}{% endfor %}"
       >
         <div class="rh-card-media">
           {% if sim.thumbnail %}

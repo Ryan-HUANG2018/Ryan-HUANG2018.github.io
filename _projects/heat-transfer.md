@@ -5,7 +5,7 @@ description: Temperature transported by the flow past a heated cylinder and thro
 importance: 4.5 # after the FSI benchmarks
 category: Heat transfer
 tags: ["2D", "Heat transfer", "IB–LBM"]
-stack: ["LBM", "Immersed boundary", "FDM", "Heat transfer"]
+stack: ["LBM", "Immersed boundary", "FDM", "Heat transfer", "Fortran"]
 summary: >
   Two convective heat-transfer cases from my PhD work (unpublished). Heat leaves a heated cylinder in cross-flow and is carried
   downstream by the shed vortices; in a channel with a constriction, the jet and the recirculation behind the

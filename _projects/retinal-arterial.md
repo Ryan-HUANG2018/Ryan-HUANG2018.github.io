@@ -2,7 +2,7 @@
 layout: simulation
 title: Blood flow in a retinal arterial network
 description: Steady non-Newtonian CFD in an 82-segment retinal arterial tree reconstructed from a glaucomatous fundus image, comparing two outlet boundary conditions.
-importance: 3.9 # SIM-07, after the coronary tree (SIM-06)
+importance: -1 # SIM-01: first and the large card (Ryan, 2026-11-28)
 featured: true # large card on the homepage (Ryan, 2026-11-28)
 category: Cardiovascular
 tags: ["3D", "Haemodynamics", "Image-based"]

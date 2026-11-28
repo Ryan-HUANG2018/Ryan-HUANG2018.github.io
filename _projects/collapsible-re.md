@@ -2,10 +2,10 @@
 layout: simulation
 title: Transition to chaos in a collapsible channel
 description: A 2D channel with two elastic wall segments — depending on Re and the wall mass, the walls stay still or oscillate periodically, through period-doubling, quasi-periodically or chaotically.
-importance: 0 # first card (SIM-01)
+importance: 0 # SIM-02
 category: FSI methods
 tags: ["2D", "FSI", "Collapsible channel"]
-stack: ["LBM", "Immersed boundary", "FDM", "OpenMP", "MPI"]
+stack: ["LBM", "Immersed boundary", "FDM", "OpenMP", "MPI", "C++"]
 summary: >
   Flow through a two-dimensional channel in which a segment of both walls is elastic, a model of the Starling resistor
   and of collapsible vessels such as compressed coronary arteries. Over 100 ≤ Re ≤ 3000 and wall-to-fluid mass ratios
