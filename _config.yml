@@ -212,7 +212,7 @@ exclude:
   - assets/img/template_error.png
   - assets/video/tutorial_al_folio.mp4
   - assets/video/pexels-*.mp4
-  - assets/html/
+  - assets/html/relativity.html
   - assets/pdf/example_pdf.pdf
   - assets/audio/
   - assets/jupyter/
